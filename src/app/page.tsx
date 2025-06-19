@@ -1,5 +1,4 @@
 import styles from "./page.module.css";
-import About from "./a-propos/pages";
 
 const Home = () => {
   return (
@@ -9,7 +8,7 @@ const Home = () => {
         <button className={styles.linkHistory}>HISTOIRE</button>
       </div>
       <div className={styles.aboutSection}>
-        <a href="src/app/a-propos/pages.tsx">
+        <a href="/a-propos">
           <img className={styles.linkAbout} src="images/9195785.png" alt="" />
         </a>
       </div>

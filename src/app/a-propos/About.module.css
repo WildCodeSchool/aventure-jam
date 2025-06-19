@@ -1,0 +1,29 @@
+body {
+  background-image: url(../../../public/images/illustrationAboutTemporaire.jpg);
+}
+.aboutSection {
+  height: 100vh;
+  font-family: var(--font-piedra), sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: 400;
+}
+.aboutSection h2 {
+  font-size: 64px;
+  margin: 50px;
+}
+.aboutSection p {
+  font-size: 32px;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.linkAccueil {
+  height: 75px;
+  width: 75px;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+}
