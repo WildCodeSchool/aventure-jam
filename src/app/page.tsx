@@ -8,8 +8,11 @@ const Home = () => {
         <h1>Interactive History</h1>
         <button className={styles.linkHistory}>
           <Link href="/history">
-            <img className={styles.buttonHistory} src="" alt="" />
-            HISTORY
+            <img
+              className={styles.buttonHistory}
+              src="images/16262430.png"
+              alt=""
+            />
           </Link>
         </button>
       </div>

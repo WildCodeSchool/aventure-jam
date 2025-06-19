@@ -16,6 +16,8 @@ body {
 .linkHistory {
   font-size: 34px;
   margin: 25px;
+  background-color: transparent;
+  border: none;
 }
 .linkAbout {
   height: 75px;
