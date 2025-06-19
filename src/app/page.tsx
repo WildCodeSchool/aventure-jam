@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styles from "./page.module.css";
 
 const Home = () => {
@@ -5,12 +6,17 @@ const Home = () => {
     <>
       <div className={styles.mainTitle}>
         <h1>Interactive History</h1>
-        <button className={styles.linkHistory}>HISTOIRE</button>
+        <button className={styles.linkHistory}>
+          <Link href="/history">
+            <img className={styles.buttonHistory} src="" alt="" />
+            HISTORY
+          </Link>
+        </button>
       </div>
       <div className={styles.aboutSection}>
-        <a href="/a-propos">
+        <Link href="/a-propos">
           <img className={styles.linkAbout} src="images/9195785.png" alt="" />
-        </a>
+        </Link>
       </div>
     </>
   );

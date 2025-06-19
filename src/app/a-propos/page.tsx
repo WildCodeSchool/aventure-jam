@@ -8,7 +8,7 @@ const About = () => {
           <img className={styles.linkAccueil} src="images/9713317.png" alt="" />
         </a>
       </div>
-      <div className={styles.aboutSection}>
+      <section className={styles.aboutSection}>
         <h2 className={styles.aboutTitle}>A Propos</h2>
         <div>
           <p className={styles.aboutTexte}>
@@ -41,7 +41,36 @@ const About = () => {
             découvrir n’attend que toi.
           </p>
         </div>
-      </div>
+      </section>
+      <ul className={styles.linkendINButton}>
+        <li>
+          <a href="https://www.linkedin.com/in/jerome-marbach-a97707359/">
+            <img
+              className={styles.linkJerome}
+              src="images/1745495175558.jpg"
+              alt=""
+            />
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/maxence-agullo-96003235a/">
+            <img
+              className={styles.linkMaxence}
+              src="images/9131529.png"
+              alt=""
+            />
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/ad-m-3bb008357/">
+            <img
+              className={styles.linkAdrien}
+              src="images/1742317018912.jpg"
+              alt=""
+            />
+          </a>
+        </li>
+      </ul>
     </>
   );
 };
