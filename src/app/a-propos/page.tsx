@@ -1,17 +1,18 @@
 import styles from "./About.module.css";
+import Link from "next/link";
 
 const About = () => {
   return (
     <>
       <section className={styles.aboutBody}>
         <div className={styles.accueilSection}>
-          <a href="/">
+          <Link href="/">
             <img
               className={styles.linkAccueil}
               src="images/9713317.png"
-              alt=""
+              alt="abcd"
             />
-          </a>
+          </Link>
         </div>
         <section className={styles.aboutSection}>
           <h2 className={styles.aboutTitle}>A Propos</h2>
@@ -49,31 +50,31 @@ const About = () => {
         </section>
         <ul className={styles.linkendINButton}>
           <li>
-            <a href="https://www.linkedin.com/in/jerome-marbach-a97707359/">
+            <Link href="https://www.linkedin.com/in/jerome-marbach-a97707359/">
               <img
                 className={styles.linkJerome}
                 src="images/1745495175558.jpg"
                 alt=""
               />
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="https://www.linkedin.com/in/maxence-agullo-96003235a/">
+            <Link href="https://www.linkedin.com/in/maxence-agullo-96003235a/">
               <img
                 className={styles.linkMaxence}
                 src="images/9131529.png"
                 alt=""
               />
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="https://www.linkedin.com/in/ad-m-3bb008357/">
+            <Link href="https://www.linkedin.com/in/ad-m-3bb008357/">
               <img
                 className={styles.linkAdrien}
                 src="images/1742317018912.jpg"
                 alt=""
               />
-            </a>
+            </Link>
           </li>
         </ul>
       </section>
