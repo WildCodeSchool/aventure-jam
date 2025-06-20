@@ -8,7 +8,7 @@ const History = () => {
         <Link href="/">
           <img
             className={styles.linkAccueil}
-            src="images/9713317.png"
+            src="/images/9713317.png"
             alt=" lien vers accueil"
           />
         </Link>

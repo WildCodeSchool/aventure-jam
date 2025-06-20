@@ -11,7 +11,7 @@ const Home = () => {
           <Link className={styles.linkHistory} href="/history">
             <img
               className={styles.buttonHistory}
-              src="images/16262430.png"
+              src="/images/16262430.png"
               alt="lien vers histoire"
             />
           </Link>
@@ -20,7 +20,7 @@ const Home = () => {
           <Link href="/a-propos">
             <img
               className={styles.linkAbout}
-              src="images/9195785.png"
+              src="/images/9195785.png"
               alt="lien vers about"
             />
           </Link>
