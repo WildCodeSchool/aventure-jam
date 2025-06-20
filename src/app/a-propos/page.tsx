@@ -50,7 +50,7 @@ const About = () => {
         </section>
         <ul className={styles.linkendINButton}>
           <li>
-            <Link
+            <a
               href="https://www.linkedin.com/in/jerome-marbach-a97707359/"
               target="blank"
             >
@@ -59,10 +59,10 @@ const About = () => {
                 src="images/1745495175558.jpg"
                 alt=""
               />
-            </Link>
+            </a>
           </li>
           <li>
-            <Link
+            <a
               href="https://www.linkedin.com/in/maxence-agullo-96003235a/"
               target="blank"
             >
@@ -71,10 +71,10 @@ const About = () => {
                 src="images/9131529.png"
                 alt=""
               />
-            </Link>
+            </a>
           </li>
           <li>
-            <Link
+            <a
               href="https://www.linkedin.com/in/ad-m-3bb008357/"
               target="blank"
             >
@@ -83,7 +83,7 @@ const About = () => {
                 src="images/1742317018912.jpg"
                 alt=""
               />
-            </Link>
+            </a>
           </li>
         </ul>
       </section>
