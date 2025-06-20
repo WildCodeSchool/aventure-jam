@@ -10,7 +10,7 @@ const About = () => {
             <img
               className={styles.linkAccueil}
               src="images/9713317.png"
-              alt="abcd"
+              alt="lien vers accueil"
             />
           </Link>
         </div>
@@ -57,7 +57,7 @@ const About = () => {
               <img
                 className={styles.linkJerome}
                 src="images/1745495175558.jpg"
-                alt=""
+                alt="liens vers linkedIn Jerome"
               />
             </a>
           </li>
@@ -69,7 +69,7 @@ const About = () => {
               <img
                 className={styles.linkMaxence}
                 src="images/9131529.png"
-                alt=""
+                alt="lien vers linkendin Maxence"
               />
             </a>
           </li>
@@ -81,7 +81,7 @@ const About = () => {
               <img
                 className={styles.linkAdrien}
                 src="images/1742317018912.jpg"
-                alt=""
+                alt="lien vers linkedin Adrien"
               />
             </a>
           </li>

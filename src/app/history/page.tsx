@@ -6,7 +6,11 @@ const History = () => {
     <section className={styles.replaceBody}>
       <div className={styles.accueilSection}>
         <Link href="/">
-          <img className={styles.linkAccueil} src="images/9713317.png" alt="" />
+          <img
+            className={styles.linkAccueil}
+            src="images/9713317.png"
+            alt=" lien vers accueil"
+          />
         </Link>
       </div>
       <div className={styles.keepCalm}>

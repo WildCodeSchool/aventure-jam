@@ -12,13 +12,17 @@ const Home = () => {
             <img
               className={styles.buttonHistory}
               src="images/16262430.png"
-              alt=""
+              alt="lien vers histoire"
             />
           </Link>
         </div>
         <div className={styles.aboutSection}>
           <Link href="/a-propos">
-            <img className={styles.linkAbout} src="images/9195785.png" alt="" />
+            <img
+              className={styles.linkAbout}
+              src="images/9195785.png"
+              alt="lien vers about"
+            />
           </Link>
         </div>
       </section>
