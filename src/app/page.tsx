@@ -1,15 +1,33 @@
 import Link from "next/link";
+import styles from "./page.module.css";
 
-export default function Home() {
+const Home = () => {
   return (
-    <main>
-      <h1>Aventure</h1>
+    <>
+      <section className={styles.homeBody}>
+        <div className={styles.mainTitle}>
+          <h1>HISTOIRE INTERACTIVE</h1>
 
-      <Link href="/jeu">
-        <button>
-          Lancer l’histoire
-        </button>
-      </Link>
-    </main>
+          <Link className={styles.linkHistory} href="/history">
+            <img
+              className={styles.buttonHistory}
+              src="/images/16262430.png"
+              alt="lien vers histoire"
+            />
+          </Link>
+        </div>
+        <div className={styles.aboutSection}>
+          <Link href="/a-propos">
+            <img
+              className={styles.linkAbout}
+              src="/images/9195785.png"
+              alt="lien vers about"
+            />
+          </Link>
+        </div>
+      </section>
+    </>
   );
-}
+};
+
+export default Home;

@@ -1,0 +1,63 @@
+.aboutBody {
+  background-image: url(../../../public/images/illustrationAboutTemporaire.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.aboutSection {
+  height: auto;
+  max-width: 80%;
+  padding: 100px;
+  font-family: var(--font-piedra), sans-serif;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-weight: 400;
+  backdrop-filter: blur(2px) saturate(140%);
+  background-color: rgba(17, 25, 40, 0.75);
+  border-radius: 12px;
+  box-sizing: border-box;
+}
+.aboutSection h2 {
+  font-size: 64px;
+  margin: 50px;
+}
+.aboutSection p {
+  font-size: 32px;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.linkAccueil {
+  height: 60px;
+  width: 60px;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+}
+.linkendINButton {
+  position: fixed;
+  bottom: 20px;
+  right: 50px;
+  gap: 30px;
+  list-style: none;
+  display: flex;
+}
+.linkAdrien {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+.linkJerome {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+.linkMaxence {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
