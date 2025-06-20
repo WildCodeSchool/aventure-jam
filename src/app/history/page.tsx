@@ -3,6 +3,11 @@ import styles from "./history.module.css";
 const History = () => {
   return (
     <section className={styles.replaceBody}>
+      <div className={styles.accueilSection}>
+        <a href="/">
+          <img className={styles.linkAccueil} src="images/9713317.png" alt="" />
+        </a>
+      </div>
       <div className={styles.keepCalm}>
         <h2>on va se calmer</h2>
         <img src="images/hqdefault.jpg" alt="" />

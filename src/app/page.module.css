@@ -1,4 +1,4 @@
-body {
+.homeBody {
   background-image: url(../../public/images/illustrationHomeTemporaire.png);
   background-size: cover;
   background-position: center;
@@ -14,10 +14,13 @@ body {
   font-size: 64px;
 }
 .linkHistory {
-  font-size: 34px;
   margin: 25px;
   background-color: transparent;
   border: none;
+}
+.linkHistory img {
+  height: 75px;
+  width: 75px;
 }
 .linkAbout {
   height: 75px;
