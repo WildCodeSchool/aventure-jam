@@ -7,15 +7,14 @@ const Home = () => {
       <section className={styles.homeBody}>
         <div className={styles.mainTitle}>
           <h1>HISTOIRE INTERACTIVE</h1>
-          <button className={styles.linkHistory}>
-            <Link href="/history">
-              <img
-                className={styles.buttonHistory}
-                src="images/16262430.png"
-                alt=""
-              />
-            </Link>
-          </button>
+
+          <Link className={styles.linkHistory} href="/history">
+            <img
+              className={styles.buttonHistory}
+              src="images/16262430.png"
+              alt=""
+            />
+          </Link>
         </div>
         <div className={styles.aboutSection}>
           <Link href="/a-propos">
