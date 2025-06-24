@@ -8,7 +8,7 @@ const schema = `
   CREATE DATABASE IF NOT EXISTS \`${MYSQL_DB_NAME}\` CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
   USE \`${MYSQL_DB_NAME}\`;
 
-  CREATE TABLE IF NOT EXISTS user (
+  CREATE TABLE IF NOT EXISTS users (
     id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
     pseudo VARCHAR(100) NOT NULL,
     avatar VARCHAR(100) NOT NULL,
@@ -21,6 +21,12 @@ const schema = `
     description TEXT NOT NULL,
     image VARCHAR(100) NOT NULL
   );
+
+   CREATE TABLE IF NOT EXISTS history (
+    id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    texte TEXT NOT NULL,
+    description TEXT NOT NULL
+  );
     
   CREATE TABLE IF NOT EXISTS inventory (
       id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
@@ -31,12 +37,6 @@ const schema = `
       FOREIGN KEY (object_id) REFERENCES object(id),
       FOREIGN KEY (user_id) REFERENCES user(id),
       FOREIGN KEY (history_id) REFERENCES history(id)
-  );
-
-  CREATE TABLE IF NOT EXISTS history (
-    id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
-    texte TEXT NOT NULL,
-    description TEXT NOT NULL
   );
 
   CREATE TABLE IF NOT EXISTS etape (
