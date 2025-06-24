@@ -7,14 +7,14 @@ export default function SignInPage() {
 
     if (session) {
         return (
-            <div style={{ padding: 20 }}>
+            <div>
                 <button onClick={() => signOut()} className={styles.deconnectionButton}>Déconnexion</button>
             </div>
         )
     }
 
     return (
-        <div style={{ padding: 20 }}>
+        <div>
             <button className={styles.gsiMaterialButton} onClick={() => signIn("google")}>
                 <div className={styles.gsiMaterialButtonState}></div>
                 <div className={styles.gsiMaterialButtonContentWrapper}>
