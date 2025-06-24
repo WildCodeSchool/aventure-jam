@@ -1,5 +1,6 @@
 import Link from "next/link";
 import styles from "./page.module.css";
+import Login from "@/ui/login"
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
               alt="lien vers histoire"
             />
           </Link>
+          <Login />
         </div>
         <div className={styles.aboutSection}>
           <Link href="/a-propos">
