@@ -35,7 +35,7 @@ const schema = `
       object_id INT NOT NULL,
       history_id INT NOT NULL,
       FOREIGN KEY (object_id) REFERENCES object(id),
-      FOREIGN KEY (user_id) REFERENCES user(id),
+      FOREIGN KEY (user_id) REFERENCES users(id),
       FOREIGN KEY (history_id) REFERENCES history(id)
   );
 
@@ -65,7 +65,8 @@ const schema = `
     user_id INT NOT NULL,
     FOREIGN KEY (history_id) REFERENCES history(id),
     FOREIGN KEY (etape_id) REFERENCES etape(id),
-    FOREIGN KEY (object_id) REFERENCES object(id)
+    FOREIGN KEY (object_id) REFERENCES object(id),
+    FOREIGN KEY (user_id) REFERENCES users(id)
   );
 
   CREATE TABLE IF NOT EXISTS etape_object (
