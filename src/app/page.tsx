@@ -1,6 +1,6 @@
 import Link from "next/link";
 import styles from "./page.module.css";
-import Login from "@/ui/login"
+import Login from "@/ui/login";
 
 const Home = () => {
   return (
@@ -10,13 +10,11 @@ const Home = () => {
           <h1>HISTOIRE INTERACTIVE</h1>
 
           <Link className={styles.linkHistory} href="/history">
-            <img
-              className={styles.buttonHistory}
-              src="/images/16262430.png"
-              alt="lien vers histoire"
-            />
+            HISTOIRE
           </Link>
-          <Login />
+          <div className={styles.googleButton}>
+            <Login />
+          </div>
         </div>
         <div className={styles.aboutSection}>
           <Link href="/a-propos">
