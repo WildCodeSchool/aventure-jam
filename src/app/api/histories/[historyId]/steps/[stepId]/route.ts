@@ -9,6 +9,9 @@ export async function GET() {
     return NextResponse.json(rows);
   } catch (error) {
     console.error("erreur MySql : ", error);
-    return NextResponse.json({ error: "ca marche pas !!!!" }, { status: 500 });
+    return NextResponse.json(
+      { error: " Internal Server Error" },
+      { status: 500 }
+    );
   }
 }

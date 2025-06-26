@@ -29,7 +29,7 @@ const seed = async () => {
     `);
 
     await connection.execute(
-      `INSERT INTO history (id, texte, description) VALUES (?, ?, ?)`,
+      `INSERT INTO history (id, title, description) VALUES (?, ?, ?)`,
       [
         1,
         "Les Cendres d'Yrnwald",

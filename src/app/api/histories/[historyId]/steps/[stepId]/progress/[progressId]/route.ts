@@ -4,7 +4,7 @@ import { NextResponse } from "next/server";
 export async function GET() {
   try {
     const [rows] = await db.query(
-      "SELECT id, texte, etape_id, object_id FROM choice"
+      "SELECT id, history_id, etape_id, object_id, user_id FROM progress"
     );
     return NextResponse.json(rows);
   } catch (error) {
