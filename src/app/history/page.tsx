@@ -13,7 +13,7 @@ const History = async () => {
           <img
             className={styles.linkAccueil}
             src="/images/9713317.png"
-            alt=" lien vers accueil"
+            alt=" aller vers accueil"
           />
         </Link>
       </div>
