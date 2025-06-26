@@ -19,8 +19,7 @@ const History = async () => {
       </div>
       <div className={styles.keepCalm}>
         <h2>{history.title}</h2>
-        <p>C'est ici que tout commence.....</p>
-        <p>creation de l'histoire en attente.</p>
+        <p>{history.description}</p>
       </div>
     </section>
   );
