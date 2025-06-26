@@ -10,7 +10,7 @@ const Home = () => {
           <h1>HISTOIRE INTERACTIVE</h1>
 
           <Link className={styles.linkHistory} href="/history">
-            HISTOIRE
+            LANCER HISTOIRE
           </Link>
           <div className={styles.googleButton}>
             <Login />
@@ -21,7 +21,7 @@ const Home = () => {
             <img
               className={styles.linkAbout}
               src="/images/9195785.png"
-              alt="lien vers about"
+              alt="aller vers about"
             />
           </Link>
         </div>
