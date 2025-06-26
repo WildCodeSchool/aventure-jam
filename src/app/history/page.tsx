@@ -5,7 +5,7 @@ import Link from "next/link";
 const History = async () => {
   const apiResult = await fetch(apiRoutes.HISTORY(1));
   const history = await apiResult.json();
-  console.log(history);
+
   return (
     <section className={styles.replaceBody}>
       <div className={styles.accueilSection}>
