@@ -1,7 +1,11 @@
+import { apiRoutes } from "@/data/ROUTES";
 import styles from "./history.module.css";
 import Link from "next/link";
 
-const History = () => {
+const History = async () => {
+  const apiResult = await fetch(apiRoutes.HISTORY(1));
+  const history = await apiResult.json();
+
   return (
     <section className={styles.replaceBody}>
       <div className={styles.accueilSection}>
@@ -14,9 +18,8 @@ const History = () => {
         </Link>
       </div>
       <div className={styles.keepCalm}>
-        <h2>Histoire</h2>
-        <p>C'est ici que tout commence.....</p>
-        <p>creation de l'histoire en attente.</p>
+        <h2>{history.title}</h2>
+        <p>{history.description}</p>
       </div>
     </section>
   );

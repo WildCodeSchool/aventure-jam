@@ -1,8 +1,8 @@
-import "dotenv/config"
-import mysql from "mysql2/promise"
+import "dotenv/config";
+import mysql from "mysql2/promise";
 
 const { MYSQL_DB_HOST, MYSQL_DB_USER, MYSQL_DB_PASSWORD, MYSQL_DB_NAME } =
-  process.env
+  process.env;
 
 const schema = `
   CREATE DATABASE IF NOT EXISTS \`${MYSQL_DB_NAME}\` CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
@@ -24,7 +24,7 @@ const schema = `
 
    CREATE TABLE IF NOT EXISTS history (
     id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
-    texte TEXT NOT NULL,
+    title TEXT NOT NULL,
     description TEXT NOT NULL
   );
     
@@ -76,7 +76,7 @@ const schema = `
     FOREIGN KEY (object_id) REFERENCES object(id),
     FOREIGN KEY (etape_id) REFERENCES etape(id)
   );
-`
+`;
 
 const migrate = async () => {
   try {
@@ -85,15 +85,15 @@ const migrate = async () => {
       user: MYSQL_DB_USER,
       password: MYSQL_DB_PASSWORD,
       multipleStatements: true,
-    })
+    });
 
-    await connection.query(schema)
-    await connection.end()
+    await connection.query(schema);
+    await connection.end();
 
-    console.log("✅ Database schema created successfully")
+    console.log("✅ Database seed upload successfully");
   } catch (err) {
-    console.error("❌ Error during migration:", err)
+    console.error("❌ Error during migration:", err);
   }
-}
+};
 
-migrate()
+migrate();
