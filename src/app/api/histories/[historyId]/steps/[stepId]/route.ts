@@ -3,18 +3,16 @@ import { NextResponse } from "next/server";
 
 export async function GET(
   _request: Request,
-  { params }: { params: { historyId: number; stepId: number } }
+  { params }: { params: { historyId: string; stepId: string } }
 ) {
-  const { stepId } = params;
+  const { stepId } = await params;
 
   console.log("hello");
 
   try {
-    const [rows] = await db.query(
-      "SELECT id, texte, history_id, pnj, background FROM etape WHERE id = ?"[
-        stepId
-      ]
-    );
+    const [rows] = await db.query("SELECT * FROM etape WHERE id = ?", [
+      parseInt(stepId),
+    ]);
     return NextResponse.json(rows);
   } catch (error) {
     console.error("erreur MySql : ", error);
