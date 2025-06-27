@@ -9,13 +9,14 @@ export default function SignInPage() {
         return (
             <div>
                 <button onClick={() => signOut()} className={styles.deconnectionButton}>Déconnexion</button>
+                <img src="https://img.freepik.com/premium-vector/dark-fantasy-portrait-witch-illustration_961307-7342.jpg" className={styles.profilePicture} alt="sorcerer"></img>
             </div>
         )
     }
 
     return (
         <div>
-            <button className={styles.gsiMaterialButton} onClick={() => signIn("google")}>
+            <button className={styles.gsiMaterialButton} onClick={() =>signIn("google")}>
                 <div className={styles.gsiMaterialButtonState}></div>
                 <div className={styles.gsiMaterialButtonContentWrapper}>
                     <div className={styles.gsiMaterialButtonIcon}>

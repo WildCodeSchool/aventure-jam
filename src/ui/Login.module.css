@@ -118,3 +118,14 @@
     background-color: #131314;
     font-family: "Roboto", arial, sans-serif;
 }
+
+
+.profilePicture{
+  position: fixed;
+  bottom: 90%;
+  left: 90%;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 2rem;
+  cursor: pointer;
+}
