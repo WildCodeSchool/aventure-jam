@@ -7,8 +7,6 @@ export async function GET(
 ) {
   const { stepId } = await params;
 
-  console.log("hello");
-
   try {
     const [rows] = await db.query("SELECT * FROM etape WHERE id = ?", [
       parseInt(stepId),

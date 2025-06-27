@@ -1,4 +1,4 @@
-.replaceBody {
+.historyBody {
   background-image: url(../../../public/images/Gemini_Generated_Image_sba3uisba3uisba3.jpg);
   background-size: cover;
   background-position: center;
@@ -6,7 +6,7 @@
   margin: 0;
 }
 
-.keepCalm {
+.mainTitle {
   height: auto;
   max-width: 80%;
   padding: 100px;
@@ -22,10 +22,12 @@
   border-radius: 12px;
   box-sizing: border-box;
 }
-.keepCalm h2 {
+.mainTitle h2 {
   font-size: 64px;
+  color: #646363e5;
+  margin-bottom: 50px;
 }
-.keepCalm p {
+.mainTitle p {
   font-size: 32px;
 }
 .linkAccueil {

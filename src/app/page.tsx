@@ -9,7 +9,7 @@ const Home = () => {
         <div className={styles.mainTitle}>
           <h1>HISTOIRE INTERACTIVE</h1>
 
-          <Link className={styles.linkHistory} href="/history">
+          <Link className={styles.linkHistory} href="/histoire">
             LANCER HISTOIRE
           </Link>
           <div className={styles.googleButton}>
