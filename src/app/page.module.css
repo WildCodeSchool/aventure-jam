@@ -1,6 +1,6 @@
 .homeBody {
-  background-image: url(../../public/images/illustrationHomeTemporaire.png);
-  background-size: cover;
+  background-image: url(../../public/images/bgHome.png);
+  background-size:contain;
   background-position: center;
 }
 
