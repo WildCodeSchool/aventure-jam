@@ -1,13 +1,8 @@
 import { db } from "@/lib/db";
 import NextAuth, { NextAuthOptions } from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
+import { UserRow } from "@/model/userModel";
 
-type UserRow = {
-    id: number;
-    pseudo: string;
-    avatar: string;
-    email: string;
-};
 
 export const authOptions: NextAuthOptions = {
     providers: [
