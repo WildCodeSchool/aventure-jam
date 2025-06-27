@@ -117,6 +117,15 @@
     border-radius: .5rem;
     background-color: #131314;
     font-family: "Roboto", arial, sans-serif;
+    position: fixed;
+    bottom: 91%;
+    left: 95%;
+    cursor: pointer;
+}
+
+.deconnectionButton img{
+  height: 2rem;
+  width: 1.5rem;
 }
 
 

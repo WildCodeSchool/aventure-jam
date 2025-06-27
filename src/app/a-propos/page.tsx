@@ -10,7 +10,7 @@ const About = () => {
             <img
               className={styles.linkAccueil}
               src="images/9713317.png"
-              alt="lien vers accueil"
+              alt="Aller vers accueil"
             />
           </Link>
         </div>
