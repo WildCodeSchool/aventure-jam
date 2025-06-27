@@ -138,3 +138,22 @@
   border-radius: 2rem;
   cursor: pointer;
 }
+
+@media screen and (max-width: 800px){
+  .profilePicture{
+    bottom: 75%;
+    left: 85%;
+    height: 3rem;
+    width: 3rem;
+  }
+
+  .deconnectionButton{
+    bottom: 76%;
+    left: 93%;
+  }
+
+  .deconnectionButton img{
+    height: 1.5rem;
+    width: 1rem;
+  }
+}
