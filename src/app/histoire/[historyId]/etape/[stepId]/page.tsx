@@ -3,12 +3,12 @@ import styles from "./etape.module.css";
 
 const Step = async () => {
   const apiResult = await fetch(apiRoutes.STEP(1, 1));
-  const steps = await apiResult.json();
+  const step = await apiResult.json();
 
   return (
     <section className={styles.etapeBody}>
       <div className={styles.mainEtapeTitle}>
-        <p>{steps.texte}</p>
+        <p>{step.texte}</p>
       </div>
     </section>
   );

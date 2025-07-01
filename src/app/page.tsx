@@ -1,6 +1,7 @@
 import Link from "next/link";
 import styles from "./page.module.css";
 import Login from "@/ui/login";
+import { appRoutes } from "@/data/ROUTES";
 
 const Home = () => {
   return (
@@ -9,7 +10,7 @@ const Home = () => {
         <div className={styles.mainTitle}>
           <h1>HISTOIRE INTERACTIVE</h1>
 
-          <Link className={styles.linkHistory} href="/histoire">
+          <Link className={styles.linkHistory} href={appRoutes.HISTORY(1)}>
             LANCER HISTOIRE
           </Link>
           <div className={styles.googleButton}>

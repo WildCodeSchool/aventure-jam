@@ -1,17 +1,14 @@
 import { db } from "@/lib/db";
+import { StepModel } from "@/model/StepModel";
 import { NextResponse } from "next/server";
 
-export async function GET(
-  _request: Request,
-  { params }: { params: { historyId: string; stepId: string } }
-) {
-  const { stepId } = await params;
-
+export async function GET() {
   try {
-    const [rows] = await db.query("SELECT * FROM etape WHERE id = ?", [
-      parseInt(stepId),
-    ]);
-    return NextResponse.json(rows);
+    const result = await db.query(
+      "SELECT id, texte, history_id, pnj, background FROM etape WHERE id = ?"
+    );
+    const rows = result[0] as StepModel[];
+    return NextResponse.json(rows[0]);
   } catch (error) {
     console.error("erreur MySql : ", error);
     return NextResponse.json(

@@ -1,5 +1,5 @@
 .historyBody {
-  background-image: url(../../../public/images/Gemini_Generated_Image_sba3uisba3uisba3.jpg);
+  background-image: url(/images/Gemini_Generated_Image_sba3uisba3uisba3.jpg);
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -23,16 +23,16 @@
   box-sizing: border-box;
 }
 .mainTitle h2 {
-  font-size: 64px;
+  font-size: 32px;
   color: #646363e5;
   margin-bottom: 50px;
 }
 .mainTitle p {
-  font-size: 32px;
+  font-size: 18px;
 }
 .linkAccueil {
-  height: 60px;
-  width: 60px;
+  height: 40px;
+  width: 40px;
   position: fixed;
   top: 20px;
   left: 20px;

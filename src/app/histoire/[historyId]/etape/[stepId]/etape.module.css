@@ -1,5 +1,5 @@
 .etapeBody {
-  background-image: url(../../../public/images/Gemini_Generated_Image_sba3uisba3uisba3.jpg);
+  background-image: url(/images/Gemini_Generated_Image_sba3uisba3uisba3.jpg);
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -20,4 +20,7 @@
   background-color: rgba(17, 25, 40, 0.75);
   border-radius: 12px;
   box-sizing: border-box;
+}
+.mainEtapeTitle p {
+  font-size: 18px;
 }

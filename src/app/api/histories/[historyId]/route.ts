@@ -1,11 +1,13 @@
 import { db } from "@/lib/db";
+import { HistoryModel } from "@/model/HistoryModel";
 import { NextResponse } from "next/server";
 
 export async function GET() {
   try {
-    const [rows] = await db.query(
+    const result = await db.query(
       "SELECT id, title, description FROM history LIMIT 1"
     );
+    const rows = result[0] as HistoryModel[];
     return NextResponse.json(rows[0]);
   } catch (error) {
     console.error("erreur MySql : ", error);

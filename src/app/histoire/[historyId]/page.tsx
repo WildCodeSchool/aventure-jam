@@ -1,4 +1,4 @@
-import { apiRoutes } from "@/data/ROUTES";
+import { apiRoutes, appRoutes } from "@/data/ROUTES";
 import styles from "./histoire.module.css";
 import Link from "next/link";
 
@@ -21,6 +21,7 @@ const History = async () => {
         <h2>{history.title}</h2>
         <p>{history.description}</p>
       </div>
+      <Link href={appRoutes.STEP(1, 1)}>let's go</Link>
     </section>
   );
 };
