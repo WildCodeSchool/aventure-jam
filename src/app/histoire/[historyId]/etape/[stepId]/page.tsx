@@ -1,8 +1,16 @@
 import { apiRoutes } from "@/data/ROUTES";
 import styles from "./etape.module.css";
 
-const Step = async () => {
-  const apiResult = await fetch(apiRoutes.STEP(1, 1));
+type Props = {
+  params: {
+    historyId: number;
+    stepId: number;
+  };
+};
+
+const Step = async ({ params }: Props) => {
+  const { historyId, stepId } = await params;
+  const apiResult = await fetch(apiRoutes.STEP(historyId, stepId));
   const step = await apiResult.json();
 
   return (

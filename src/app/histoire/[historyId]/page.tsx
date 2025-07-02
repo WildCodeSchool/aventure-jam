@@ -2,8 +2,15 @@ import { apiRoutes, appRoutes } from "@/data/ROUTES";
 import styles from "./histoire.module.css";
 import Link from "next/link";
 
-const History = async () => {
-  const apiResult = await fetch(apiRoutes.HISTORY(1));
+type Props = {
+  params: {
+    historyId: number;
+  };
+};
+
+const History = async ({ params }: Props) => {
+  const { historyId } = await params;
+  const apiResult = await fetch(apiRoutes.HISTORY(historyId));
   const history = await apiResult.json();
 
   return (
@@ -20,8 +27,12 @@ const History = async () => {
       <div className={styles.mainTitle}>
         <h2>{history.title}</h2>
         <p>{history.description}</p>
+        <div className={styles.nextStepLink}>
+          <Link href={appRoutes.STEP(1, 1)}>
+            <img src="/Logo/img.icons8.png" />
+          </Link>
+        </div>
       </div>
-      <Link href={appRoutes.STEP(1, 1)}>let's go</Link>
     </section>
   );
 };

@@ -1,9 +1,8 @@
 .historyBody {
-  background-image: url(/images/Gemini_Generated_Image_sba3uisba3uisba3.jpg);
+  background-image: url(/images/bibliotheque-jam.PNG);
   background-size: cover;
-  background-position: center;
-  height: 100vh;
   margin: 0;
+  height: 100vh;
 }
 
 .mainTitle {
@@ -36,4 +35,7 @@
   position: fixed;
   top: 20px;
   left: 20px;
+}
+.nextStepLink {
+  margin-top: 50px;
 }
