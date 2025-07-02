@@ -1,7 +1,8 @@
 import { db } from "@/lib/db";
 import NextAuth, { NextAuthOptions } from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
-import { UserRow } from "@/model/userModel";
+import { User } from "@/model/userModel";
+
 
 
 export const authOptions: NextAuthOptions = {
@@ -29,13 +30,14 @@ export const authOptions: NextAuthOptions = {
                 const [rows] = await db.query(
                     "SELECT * FROM users WHERE email = ?",
                     [user.email]
-                ) as [UserRow[], unknown];
+                ) as [User[], unknown];
 
                 if (rows.length === 0) {
                     await db.query(
                         `INSERT INTO users (pseudo, avatar, email) VALUES (?, ?, ?)`,
                         [name, image, user.email]
                     );
+                    
                 }
 
                 return true;
