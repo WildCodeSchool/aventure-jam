@@ -1,27 +1,27 @@
 // app/infos/[id]/editer-info/page.tsx
-import { notFound } from "next/navigation"
-import styles from "./EditInfoPage.module.css"
-import { InfoModel } from "@/model/InfoModel"
-import { getOneById } from "@/service/InfoService"
-import EditInfoForm from "@/ui/EditInfoForm"
+import { notFound } from "next/navigation";
+import styles from "./EditInfoPage.module.css";
+import { InfoModel } from "@/model/InfoModel";
+import { getOneById } from "@/service/InfoService";
+import EditInfoForm from "@/ui/EditInfoForm";
 
 interface PageProps {
   params: {
-    id: string
-  }
+    id: string;
+  };
 }
 
 export default async function EditInfoPage({ params }: PageProps) {
-  const idNum = parseInt(params.id, 10)
+  const idNum = parseInt(params.id, 10);
   if (isNaN(idNum)) {
-    return notFound()
+    return notFound();
   }
 
-  let info: InfoModel
+  let info: InfoModel;
   try {
-    info = await getOneById(idNum)
+    info = await getOneById(idNum);
   } catch {
-    return notFound()
+    return notFound();
   }
 
   return (
@@ -29,5 +29,5 @@ export default async function EditInfoPage({ params }: PageProps) {
       <h1>Modifier l&#39;information #{info.id}</h1>
       <EditInfoForm initialData={info} />
     </main>
-  )
+  );
 }

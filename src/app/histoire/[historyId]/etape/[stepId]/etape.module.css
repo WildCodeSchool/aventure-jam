@@ -1,0 +1,39 @@
+.etapeBody {
+  background-image: url(/images/Gemini_Generated_Image_sba3uisba3uisba3.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  margin: 0;
+}
+.mainEtapeTitle {
+  height: auto;
+  max-width: 80%;
+  padding: 100px;
+  font-family: var(--font-geist-sans);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-weight: 400;
+  backdrop-filter: blur(2px) saturate(140%);
+  background-color: rgba(17, 25, 40, 0.75);
+  border-radius: 12px;
+  box-sizing: border-box;
+}
+.mainEtapeTitle p {
+  font-size: 18px;
+}
+.nextPage {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+}
+.linkAccueil {
+  height: 40px;
+  width: 40px;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+}

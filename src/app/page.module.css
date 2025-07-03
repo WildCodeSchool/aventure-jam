@@ -1,6 +1,6 @@
 .homeBody {
   background-image: url(../../public/images/bgHome.png);
-  background-size:contain;
+  background-size: contain;
   background-position: center;
 }
 
@@ -33,22 +33,22 @@
   right: 20px;
 }
 
-@media screen and (max-width: 800px){
-  .homeBody{
+@media screen and (max-width: 800px) {
+  .homeBody {
     background-repeat: no-repeat;
     background-size: cover;
   }
 
-  .mainTitle{
+  .mainTitle {
     font-size: 10px;
   }
 
-  .linkAbout{
+  .linkAbout {
     height: 20px;
     width: 20px;
   }
 
-  .linkHistory{
+  .linkHistory {
     font-size: 10px;
   }
 }
