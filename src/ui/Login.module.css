@@ -117,4 +117,43 @@
     border-radius: .5rem;
     background-color: #131314;
     font-family: "Roboto", arial, sans-serif;
+    position: fixed;
+    bottom: 91%;
+    left: 95%;
+    cursor: pointer;
+}
+
+.deconnectionButton img{
+  height: 2rem;
+  width: 1.5rem;
+}
+
+
+.profilePicture{
+  position: fixed;
+  bottom: 90%;
+  left: 90%;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 800px){
+  .profilePicture{
+    bottom: 75%;
+    left: 85%;
+    height: 3rem;
+    width: 3rem;
+  }
+
+  .deconnectionButton{
+    bottom: 76%;
+    left: 93%;
+  }
+
+  .deconnectionButton img{
+    height: 1.5rem;
+    width: 1rem;
+  }
 }

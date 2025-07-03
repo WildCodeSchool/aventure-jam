@@ -1,6 +1,6 @@
 .homeBody {
-  background-image: url(../../public/images/illustrationHomeTemporaire.png);
-  background-size: cover;
+  background-image: url(../../public/images/bgHome.png);
+  background-size:contain;
   background-position: center;
 }
 
@@ -11,18 +11,18 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  font-size: 64px;
+  font-size: 40px;
 }
 .linkHistory {
   margin: 25px;
   background-color: transparent;
-  font-size: 25px;
+  font-size: 20px;
   border: none;
 }
 
 .linkAbout {
-  height: 75px;
-  width: 75px;
+  height: 40px;
+  width: 40px;
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -31,4 +31,24 @@
   position: fixed;
   top: 20px;
   right: 20px;
+}
+
+@media screen and (max-width: 800px){
+  .homeBody{
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .mainTitle{
+    font-size: 10px;
+  }
+
+  .linkAbout{
+    height: 20px;
+    width: 20px;
+  }
+
+  .linkHistory{
+    font-size: 10px;
+  }
 }

@@ -16,7 +16,6 @@
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  font-weight: 400;
   backdrop-filter: blur(2px) saturate(140%);
   background-color: rgba(17, 25, 40, 0.75);
   border-radius: 12px;
@@ -30,10 +29,12 @@
   font-size: 32px;
   margin-left: 10%;
   margin-right: 10%;
+  font-weight: 100;
+  font-size: 1rem;
 }
 .linkAccueil {
-  height: 60px;
-  width: 60px;
+  height: 40px;
+  width: 40px;
   position: fixed;
   top: 20px;
   left: 20px;
@@ -60,4 +61,50 @@
   height: 50px;
   width: 50px;
   border-radius: 50%;
+}
+
+
+@media screen and (max-width: 800px) {
+  .linkAdrien {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+  }
+  .linkJerome {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+  }
+  .linkMaxence {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+  }
+
+  .linkAccueil {
+    height: 30px;
+    width: 30px;
+  }
+
+  .aboutSection{
+    max-height: 80%;
+    padding: .5rem;
+    width: 80%;
+    overflow-y: scroll;
+  }
+
+  .aboutSection h2{
+    font-size: 1rem;
+    margin: 10px;
+  }
+
+  .aboutSection p{
+    font-size: 1rem;
+  }
+
+  .linkendINButton{
+    display: flex;
+    flex-direction: column;
+    right: 20px;
+  }
 }
