@@ -9,7 +9,7 @@ type Props = {
 };
 
 const History = async ({ params }: Props) => {
-  const { historyId } = params;
+  const { historyId } = await params;
   const apiResult = await fetch(apiRoutes.HISTORY(historyId));
   const history = await apiResult.json();
 
