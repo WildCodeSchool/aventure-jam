@@ -17,30 +17,28 @@ const Step = async ({ params }: Props) => {
   const step = await apiResult.json();
 
   return (
-    <>
-      <section className={styles.etapeBody}>
-        <div className={styles.accueilSection}>
-          <Link href="/">
-            <img
-              className={styles.linkAccueil}
-              src="/images/9713317.png"
-              alt=" aller vers accueil"
-            />
+    <section className={styles.etapeBody}>
+      <div className={styles.accueilSection}>
+        <Link href="/">
+          <img
+            className={styles.linkAccueil}
+            src="/images/9713317.png"
+            alt=" aller vers accueil"
+          />
+        </Link>
+      </div>
+      <div className={styles.mainEtapeTitle}>
+        <p>{step.texte}</p>
+        <div className={styles.nextPage}>
+          <Link href={`/histoire/${historyId}/etape/${toNextStep + 1}`}>
+            Etape suivante
+          </Link>
+          <Link href={`/histoire/${historyId}/etape/${toPreviewStep - 1}`}>
+            Etape precedente
           </Link>
         </div>
-        <div className={styles.mainEtapeTitle}>
-          <p>{step.texte}</p>
-          <div className={styles.nextPage}>
-            <Link href={`/histoire/${historyId}/etape/${toNextStep + 1}`}>
-              Etape suivante
-            </Link>
-            <Link href={`/histoire/${historyId}/etape/${toPreviewStep - 1}`}>
-              Etape precedente
-            </Link>
-          </div>
-        </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 };
 
