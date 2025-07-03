@@ -15,19 +15,17 @@
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  font-weight: 400;
+  font-weight: 200;
   backdrop-filter: blur(2px) saturate(140%);
   background-color: rgba(17, 25, 40, 0.75);
   border-radius: 12px;
   box-sizing: border-box;
 }
-.mainTitle h2 {
-  font-size: 32px;
-  color: #646363e5;
-  margin-bottom: 50px;
+.keepCalm h2 {
+  font-size: 50px;
 }
-.mainTitle p {
-  font-size: 18px;
+.keepCalm p {
+  font-size: 20px;
 }
 .linkAccueil {
   height: 40px;
@@ -36,6 +34,22 @@
   top: 20px;
   left: 20px;
 }
-.nextStepLink {
-  margin-top: 50px;
+
+@media screen and (max-width: 800px) {
+  .linkAccueil {
+    height: 20px;
+    width: 20px;
+  }
+
+  .keepCalm h2 {
+    font-size: 30px;
+  }
+
+  .keepCalm p {
+    font-size: 15px;
+  }
+
+  .keepCalm {
+    padding: 0.7rem;
+  }
 }
