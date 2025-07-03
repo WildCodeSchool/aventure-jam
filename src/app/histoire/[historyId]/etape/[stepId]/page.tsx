@@ -34,7 +34,7 @@ const Step = async ({ params }: Props) => {
             <Link href={`/histoire/${historyId}/etape/${toNextStep + 1}`}>
               Etape suivante
             </Link>
-            <Link href={`/histoire/${historyId}/etape/${toNextStep - 1}`}>
+            <Link href={`/histoire/${historyId}/etape/${toPreviewStep - 1}`}>
               Etape precedente
             </Link>
           </div>

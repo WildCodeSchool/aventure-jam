@@ -5,7 +5,7 @@ import { NextResponse } from "next/server";
 export async function GET() {
   try {
     const result = await db.query(
-      "SELECT id, title, description FROM history LIMIT 1"
+      "SELECT id, title, description FROM history Where id = ? "
     );
     const rows = result[0] as HistoryModel[];
     return NextResponse.json(rows[0]);
