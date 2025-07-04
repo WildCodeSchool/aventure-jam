@@ -2,6 +2,11 @@ import { apiRoutes } from "@/data/ROUTES";
 import styles from "./etape.module.css";
 import Link from "next/link";
 
+type Choice = {
+  id: number;
+  texte: string;
+};
+
 type Props = {
   params: {
     historyId: number;
@@ -15,7 +20,7 @@ const Step = async ({ params }: Props) => {
   const apiStepResult = await fetch(apiRoutes.STEP(historyId, stepId));
   const step = await apiStepResult.json();
   const apiChoicesResult = await fetch(apiRoutes.CHOICES(historyId, stepId));
-  const choices = await apiChoicesResult.json();
+  const choices: Choice[] = await apiChoicesResult.json();
 
   return (
     <section className={styles.etapeBody}>
@@ -30,11 +35,13 @@ const Step = async ({ params }: Props) => {
       </div>
       <div className={styles.mainEtapeTitle}>
         <p>{step.texte}</p>
-        <div className={styles.nextPage}>
-          <ul>
-            <li>
-              <Link href="">{choices.texte}</Link>
-            </li>
+        <div className={styles.ChoiceList}>
+          <ul className={styles.ChoiceCase}>
+            {choices.map((choice) => (
+              <li className={styles.choiceStyle}>
+                <Link href="">{choice.texte}</Link>
+              </li>
+            ))}
           </ul>
         </div>
       </div>
