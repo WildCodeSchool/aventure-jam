@@ -7,12 +7,12 @@ type Params = {
 };
 
 export async function GET(_req: Request, { params }: Params) {
-  const { stepId } = await params;
+  const { stepId, historyId } = await params;
   try {
     const result = await db.query(
       "SELECT id, texte, history_id, pnj, background FROM etape WHERE id = ? AND history_id = ? ",
 
-      [stepId, params.historyId]
+      [stepId, historyId]
     );
     const rows = result[0] as StepModel[];
     if (rows.length === 0) {
