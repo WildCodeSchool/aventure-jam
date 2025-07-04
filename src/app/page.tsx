@@ -1,5 +1,7 @@
 import Link from "next/link";
 import styles from "./page.module.css";
+import Login from "@/ui/login";
+import { appRoutes } from "@/data/ROUTES";
 
 const Home = () => {
   return (
@@ -8,20 +10,19 @@ const Home = () => {
         <div className={styles.mainTitle}>
           <h1>HISTOIRE INTERACTIVE</h1>
 
-          <Link className={styles.linkHistory} href="/history">
-            <img
-              className={styles.buttonHistory}
-              src="/images/16262430.png"
-              alt="lien vers histoire"
-            />
+          <Link className={styles.linkHistory} href={appRoutes.HISTORY(1)}>
+            LANCER HISTOIRE
           </Link>
+          <div className={styles.googleButton}>
+            <Login />
+          </div>
         </div>
         <div className={styles.aboutSection}>
           <Link href="/a-propos">
             <img
               className={styles.linkAbout}
               src="/images/9195785.png"
-              alt="lien vers about"
+              alt="aller vers about"
             />
           </Link>
         </div>

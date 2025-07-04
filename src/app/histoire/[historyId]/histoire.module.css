@@ -1,0 +1,55 @@
+.historyBody {
+  background-image: url(/images/bibliotheque-jam.PNG);
+  background-size: cover;
+  margin: 0;
+  height: 100vh;
+}
+
+.mainTitle {
+  height: auto;
+  max-width: 80%;
+  padding: 100px;
+  font-family: var(--font-geist-sans);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-weight: 200;
+  backdrop-filter: blur(2px) saturate(140%);
+  background-color: rgba(17, 25, 40, 0.75);
+  border-radius: 12px;
+  box-sizing: border-box;
+}
+.keepCalm h2 {
+  font-size: 50px;
+}
+.keepCalm p {
+  font-size: 20px;
+}
+.linkAccueil {
+  height: 40px;
+  width: 40px;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+}
+
+@media screen and (max-width: 800px) {
+  .linkAccueil {
+    height: 20px;
+    width: 20px;
+  }
+
+  .keepCalm h2 {
+    font-size: 30px;
+  }
+
+  .keepCalm p {
+    font-size: 15px;
+  }
+
+  .keepCalm {
+    padding: 0.7rem;
+  }
+}

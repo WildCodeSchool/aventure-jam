@@ -9,31 +9,32 @@
 .aboutSection {
   height: auto;
   max-width: 80%;
-  padding: 100px;
+  padding: 50px;
   font-family: var(--font-piedra), sans-serif;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  font-weight: 400;
   backdrop-filter: blur(2px) saturate(140%);
   background-color: rgba(17, 25, 40, 0.75);
-  border-radius: 12px;
+  border-radius: 10px;
   box-sizing: border-box;
 }
 .aboutSection h2 {
-  font-size: 64px;
+  font-size: 32px;
   margin: 50px;
 }
 .aboutSection p {
-  font-size: 32px;
+  font-size: 18px;
   margin-left: 10%;
   margin-right: 10%;
+  font-weight: 100;
+  font-size: 1rem;
 }
 .linkAccueil {
-  height: 60px;
-  width: 60px;
+  height: 40px;
+  width: 40px;
   position: fixed;
   top: 20px;
   left: 20px;
@@ -47,17 +48,62 @@
   display: flex;
 }
 .linkAdrien {
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
   border-radius: 50%;
 }
 .linkJerome {
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
   border-radius: 50%;
 }
 .linkMaxence {
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
   border-radius: 50%;
+}
+
+@media screen and (max-width: 800px) {
+  .linkAdrien {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+  }
+  .linkJerome {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+  }
+  .linkMaxence {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+  }
+
+  .linkAccueil {
+    height: 30px;
+    width: 30px;
+  }
+
+  .aboutSection {
+    max-height: 80%;
+    padding: 0.5rem;
+    width: 80%;
+    overflow-y: scroll;
+  }
+
+  .aboutSection h2 {
+    font-size: 1rem;
+    margin: 10px;
+  }
+
+  .aboutSection p {
+    font-size: 1rem;
+  }
+
+  .linkendINButton {
+    display: flex;
+    flex-direction: column;
+    right: 20px;
+  }
 }
