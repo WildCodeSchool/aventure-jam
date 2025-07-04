@@ -6,15 +6,16 @@ type Props = {
   params: {
     historyId: number;
     stepId: number;
+    choicesId: number;
   };
 };
 
 const Step = async ({ params }: Props) => {
   const { historyId, stepId } = await params;
-  const toNextStep = Number(stepId);
-  const toPreviewStep = Number(stepId);
-  const apiResult = await fetch(apiRoutes.STEP(historyId, stepId));
-  const step = await apiResult.json();
+  const apiStepResult = await fetch(apiRoutes.STEP(historyId, stepId));
+  const step = await apiStepResult.json();
+  const apiChoicesResult = await fetch(apiRoutes.CHOICES(historyId, stepId));
+  const choices = await apiChoicesResult.json();
 
   return (
     <section className={styles.etapeBody}>
@@ -30,12 +31,11 @@ const Step = async ({ params }: Props) => {
       <div className={styles.mainEtapeTitle}>
         <p>{step.texte}</p>
         <div className={styles.nextPage}>
-          <Link href={`/histoire/${historyId}/etape/${toNextStep + 1}`}>
-            Etape suivante
-          </Link>
-          <Link href={`/histoire/${historyId}/etape/${toPreviewStep - 1}`}>
-            Etape precedente
-          </Link>
+          <ul>
+            <li>
+              <Link href="">{choices.texte}</Link>
+            </li>
+          </ul>
         </div>
       </div>
     </section>

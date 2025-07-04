@@ -5,6 +5,8 @@ const apiRoutes = {
   HISTORY: (id: number) => `${apiUrl}/api/histories/${id}`,
   STEP: (historyId: number, stepId: number) =>
     `${apiUrl}/api/histories/${historyId}/steps/${stepId}`,
+  CHOICES: (historyId: number, stepId: number) =>
+    `${apiUrl}/api/histories/${historyId}/steps/${stepId}/choices`,
 };
 
 const appRoutes = {
