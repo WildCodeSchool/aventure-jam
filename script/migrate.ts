@@ -19,7 +19,9 @@ const schema = `
     id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
     name VARCHAR(100) NOT NULL,
     description TEXT NOT NULL,
-    image VARCHAR(100) NOT NULL
+    image VARCHAR(100) NOT NULL,
+    lead_to_step_id INT NOT NULL,
+    give_or_take BOOLEAN DEFAULT FALSE
   );
 
    CREATE TABLE IF NOT EXISTS history (
@@ -39,7 +41,7 @@ const schema = `
       FOREIGN KEY (history_id) REFERENCES history(id)
   );
 
-  CREATE TABLE IF NOT EXISTS etape (
+  CREATE TABLE IF NOT EXISTS steps (
     id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
     texte TEXT NOT NULL,
     history_id INT NOT NULL,
@@ -51,30 +53,32 @@ const schema = `
   CREATE TABLE IF NOT EXISTS choice (
     id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
     texte TEXT NOT NULL,
-    etape_id INT NOT NULL,
+    steps_id INT NOT NULL,
     object_id INT NOT NULL,
+    link_to_steps_id INT NOT NULL,
     FOREIGN KEY (object_id) REFERENCES object(id),
-    FOREIGN KEY (etape_id) REFERENCES etape(id)
+    FOREIGN KEY (etape_id) REFERENCES steps(id)
+
   );
 
   CREATE TABLE IF NOT EXISTS progress (
     id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
     history_id INT NOT NULL,
-    etape_id INT NOT NULL,
+    steps_id INT NOT NULL,
     object_id INT NOT NULL,
     user_id INT NOT NULL,
     FOREIGN KEY (history_id) REFERENCES history(id),
-    FOREIGN KEY (etape_id) REFERENCES etape(id),
+    FOREIGN KEY (etape_id) REFERENCES steps(id),
     FOREIGN KEY (object_id) REFERENCES object(id),
     FOREIGN KEY (user_id) REFERENCES users(id)
   );
 
-  CREATE TABLE IF NOT EXISTS etape_object (
+  CREATE TABLE IF NOT EXISTS steps_objects (
     id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
-    etape_id INT NOT NULL,
+    steps_id INT NOT NULL,
     object_id INT NOT NULL,
     FOREIGN KEY (object_id) REFERENCES object(id),
-    FOREIGN KEY (etape_id) REFERENCES etape(id)
+    FOREIGN KEY (etape_id) REFERENCES steps(id)
   );
 `;
 

@@ -19,9 +19,9 @@ const seed = async () => {
       SET FOREIGN_KEY_CHECKS = 0;
       TRUNCATE TABLE progress;
       TRUNCATE TABLE inventory;
-      TRUNCATE TABLE etape_object;
+      TRUNCATE TABLE steps_objects;
       TRUNCATE TABLE choice;
-      TRUNCATE TABLE etape;
+      TRUNCATE TABLE steps;
       TRUNCATE TABLE history;
       TRUNCATE TABLE object;
       TRUNCATE TABLE users;

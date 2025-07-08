@@ -38,7 +38,7 @@ const Step = async ({ params }: Props) => {
         <div className={styles.ChoiceList}>
           <ul className={styles.ChoiceCase}>
             {choices.map((choice) => (
-              <li className={styles.choiceStyle}>
+              <li key={choice.id} className={styles.choiceStyle}>
                 <Link href="">{choice.texte}</Link>
               </li>
             ))}

@@ -10,7 +10,7 @@ export async function GET(_req: Request, { params }: Params) {
   const { stepId } = await params;
   try {
     const result = await db.query(
-      "SELECT id, texte, etape_id FROM choice WHERE etape_id = ?",
+      "SELECT id, texte, steps_id FROM choice WHERE steps_id = ?",
       [stepId]
     );
     const rows = result[0] as StepModel[];
