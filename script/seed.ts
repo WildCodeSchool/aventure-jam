@@ -121,51 +121,179 @@ const seed = async () => {
     const etapes = [
       [
         1,
-        "Tu ouvres les yeux, étendu sur un sol froid et dur. Autour de toi, des ruines noyées dans une brume cramoisie. L'air sent la chair calcinée et la cendre mouillée. Le ciel est figé, crevé d'un œil rouge qui ne cligne jamais. Tu n'as ni souvenir, ni nom. Juste la sensation aiguë que tu n'es pas censé être là… pas en vie. Tu te redresses lentement, observant la marque noire brûlée dans ta chair : un œil fermé entouré de crocs.",
+        `
+        Chapitre I – L’Éveil dans les Brumes.
+        
+        Tu ouvres les yeux, étendu sur un sol froid et dur. Autour de toi, des ruines noyées dans une brume cramoisie. L’air sent la chair calcinée et la cendre mouillée. 
+        Le ciel est figé, crevé d’un œil rouge qui ne cligne jamais. Tu n’as ni souvenir, ni nom. Juste la sensation aiguë que tu n’es pas censé être là… pas en vie.
+        
+        Tu te redresses lentement. Tes membres sont engourdis, ta gorge sèche comme si tu avais crié des siècles dans le vide. 
+        
+        Tu baisses les yeux sur ta main droite : une marque noire, brûlée dans ta chair. Un œil fermé, entouré de crocs. Tu n’en connais pas le sens, mais il pulse, chaud, comme un cœur battant. 
+        
+        Quelque chose en toi sait : cette marque est une clef. Ou une malédiction.
+        
+        Derrière toi, un craquement.
+        
+        Tu te retournes d’instinct. Une silhouette approche entre les pierres effondrées : une vieille femme drapée d’un manteau de suie. Son visage est masqué par un bandeau de cuir clouté.
+        « Tu n’as pas de nom… » dit-elle d’une voix rauque. « Alors tu peux en forger un. Mais la Marque… elle, t’a choisi. »
+        
+        Elle tend la main. Tu hésites… puis la prends.
+        « Suis-moi, Porte-Marque. Il te reste peu de temps avant que le Néant ne te réclame de nouveau. »`,
         1,
-        "Morgha la Céciteuse - Une vieille femme drapée d'un manteau de suie, le visage masqué par un bandeau de cuir clouté. Elle semble te connaître.",
+        "Morgha la Céciteuse.",
         "ruines_brume_cramoisie.jpg",
       ],
       [
         2,
-        "Elle te conduit dans les profondeurs d'un sanctuaire à moitié effondré, un ancien Temple des Veilleurs. Là, dans l'obscurité fumeuse, brûle un feu noir, silencieux. Morgha te donne de quoi boire - une eau cendreuse qui te rend un peu de vigueur. Elle t'explique que le monde s'éteint à cause des Brèches ouvertes par la Couronne d'Épine, et que toi seul peux refermer la Brèche originelle car tu portes la Marque.",
+        `
+        Chapitre II – La Voix des Morts.
+        
+        Elle te conduit dans les profondeurs d’un sanctuaire à moitié effondré, un ancien Temple des Veilleurs. 
+        Là, dans l’obscurité fumeuse, brûle un feu noir, silencieux. 
+        
+        La femme – elle se nomme Morgha la Céciteuse – te donne de quoi boire. 
+        L’eau est cendreuse, mais elle te rend un peu de vigueur.
+        « Le monde s’éteint. Les Brèches, ouvertes par la Couronne d’Épine, laissent entrer la Peste Rouge et ses Enfants. »
+        « Toi, tu viens d’un monde d’avant. Ou peut-être d’un futur qui n’existe plus. Qu’importe. Tu portes la Marque. Tu peux refermer la Brèche originelle. »
+        
+        Elle tend une dague cérémonielle. L’acier est sombre, strié de runes éteintes.
+        « Mais tu n’as pas d’arme… ni de souvenir. Commence par choisir ce que tu es. Ce que tu veux devenir. »`,
         1,
-        "Morgha la Céciteuse - Elle semble connaître des secrets sur ton passé et ta destinée.",
+        "Morgha la Céciteuse.",
         "temple_veilleurs_feu_noir.jpg",
       ],
       [
         3,
-        "Morgha te tend une dague cérémonielle et t'explique que tu dois choisir ce que tu es, ce que tu veux devenir. Elle te propose aussi un objet relique pour t'aider dans ta quête. Tu ressens des échos dans ton esprit, des fragments de ce que tu pourrais être, mais tu ne comprends pas encore tout.",
+        `
+        Chapitre III – Le Pacte de Cendre.
+        
+        Tu sers la dague contre ta paume. Son contact est froid, presque douloureux. Mais dans ton esprit, un écho s’éveille. Des souvenirs… ou des fragments de ce que tu pourrais être. 
+        
+        Tu ne les comprends pas tous. Tu ne sais pas encore ce que tu étais. Mais quelque chose, là-dessous, se tend vers la surface.
+        
+        Morgha te regarde longuement.
+        « Il est encore temps. Certains fils du destin sont brisés, d’autres simplement noués. Ta marque n’est pas qu’un fardeau, Porte-Marque. Elle est aussi une clef. »
+        
+        Elle glisse quelque chose dans ta main libre. Un petit objet, que tu glisses sans réfléchir à ta ceinture, autour de ton cou ou à ton doigt. 
+        Tu ne sais pas encore ce qu’il est, ni à quoi il servira, mais il pulse doucement contre toi. Un talisman, peut-être… ou un dernier mensonge.
+        « Yrnwald ne peut plus être sauvé, mais ce qui se trouve au nord… la Brèche originelle, elle, peut être scellée. 
+        
+        Tu ne survivras pas si tu t’y rends aujourd’hui. Il te faudra des réponses. De la puissance. Des choix. »`,
         1,
-        "Morgha la Céciteuse - Elle observe tes choix avec attention, comme si elle savait déjà ce que tu vas décider.",
+        "Morgha la Céciteuse.",
         "sanctuaire_choix_relique.jpg",
       ],
       [
         4,
-        "Tu sers la dague contre ta paume. Son contact est froid, presque douloureux. Morgha te regarde longuement et t'explique qu'Yrnwald ne peut plus être sauvé, mais que la Brèche originelle au nord peut être scellée. Dehors, le vent a tourné. L'aube ne vient pas. Sur la carte gravée dans ta mémoire, trois routes apparaissent clairement vers des fragments de vérité.",
+        `
+        Chapitre IV – Trois Voies vers la Mort.
+        
+        Dehors, le vent a tourné. L’aube ne vient pas. Yrnwald ne connaît plus le jour. 
+        La lumière ne vient désormais que des Brèches, et de ceux qu’elles consument.
+        Sur la carte gravée dans ta mémoire — ou transmise par la Marque — trois routes apparaissent clairement. 
+        Aucune n’est sûre. Toutes mènent à un fragment de vérité.`,
         1,
-        "Morgha la Céciteuse - Elle te donne ses derniers conseils avant ton départ.",
+        "NULL",
         "yrnwald_trois_routes.jpg",
       ],
       [
         5,
-        "Les arbres de Gräven se referment sur toi comme des os longs et tordus. Le silence y est pesant, troublé seulement par les chuchotements des feuilles mortes qui ne tombent jamais et t'observent. Tu progresses à pas lents, sentant parfois ton reflet marcher à contre-courant sur l'écorce. Une lumière rougeâtre perce le brouillard : un campement avec un autel fait de crânes et de branches.",
+        `
+        Chapitre V – Le Bois où Murmure la Brèche.
+        
+        Les arbres de Gräven se referment sur toi comme des os longs et tordus. Le silence y est pesant, troublé seulement par les chuchotements des feuilles mortes. 
+        Elles ne tombent jamais. Elles t’observent.
+       
+        Tu progresses à pas lents. Tu sens parfois ton reflet marcher à contre-courant sur l’écorce.
+        Puis, une lumière rougeâtre perce le brouillard. Un feu. Un campement. Un petit autel fait de crânes et de branches. Et une silhouette accroupie.
+        « Porte-Marque, hm ? Tu sens encore le sang frais. C’est rare. La plupart de ceux que je vois ici… sont creux. »
+       
+        Un marchand masqué, vêtu de bandes de cuir et de morceaux d’ossements polis, s’adresse à toi sans lever les yeux. Son visage est caché par un masque rituel. Il ne semble pas hostile.
+        « Je vends souvenirs, malédictions, promesses… et parfois, des choses utiles. Tout dépend de ce que tu cherches. Et de ce que tu es prêt à perdre. »
+       
+        Il étale devant toi plusieurs objets :
+        
+        - Une fiole de mémoire, contenant un souvenir vivant.
+
+        - Une lame d'obsidienne, fragile mais capable de trancher les esprits.
+
+        - Un crochet de Brèche, qui pulse au rythme de ton propre cœur.
+
+        Tu ressens une familiarité étrange avec un des objets.
+        Ton instinct te guide, ou peut-être est-ce la Marque. Le marchand, en te regardant, modifie discrètement l’ordre des objets. Il sait quelque chose, ou croit savoir.
+        « Tu peux en prendre un. Mais je prendrai quelque chose aussi. Pas maintenant. Plus tard. Quand tu auras oublié que tu m'es redevable. »
+        
+        Il rit. Puis s'efface dans les bois, comme s'il n'avait jamais été là.
+        
+        Tu repars. L’objet que tu as choisi ou celui que tu n’as pas refusé. 
+        Tu ne sais pas encore quand il te servira. 
+        Tu ne sais pas encore ce qu’il t’a coûté.`,
         1,
-        "Marchand masqué - Vêtu de bandes de cuir et de morceaux d'ossements polis, son visage est caché par un masque rituel. Il vend souvenirs, malédictions et promesses.",
+        "Marchand masqué.",
         "foret_graven_marchand.jpg",
       ],
       [
         6,
-        "Tu quittes Gräven par l'ancien sentier de pierre, là où la mousse mange les symboles oubliés. Dans ton dos, les arbres se referment lentement - ils n'aiment pas laisser partir ce qu'ils ont vu. La brume devient cendre, le vent porte des éclats de voix. Au loin, une tour solitaire perce la plaine déserte : la Tour du Voile, autrefois phare pour les sentinelles du nord.",
+        `
+        Chapitre VI – Le Murmure et la Faille.
+        
+        Tu quittes Gräven par l’ancien sentier de pierre, là où la mousse mange les symboles oubliés. Dans ton dos, les arbres se referment lentement. Ils n’aiment pas laisser partir ce qu’ils ont vu.
+        La brume devient cendre.
+        Le vent porte des éclats de voix. Ce ne sont pas des mots — juste la sensation d’être appelé.
+        
+        Tu marches.
+        Au loin, une tour solitaire perce la plaine déserte.
+        La Tour du Voile.
+        
+        Autrefois, c’était un phare pour les sentinelles du nord.
+        Aujourd’hui, elle penche sous son propre poids, éventrée à mi-hauteur, mais toujours dressée comme un doigt contre le ciel gris.
+        
+        Tu l’atteins au crépuscule (même si, ici, le crépuscule ne finit jamais).
+        Le seuil est ouvert. 
+        
+        Tu entres.`,
         1,
-        "Aucun PNJ - Solitude et mystère dans la plaine désolée.",
+        "NULL",
         "tour_voile_plaine.jpg",
       ],
       [
         7,
-        "À l'intérieur de la tour, la lumière s'éteint d'elle-même. Les murs sont couverts de runes effacées que tu ne peux lire. Un vieillard vêtu de peaux rapiécées, un bandeau couvrant ses yeux, t'attendait. Il ne parle que par symboles et fragments, mais tu comprends qu'il faut éveiller l'un des Trois Dormeurs pour atteindre la Brèche. Il te montre des cartes à moitié brûlées clouées au mur.",
+        `
+        Chapitre VII – La Veille du Dormeur.
+        
+        À l’intérieur, la lumière s’éteint d’elle-même. Les murs sont couverts de runes effacées, que tu ne peux lire — ou que tu refuses de comprendre.
+        Dans le silence, un grincement. Quelqu’un vit encore ici. Et il t’attendait.
+        
+        Un vieillard, vêtu de peaux rapiécées, un bandeau couvrant ses yeux. Il tend vers toi une main décharnée.
+        « Porte-Marque. Tu es… tôt. Trop tôt. Ou bien trop tard. »
+        
+        Il n’a pas de nom. Il ne parle que par symboles. Des fragments. Mais tu comprends une chose :
+        « Si tu veux atteindre la Brèche, tu devras éveiller l’un des Trois Dormeurs. »
+        
+        Trois piliers scellés par le sang ancien, gardiens des portes de la Couronne d’Épine. Trois entités liées à ton propre passé. Ou futur.
+        Il pointe vers les cartes à moitié brûlées clouées au mur :
+        La Reine Écorchée, dans les ruines d’Ashtorath.
+
+        - Le Veilleur Aveugle, sous les Temples.
+
+        - La Mère Cendre, endormie sous le Lac Noir.
+
+        - Tu devras en réveiller au moins un. Mais aucun réveil ne sera sans prix.
+
+        À partir de maintenant, le choix que tu as fait plus tôt commence à modifier subtilement ton lien avec ces entités.
+        L’un d’eux te répondra plus aisément.
+        Un autre pourrait te reconnaître.
+        Un troisième pourrait te haïr.
+        Mais tu ignores encore lequel.
+
+        Avant de partir, le vieil homme te remet un fragment d’os poli. Une clef.
+        Pas pour une porte, mais pour un souvenir.
+        « Quand la douleur viendra, serre-la fort. Et regarde bien ce que tu oubliais. »
+        
+        Tu repars.`,
         1,
-        "Vieillard aveugle - Sans nom, il ne parle que par symboles. Gardien des secrets des Trois Dormeurs.",
+        "Vieillard aveugle.",
         "tour_vieillard_cartes.jpg",
       ],
       [
