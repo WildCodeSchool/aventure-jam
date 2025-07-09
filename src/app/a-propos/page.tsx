@@ -9,7 +9,7 @@ const About = () => {
           <Link href="/">
             <img
               className={styles.linkAccueil}
-              src="images/9713317.png"
+              src="/Logo/9713317.png"
               alt="Aller vers accueil"
             />
           </Link>
@@ -68,20 +68,8 @@ const About = () => {
             >
               <img
                 className={styles.linkMaxence}
-                src="/images/9131529.png"
+                src="/Logo/9131529.png"
                 alt="lien vers linkendin Maxence"
-              />
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.linkedin.com/in/ad-m-3bb008357/"
-              target="blank"
-            >
-              <img
-                className={styles.linkAdrien}
-                src="/images/1742317018912.jpg"
-                alt="lien vers linkedin Adrien"
               />
             </a>
           </li>

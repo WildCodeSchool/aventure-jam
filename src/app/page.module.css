@@ -1,5 +1,5 @@
 .homeBody {
-  background-image: url(../../public/images/bgHome.png);
+  background-image: url(/background/bgHome.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;

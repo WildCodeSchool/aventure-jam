@@ -57,7 +57,8 @@ const schema = `
     object_id INT NOT NULL,
     link_to_steps_id INT NOT NULL,
     FOREIGN KEY (object_id) REFERENCES object(id),
-    FOREIGN KEY (etape_id) REFERENCES steps(id)
+    FOREIGN KEY (steps_id) REFERENCES steps(id)
+    FOREIGN KEY (link_to_step_id) REFERENCES steps(id)
 
   );
 
@@ -68,7 +69,7 @@ const schema = `
     object_id INT NOT NULL,
     user_id INT NOT NULL,
     FOREIGN KEY (history_id) REFERENCES history(id),
-    FOREIGN KEY (etape_id) REFERENCES steps(id),
+    FOREIGN KEY (steps_id) REFERENCES steps(id),
     FOREIGN KEY (object_id) REFERENCES object(id),
     FOREIGN KEY (user_id) REFERENCES users(id)
   );
@@ -78,7 +79,7 @@ const schema = `
     steps_id INT NOT NULL,
     object_id INT NOT NULL,
     FOREIGN KEY (object_id) REFERENCES object(id),
-    FOREIGN KEY (etape_id) REFERENCES steps(id)
+    FOREIGN KEY (steps_id) REFERENCES steps(id)
   );
 `;
 
