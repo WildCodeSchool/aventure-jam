@@ -121,10 +121,7 @@ const seed = async () => {
     const etapes = [
       [
         1,
-        `
-        Chapitre I – L’Éveil dans les Brumes.
-        
-        Tu ouvres les yeux, étendu sur un sol froid et dur. Autour de toi, des ruines noyées dans une brume cramoisie. L’air sent la chair calcinée et la cendre mouillée. 
+        `Tu ouvres les yeux, étendu sur un sol froid et dur. Autour de toi, des ruines noyées dans une brume cramoisie. L’air sent la chair calcinée et la cendre mouillée. 
         Le ciel est figé, crevé d’un œil rouge qui ne cligne jamais. Tu n’as ni souvenir, ni nom. Juste la sensation aiguë que tu n’es pas censé être là… pas en vie.
         
         Tu te redresses lentement. Tes membres sont engourdis, ta gorge sèche comme si tu avais crié des siècles dans le vide. 
@@ -146,13 +143,10 @@ const seed = async () => {
       ],
       [
         2,
-        `
-        Chapitre II – La Voix des Morts.
-        
-        Elle te conduit dans les profondeurs d’un sanctuaire à moitié effondré, un ancien Temple des Veilleurs. 
+        `Elle te conduit dans les profondeurs d’un sanctuaire à moitié effondré, un ancien Temple des Veilleurs. 
         Là, dans l’obscurité fumeuse, brûle un feu noir, silencieux. 
         
-        La femme – elle se nomme Morgha la Céciteuse – te donne de quoi boire. 
+        La femme – elle se nomme Morgha la Céciteuse, elle te donne de quoi boire. 
         L’eau est cendreuse, mais elle te rend un peu de vigueur.
         « Le monde s’éteint. Les Brèches, ouvertes par la Couronne d’Épine, laissent entrer la Peste Rouge et ses Enfants. »
         « Toi, tu viens d’un monde d’avant. Ou peut-être d’un futur qui n’existe plus. Qu’importe. Tu portes la Marque. Tu peux refermer la Brèche originelle. »
@@ -165,10 +159,7 @@ const seed = async () => {
       ],
       [
         3,
-        `
-        Chapitre III – Le Pacte de Cendre.
-        
-        Tu sers la dague contre ta paume. Son contact est froid, presque douloureux. Mais dans ton esprit, un écho s’éveille. Des souvenirs… ou des fragments de ce que tu pourrais être. 
+        `Tu sers la dague contre ta paume. Son contact est froid, presque douloureux. Mais dans ton esprit, un écho s’éveille. Des souvenirs… ou des fragments de ce que tu pourrais être. 
         
         Tu ne les comprends pas tous. Tu ne sais pas encore ce que tu étais. Mais quelque chose, là-dessous, se tend vers la surface.
         
@@ -186,10 +177,7 @@ const seed = async () => {
       ],
       [
         4,
-        `
-        Chapitre IV – Trois Voies vers la Mort.
-        
-        Dehors, le vent a tourné. L’aube ne vient pas. Yrnwald ne connaît plus le jour. 
+        `Dehors, le vent a tourné. L’aube ne vient pas. Yrnwald ne connaît plus le jour. 
         La lumière ne vient désormais que des Brèches, et de ceux qu’elles consument.
         Sur la carte gravée dans ta mémoire — ou transmise par la Marque — trois routes apparaissent clairement. 
         Aucune n’est sûre. Toutes mènent à un fragment de vérité.`,
@@ -199,10 +187,7 @@ const seed = async () => {
       ],
       [
         5,
-        `
-        Chapitre V – Le Bois où Murmure la Brèche.
-        
-        Les arbres de Gräven se referment sur toi comme des os longs et tordus. Le silence y est pesant, troublé seulement par les chuchotements des feuilles mortes. 
+        `Les arbres de Gräven se referment sur toi comme des os longs et tordus. Le silence y est pesant, troublé seulement par les chuchotements des feuilles mortes. 
         Elles ne tombent jamais. Elles t’observent.
        
         Tu progresses à pas lents. Tu sens parfois ton reflet marcher à contre-courant sur l’écorce.
@@ -235,10 +220,7 @@ const seed = async () => {
       ],
       [
         6,
-        `
-        Chapitre VI – Le Murmure et la Faille.
-        
-        Tu quittes Gräven par l’ancien sentier de pierre, là où la mousse mange les symboles oubliés. Dans ton dos, les arbres se referment lentement. Ils n’aiment pas laisser partir ce qu’ils ont vu.
+        `Tu quittes Gräven par l’ancien sentier de pierre, là où la mousse mange les symboles oubliés. Dans ton dos, les arbres se referment lentement. Ils n’aiment pas laisser partir ce qu’ils ont vu.
         La brume devient cendre.
         Le vent porte des éclats de voix. Ce ne sont pas des mots — juste la sensation d’être appelé.
         
@@ -259,10 +241,7 @@ const seed = async () => {
       ],
       [
         7,
-        `
-        Chapitre VII – La Veille du Dormeur.
-        
-        À l’intérieur, la lumière s’éteint d’elle-même. Les murs sont couverts de runes effacées, que tu ne peux lire — ou que tu refuses de comprendre.
+        `À l’intérieur, la lumière s’éteint d’elle-même. Les murs sont couverts de runes effacées, que tu ne peux lire — ou que tu refuses de comprendre.
         Dans le silence, un grincement. Quelqu’un vit encore ici. Et il t’attendait.
         
         Un vieillard, vêtu de peaux rapiécées, un bandeau couvrant ses yeux. Il tend vers toi une main décharnée.
@@ -298,164 +277,306 @@ const seed = async () => {
       ],
       [
         8,
-        "La terre elle-même change sous tes pas, devenant poussière. Les oiseaux ne chantent plus. Un cri déchire le silence : un enfant court vers toi à travers la plaine, affolé, tenant un paquet ensanglanté. Il hurle un nom que tu n'as pas entendu depuis longtemps - ton ancien nom. Soudain, la terre s'ouvre sur une Brèche vivante et affamée, ses tentacules d'ombre s'élançant vers vous.",
+        `Fuyant la Brèche vivante, tu ouvres une voie vers un territoire inconnu. 
+        Les vents cendrés mordent ta peau tandis que tu franchis un ancien pont de pierre, effondré par endroits, suspendu au-dessus d’un gouffre sans fond.
+
+        Derrière toi, la Brèche hurle, une gueule béante et palpitante, crachant des filaments d’ombre qui rampent sur les murs et les colonnes brisées,
+        traquant ta chaleur, ton souffle, ton existence même.
+
+        Tu cours, chaque pas résonne comme un tambour funeste sur les dalles fissurées. La Brèche n’oublie jamais ce qui lui échappe.
+        Tu n’es plus qu’un fugitif, poursuivi par un abîme qui te connaît déjà mieux que toi-même.
+        Pourtant, quelque part au-delà de ce pont, un territoire inconnu t’appelle, porteur d’espoir ou de damnation.
+
+        Derrière toi, la Brèche te traque encore.`,
         1,
-        "Enfant affolé - Petit, humain, tenant un mystérieux paquet. Il semble te connaître sous un ancien nom.",
-        "plaine_enfant_breche.jpg",
+        "NULL.",
+        "plaine_breche.jpg",
       ],
       [
         9,
-        "La route jusqu'aux ruines est silencieuse. Tu traverses une ancienne arche gravée de glyphes réduits à des éraflures. Le sol craque sous tes pas - ce ne sont pas des pierres, mais des os. Ashtorath était autrefois une cité couronnée d'argent, aujourd'hui réduite à des colonnes brisées. Une lueur vacille : la Reine Écorchée t'attend sur son trône de fer fondu, entourée d'ombres agenouillées.",
+        `Tu franchis les arches brisées et les avenues mortes d’Ashtorath, la cité déchue. Sous tes pas, le sol craque : 
+        ce ne sont pas des pierres, mais des ossements blanchis, mêlés à la cendre.
+        
+        Le vent y charrie une odeur de fer et de cendre froide. La lumière rouge des Brèches coule le long des murs éboulés, projetant des ombres immenses et déformées.
+
+        Au centre de la place principale, un trône de fer fondu se dresse encore, forgé dans les restes de l’ancien pouvoir. 
+        Dessus repose la Reine Écorchée, sa chair est à nu, nouée de chaînes d’argent et de tissus ensanglantés, mais elle siège avec une grâce morbide. Ses yeux, deux abysses sans fond, te fixent avec une faim ancienne.
+        « Un Porte-Marque… Enfin. » murmure-t-elle, sa voix aussi douce que le poison.
+
+        Elle tend sa main décharnée, dévoilant une lame noire, faite du même fer que son trône.
+        « Le chemin vers la Brèche demande du sang, Porte-Marque. Le mien… ou le tien. »
+
+        Son regard te transperce, comme si elle sondait les fragments de ton âme.
+        Tu sais que ce choix ne sera pas sans conséquence. Qu’importera ton offrande, la Reine ne sortira pas indemne de cet échange.
+        L’air devient plus lourd. Le silence s’étend, suspendu, attendant ta décision.
+
+        Le Pacte de Sang d’Ashtorath te guette.`,
         1,
-        "La Reine Écorchée - Assise sur un trône de fer fondu, entourée d'ombres silencieuses. Elle semble te reconnaître comme un héritier.",
+        "La Reine Écorchée",
         "ashtorath_reine_ecorchee.jpg",
       ],
       [
         10,
-        "La Reine te propose un choix : pour réveiller la porte, il faut du sang - le tien ou le sien. Ses yeux vides s'enfoncent dans les tiens, deux puits affamés. Quand tu fais ton choix, la Marque réagit violemment. Le sol tremble, un pilier noir jaillit du centre du temple brisé avec des chaînes brisées qui tournoient autour. Le premier Dormeur s'éveille avec un cri étouffé mais pas étranger.",
+        `Le sol se met à trembler sous tes pieds, d’abord faiblement, puis avec la violence d’un cœur ancien qui se réveille.
+
+        Dans les profondeurs d’Ashtorath, des chaînes invisibles se rompent une à une, leurs échos résonnant comme des cloches funèbres dans toute la cité dévastée.
+
+        Un pilier noir, suintant d’une lumière blafarde, surgit des entrailles du sol, tordant la réalité autour de lui. Il pulse au rythme de la Marque que tu portes, comme si une partie de toi répondait à son appel.
+        Autour, l’air devient lourd, saturé d’une odeur de cendre brûlante et de métal ancien.
+
+        Puis vient le cri.
+
+        Un hurlement lointain, venu d’un autre temps, un cri d’agonie et de renaissance, qui transperce les brumes d’Yrnwald.
+        Tu comprends, sans qu’on te l’explique : le premier Dormeur est éveillé. 
+        Un rayon d’énergie écarlate s’élève vers les cieux morts, traçant un sillon visible depuis chaque recoin du monde.
+
+        Désormais, plus rien ne sera jamais comme avant.`,
         1,
-        "La Reine Écorchée - Elle se dissout lentement après l'éveil, son corps n'était qu'un fragment.",
+        "NULL.",
         "pilier_noir_eveil.jpg",
       ],
       [
         11,
-        "Des chaînes de lumière montent vers le ciel, traçant une ligne visible jusqu'à l'horizon. Sur le chemin du retour, alors que les ruines s'effacent, tu rencontres un pèlerin vêtu d'un manteau de cendres, au visage masqué de bois blanc. Il s'incline et te remet un parchemin scellé par une mèche de tes propres cheveux - que tu ne te souviens pas qu'on t'ait pris.",
+        `Sur le chemin du retour, alors que les ruines d’Ashtorath disparaissent lentement derrière toi, noyées dans la brume rougeâtre, 
+        une silhouette se dessine au milieu du sentier effacé.
+
+        Un pèlerin. Son visage est caché sous un masque de bois blanc, sans expression, et son manteau semble fait de cendres et de linceuls rapiécés.
+      
+        Sans dire un mot, il incline la tête et s’approche.
+
+        Il tend un parchemin ancien, scellé d’une mèche de cheveux… tes propres cheveux. Tu ne te souviens pas qu’on ait pu te les prendre, 
+        mais tu reconnais la teinte, la texture, et un frisson te parcourt.
+        Sa voix, faible comme un souffle entre les mondes, brise enfin le silence :
+        « Ouvre-le seulement lorsque tu n’auras plus d’autre choix. »
+      
+        Il te fixe longuement, et tu devines, derrière le masque, un regard qui sait trop de choses.
+
+        « Souviens-toi… Ce que tu crois avoir perdu peut encore être sauvé. »
+
+        Avant que tu ne puisses poser la moindre question, il disparaît dans la brume, comme effacé de la réalité.
+        Seul reste ce poids dans ta main : le parchemin scellé, brûlant d’un secret que tu redoutes de connaître. `,
         1,
-        "Pèlerin du Vide - Manteau de cendres, masque de bois blanc. Il semble connaître ton destin mieux que toi.",
+        "Pèlerin du Vide",
         "pelerin_parchemin.jpg",
       ],
       [
         12,
-        "Tu marches seul vers la Couronne d'Épine à travers le Bois-Puits, un lieu où l'espace et la mémoire se plient aux volontés anciennes. Une silhouette familière approche - une femme dont tu ne vois pas le visage. Elle tient dans ses mains le paquet ensanglanté perdu durant ta fuite. Elle t'annonce froidement qu'il contenait ton vrai nom, désormais volé par un autre.",
+        `Dans les profondeurs du Bois-Puits, là où la brume se mêle aux ombres tordues des arbres morts, le chemin se dérobe sous tes pas.
+        L’air devient plus lourd, saturé d’une étrange nostalgie. Chaque pas semble t’enfoncer davantage dans un passé que tu n’as jamais demandé à retrouver.
+
+        Une silhouette apparaît, surgissant lentement d’un voile de brume mouvante.
+        Une femme, drapée d’un long manteau sombre. Son visage reste masqué par un voile d’argent, et sa voix résonne dans ta tête avant même qu’elle ne parle.
+
+        Dans ses mains pâles, elle tient un objet que tu reconnais aussitôt : le paquet ensanglanté que tu avais perdu lors de ta fuite.
+        Elle s’arrête à quelques pas de toi et tend l’objet sans un mot. Puis, d’une voix glaciale, elle murmure :
+        « Tu l’as abandonné. »
+
+        Son ton n’est ni accusateur, ni compatissant. Elle énonce un fait. Un constat.
+        « Ce paquet contenait ton vrai nom. Celui que tu as volontairement oublié pour survivre jusqu’ici. »
+
+        La brume autour de toi s’épaissit. L’atmosphère devient suffocante, et une silhouette s’avance derrière elle, encore dissimulée dans les ombres mouvantes.
+        La femme recule alors, disparaissant sans laisser de trace, comme si elle n’avait jamais existé.
+        Il ne reste que toi, ton fardeau retrouvé… et ce qui s’approche lentement, prêt à te confronter. `,
         1,
         "Femme mystérieuse - Visage non visible, elle semble liée à ton passé oublié. Porteuse de mauvaises nouvelles.",
         "bois_puits_nom_vole.jpg",
       ],
       [
         13,
-        "L'air devient lourd. Quelqu'un approche - quelqu'un qui te ressemble. Tu fais face à ton double, une version de toi plus jeune, plus pure, peut-être plus cruelle. Il se présente comme celui que tu aurais pu être, celui que tu as refusé de devenir, celui qui se souvient. Il te tend une lame noire sans reflet et t'explique qu'il ne peut y avoir qu'un seul porteur pour la Brèche.",
+        `La forêt s'efface derrière toi, avalée par la brume.
+        Tu marches dans un espace où les frontières s’effondrent, là où le sol et le ciel se confondent, et où la mémoire se replie sur elle-même.
+
+        Devant toi, une silhouette t’attend.
+        Tu la reconnais avant même de discerner ses traits.
+
+        C'est toi. Une version de toi-même, plus jeune, plus claire… ou peut-être simplement plus vraie.
+        Il porte les marques de ton passé, celles que tu as refusé de voir. Son regard te transperce, froid et sans jugement.
+        Dans ses mains, une lame noire, sans reflet, comme un abîme qui absorbe la lumière.
+
+        Il te tend l’arme. Sa voix est douce, presque triste :
+        « Il ne peut y avoir qu’un seul Porte-Marque. La Brèche exige un porteur. Un seul. »
+
+        Puis il ajoute, sans détour :
+        « Tu peux fuir. Tu peux me combattre. Ou bien… tu peux m’accepter. »
+
+        Les mots résonnent comme une sentence.
+        Ce choix, tu l’as peut-être déjà fait ailleurs, dans un souvenir oublié ou dans un futur effacé.
+        Mais ici, face à toi-même, il ne peut plus être repoussé.
+        C’est le dernier carrefour, celui qui décide non seulement de ta survie… 
+        mais aussi de ce que deviendra le monde.`,
         1,
-        "Ton double - Version alternative de toi-même, plus jeune et qui possède tes souvenirs perdus. Il tient une lame noire inquiétante.",
+        "Ton double.",
         "miroir_fendu_double.jpg",
       ],
       [
         14,
-        "Le sommet est proche. Tu vois la Brèche suspendue dans le ciel, un gouffre qui transperce la réalité. La Couronne d'Épine flotte au-dessus du vide, ses pics tournoyants scintillant de souvenirs et de malheurs. Trois escaliers mènent à elle, mais un seul porteur peut franchir le seuil. C'est maintenant que tu dois choisir la fin de ton histoire et le prix que tu es prêt à payer.",
+        `Le ciel se déchire au-dessus de toi, dévoilant la Couronne d’Épine, suspendue au-dessus du gouffre béant qu’est la Brèche.
+        Elle tourne lentement, immense et silencieuse, tissée d’épines noires et de fragments de souvenirs déchirés. Chaque pointe scintille de lumière rouge, comme des étoiles mourantes.
+
+        Trois escaliers de pierre s'élèvent vers elle, chacun portant les marques des choix que tu as faits jusque-là.
+        Aucun ne semble plus sûr qu’un autre.
+
+        Tu ressens la Brèche t’appeler, affamée, impatiente. C’est ici que ton voyage prend fin. Ici que tu dois faire le dernier choix.
+
+        Le vent hurle autour de toi, portant les échos de tous ceux qui t’ont précédé… et échoué.
+
+        Un seul Porte-Marque peut franchir le seuil.
+        Ce que tu abandonneras ici ne pourra jamais être repris.`,
         1,
-        "Ton double - Selon le choix précédent, il peut être ton allié, ton ennemi, ou une partie de toi-même à accepter.",
+        "NULL.",
         "couronne_epine_choix_final.jpg",
+      ],
+      [
+        15,
+        `Les ruines d’Ashtorath se dressent devant toi, noyées sous une brume écarlate qui glisse entre les colonnes brisées comme une marée vivante.
+        Chaque pas réveille une poussière noire, lourde comme du plomb. Le vent lui-même semble fuir ce lieu.
+
+        Autour de toi, des ombres rampent, silencieuses, traînant derrière elles des traînées de cendres incandescentes.
+        Au centre de ce charnier oublié, une silhouette t’attend, drapée dans des lambeaux d’étoffe et de fumée.
+
+        Un Spectre.
+        Son visage est masqué par une couronne fendue, et sa voix n’est qu’un souffle glacé, sifflant entre les pierres :
+        « Porte-Marque… Reviens d’où tu viens. Ou abandonne ce que tu crois être tien. »
+
+        Il tend une main décharnée vers toi, paume ouverte, attendant que tu fasses ton choix.
+        Dans son regard, il n’y a ni haine, ni compassion. Seulement la faim d’un pacte ancien.
+
+        Un frisson parcourt ton dos. Ici, il te faudra sacrifier quelque chose : ta mémoire… ou ta chair.`,
+        1,
+        "Spectres des ruines",
+        "Spectres_des_ruines.jpg",
+      ],
+      [
+        16,
+        `Tu descends dans les entrailles des ruines d’Ashtorath.
+        Les escaliers de pierre s’effritent sous tes pas, chaque marche recouverte de suie, de cendres et d’ossements noircis par le feu ancien.
+        Les murs transpirent, suintant une humidité chaude mêlée à la cendre, comme si la cité elle-même pleurait ses morts.
+
+        Au loin, une faible lueur vacille dans l’obscurité étouffante.
+        Une flamme pâle, oscillant sans source apparente, t’invite à continuer, mais plus tu avances, plus la Marque sur ta main brûle.
+
+        Tu ressens une présence…
+        Quelque chose d’ancien, tapi dans l’ombre, qui attend que tu franchisses un seuil invisible.
+        Pourtant, tes jambes avancent, guidées par cette lumière qui semble t’appeler par ton propre sang.`,
+        1,
+        "NUll",
+        "ruines_Ashtorath.jpg",
+      ],
+      [
+        17,
+        `Les Temples en ruine s’élèvent autour de toi, leurs colonnes effondrées marquant les vestiges d’un culte oublié.
+
+        L’air est saturé d’une odeur âcre, un mélange de fer, de cendres et d’encens brûlé jusqu’à la pierre.
+
+        Dans l’ombre des arches brisées, des silhouettes encapuchonnées prient en silence.
+        Leurs voix sont absentes, mais leurs lèvres remuent dans une ferveur glaciale, comme si elles récitaient un serment ancien que seul l’écho des murs peut entendre.
+
+        Leurs robes sont lourdes, couvertes de symboles tracés avec du sang séché et de la cendre.
+        À chaque pas que tu fais, leurs têtes se tournent lentement vers toi, dévoilant des visages masqués, où l’on devine des regards vides, consumés par la dévotion.
+
+        Leurs gestes sont lents, presque mécaniques, comme s’ils suivaient une volonté qui n’est plus la leur.
+        Tu ressens que ce lieu est sacré… ou maudit.
+
+        Quelque chose t’attend ici.
+        Une opportunité… ou un piège.`,
+        1,
+        "Fanatique",
+        "Temple_en_ruine.jpg",
+      ],
+      [
+        18,
+        `Sous les fondations fragiles des Temples en ruine, tu découvres une crypte oubliée.
+        L’air y est plus lourd, chargé d’une énergie ancienne, presque palpable.
+        Au centre, un autel massif, gravé de symboles étranges et de runes effacées, s’élève dans l’obscurité.
+        La lumière de ta Marque pulse doucement, résonnant avec les gravures.
+
+        Devant toi, un choix crucial :
+
+        Purifier la Marque — offrir une part de ton essence pour la purifier, effaçant ses ténèbres, au risque de t’affaiblir temporairement.
+
+        Ou corrompre davantage la Marque — embrasser pleinement son pouvoir obscur, au prix de t’enfoncer plus profondément dans la cendre et le néant.
+
+        Le poids de ta décision pèse lourd dans la nuit silencieuse.
+        Chaque option façonnera ta destinée. `,
+        1,
+        "NULL",
+        "Dessous_temple_en_ruine.jpg",
       ],
     ];
     for (const etape of etapes) {
       await connection.execute(
-        `INSERT INTO etape (id, texte, history_id, pnj, background) VALUES (?, ?, ?, ?, ?)`,
+        `INSERT INTO steps (id, texte, history_id, pnj, background) VALUES (?, ?, ?, ?, ?)`,
         etape
       );
     }
 
     const choices = [
+      [1, "Suivre la vieille femme à travers les ruines", 1, "NULL", 2],
+
+      [2, "Choisir La Lame Noire (guerrier)", 2, 1, 3],
+      [3, "Choisir L’Ombre Sifflante (rôdeur)", 2, 1, 3],
+      [4, "Choisir L’Appel du Sang (sorcier)", 2, 1, 3],
+
+      [5, "Prendre la Pierre de veillée", 3, 2, 4],
+      [6, "Prendre l’Anneau de murmures", 3, 3, 4],
+      [7, "Prendre la Poche d’ombres", 3, 4, 4],
+
+      [8, "Prendre la route vers les Peste-Ruines d’Ashtorath", 4, "NULL", 15],
+      [9, "Prendre la route vers la Forêt de Gräven", 4, "NULL", 5],
+      [10, "Prendre la route vers les Temples en ruine", 4, "NULL", 17],
+
+      [11, "Acheter la Fiole de mémoire", 5, 5, 6],
+      [12, "Acheter la Lame d’obsidienne", 5, 6, 6],
+      [13, "Acheter le Crochet de Brèche", 5, 7, 6],
+
+      [14, "Suivre la route vers la Tour du Voile", 6, "NULL", 7],
+
+      [15, "Utiliser un objet défensif pour bloquer l’ombre", 8, "NULL", 9],
       [
-        1,
-        "La Lame Noire, Tu ressens dans ton bras la mémoire d'un guerrier : vif, impitoyable, doué au combat rapproché.",
-        1,
-        12,
-      ],
-      [
-        2,
-        "L'Ombre Sifflante, Tu étais un rôdeur. Discret, rusé, maniant la dague et le mensonge comme des armes.",
-        1,
-        12,
-      ],
-      [
-        3,
-        "L'Appel du Sang, Tu sens couler en toi une magie ancienne, interdite. Tu étais sorcier… ou pire.",
-        1,
-        12,
-      ],
-
-      [4, "Accepter la dague cérémonielle de Morgha", 2, 1],
-      [5, "Refuser la dague et chercher une autre arme", 2, 1],
-
-      [6, "Prendre la pierre de veillée (ressusciter une fois)", 3, 2],
-      [7, "Prendre l'anneau de murmures (entendre les secrets cachés)", 3, 3],
-      [8, "Prendre la poche d'ombres (dissimulation)", 3, 4],
-
-      [9, "Partir vers les Peste-Ruines d'Ashtorath à l'ouest", 4, 1],
-      [10, "Se diriger vers la Forêt de Gräven au sud-est", 4, 1],
-      [11, "Aller vers les Temples en ruine au nord-est", 4, 1],
-
-      [12, "Prendre la fiole de mémoire (contenant un souvenir vivant)", 5, 5],
-      [
-        13,
-        "Prendre la lame d'obsidienne (fragile mais tranche les esprits)",
-        5,
-        6,
-      ],
-      [14, "Prendre le crochet de Brèche (pulse au rythme de ton cœur)", 5, 7],
-      [15, "Refuser les objets du marchand et partir", 5, 1],
-
-      [16, "Entrer directement dans la tour", 6, 1],
-      [17, "Observer la tour de loin avant d'approcher", 6, 1],
-      [18, "Contourner la tour et continuer ton chemin", 6, 1],
-
-      [
-        19,
-        "Choisir d'éveiller la Reine Écorchée dans les ruines d'Ashtorath",
-        7,
+        16,
+        "Utiliser un artefact de voyage pour fuir instantanément",
         8,
+        "NULL",
+        9,
       ],
-      [20, "Choisir d'éveiller le Veilleur Aveugle sous les Temples", 7, 8],
-      [21, "Choisir d'éveiller la Mère Cendre sous le Lac Noir", 7, 8],
 
-      [22, "Protéger l'enfant avec un objet de défense", 8, 2],
-      [23, "Fuir immédiatement avec un artefact de voyage", 8, 4],
-      [24, "Appeler à l'aide avec un objet magique", 8, 3],
-      [25, "Tenter de sauver le paquet ensanglanté", 8, 10],
+      [17, "Invoquer une aide temporaire", 8, "NULL", 9],
 
-      [26, "Montrer du respect à la Reine", 9, 1],
-      [27, "Défier la Reine et ses ombres", 9, 1],
-      [28, "Tenter de négocier avec elle", 9, 1],
+      [18, "Offrir ton sang à la Reine Écorchée", 9, "NULL", 10],
+      [19, "Offrir le sien", 9, "NULL", 10],
 
-      [29, "Offrir ton propre sang pour réveiller la porte", 10, 1],
-      [30, "Demander à la Reine de donner son sang", 10, 1],
-      [31, "Utiliser un artefact obtenu précédemment", 10, 5],
+      [20, "Accepter le fragment d’os et continuer vers la suite", 10, 8, 11],
 
-      [32, "Garder le parchemin scellé pour le bon moment", 11, 9],
-      [33, "Ouvrir immédiatement le parchemin par curiosité", 11, 9],
-      [34, "Refuser le parchemin du Pèlerin", 11, 1],
+      [21, "Poursuivre vers la Couronne d’Épine", 11, 9, 12],
 
-      [35, "Accepter la perte de ton nom avec résignation", 12, 10],
-      [36, "Tenter de récupérer le paquet coûte que coûte", 12, 10],
-      [37, "Fuir avant que l'autre version de toi n'arrive", 12, 10],
-      [38, "Demander qui a volé ton nom", 12, 10],
-
-      [39, "Accepter le combat contre ton double", 13, 11],
-      [40, "Refuser la lame et chercher une réconciliation", 13, 11],
-      [41, "Proposer de partager le fardeau ensemble", 13, 11],
-      [42, "Tenter de fuir ce choix impossible", 13, 11],
+      [22, "Suivre la femme pour récupérer le paquet", 12, 10, 13],
+      [23, "Refuser et continuer seul", 12, "NULL", 13],
 
       [
-        43,
-        "Te sacrifier - Laisser l'autre franchir la Brèche (Fin 1: Le Héros Oublié)",
+        24,
+        "Se sacrifier et laisser l’autre franchir la Brèche",
+        13,
+        "NULL",
         14,
-        11,
       ],
-      [
-        44,
-        "Combattre ton double pour prendre sa place (Fin 2: Le Brisé)",
-        14,
-        11,
-      ],
-      [
-        45,
-        "Fusionner avec lui pour devenir complet (Fin 3: Le Souverain Gris)",
-        14,
-        11,
-      ],
+      [25, "Combattre son double et prendre sa place", 13, 11, 14],
+      [26, "Fusionner avec son double", 13, "NULL", 14],
+
+      [27, "Accepter de donner ta mémoire au Spectre", 15, "NULL", 16],
+      [28, "Refuser et affronter les ombres", 15, "NULL", 16],
+
+      [29, "Suivre la lumière dans les souterrains", 16, "NULL", 8],
+      [30, "Rebrousser chemin", 16, "NULL", 8],
+
+      [31, "Prier auprès des fanatiques", 17, "NULL", 18],
+      [32, "Tenter de dérober un artefact", 17, "NULL", 18],
+
+      [33, "Purifier ta Marque à l’autel", 18, "NULL", 8],
+      [34, "Corrompre davantage ta Marque à l’autel", 18, "NULL", 8],
     ];
     for (const choice of choices) {
       await connection.execute(
-        `INSERT INTO choice (id, texte, etape_id, object_id) VALUES (?, ?, ?, ?)`,
+        `INSERT INTO choice (id, texte, etape_id, object_id, link_to_steps_id) VALUES (?, ?, ?, ?, ?)`,
         choice
       );
     }
