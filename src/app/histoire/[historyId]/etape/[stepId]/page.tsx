@@ -1,11 +1,7 @@
 import { apiRoutes } from "@/data/ROUTES";
 import styles from "./etape.module.css";
 import Link from "next/link";
-
-type Choice = {
-  id: number;
-  texte: string;
-};
+import { ChoiceModel } from "@/model/ChoiceModel";
 
 type Props = {
   params: {
@@ -20,7 +16,7 @@ const Step = async ({ params }: Props) => {
   const apiStepResult = await fetch(apiRoutes.STEP(historyId, stepId));
   const step = await apiStepResult.json();
   const apiChoicesResult = await fetch(apiRoutes.CHOICES(historyId, stepId));
-  const choices: Choice[] = await apiChoicesResult.json();
+  const choices: ChoiceModel[] = await apiChoicesResult.json();
 
   return (
     <section className={styles.etapeBody}>
@@ -39,7 +35,15 @@ const Step = async ({ params }: Props) => {
           <ul className={styles.ChoiceCase}>
             {choices.map((choice) => (
               <li key={choice.id} className={styles.choiceStyle}>
-                <Link href="">{choice.texte}</Link>
+                <Link
+                  href={
+                    choice.link_to_step_id === 0
+                      ? "/"
+                      : `/histoire/${historyId}/etape/${choice.link_to_step_id}`
+                  }
+                >
+                  {choice.texte}
+                </Link>
               </li>
             ))}
           </ul>

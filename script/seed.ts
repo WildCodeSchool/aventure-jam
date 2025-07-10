@@ -19,7 +19,6 @@ const seed = async () => {
       SET FOREIGN_KEY_CHECKS = 0;
       TRUNCATE TABLE progress;
       TRUNCATE TABLE inventory;
-      TRUNCATE TABLE steps_objects;
       TRUNCATE TABLE choice;
       TRUNCATE TABLE steps;
       TRUNCATE TABLE history;
@@ -182,7 +181,7 @@ const seed = async () => {
         Sur la carte gravée dans ta mémoire — ou transmise par la Marque — trois routes apparaissent clairement. 
         Aucune n’est sûre. Toutes mènent à un fragment de vérité.`,
         1,
-        "NULL",
+        null,
         "yrnwald_trois_routes.jpg",
       ],
       [
@@ -236,12 +235,12 @@ const seed = async () => {
         
         Tu entres.`,
         1,
-        "NULL",
+        null,
         "tour_voile_plaine.jpg",
       ],
       [
         7,
-        `À l’intérieur, la lumière s’éteint d’elle-même. Les murs sont couverts de runes effacées, que tu ne peux lire — ou que tu refuses de comprendre.
+        `À l’intérieur, la lumière s’éteint d’elle-même. Les murs sont couverts de runes effacées, que tu ne peux lire  ou que tu refuses de comprendre.
         Dans le silence, un grincement. Quelqu’un vit encore ici. Et il t’attendait.
         
         Un vieillard, vêtu de peaux rapiécées, un bandeau couvrant ses yeux. Il tend vers toi une main décharnée.
@@ -289,7 +288,7 @@ const seed = async () => {
 
         Derrière toi, la Brèche te traque encore.`,
         1,
-        "NULL.",
+        null,
         "plaine_breche.jpg",
       ],
       [
@@ -332,7 +331,7 @@ const seed = async () => {
 
         Désormais, plus rien ne sera jamais comme avant.`,
         1,
-        "NULL.",
+        null,
         "pilier_noir_eveil.jpg",
       ],
       [
@@ -397,7 +396,11 @@ const seed = async () => {
         « Il ne peut y avoir qu’un seul Porte-Marque. La Brèche exige un porteur. Un seul. »
 
         Puis il ajoute, sans détour :
-        « Tu peux fuir. Tu peux me combattre. Ou bien… tu peux m’accepter. »
+        « Tu peux fuir. 
+        
+        Tu peux me combattre. 
+        
+        Ou bien… tu peux m’accepter. »
 
         Les mots résonnent comme une sentence.
         Ce choix, tu l’as peut-être déjà fait ailleurs, dans un souvenir oublié ou dans un futur effacé.
@@ -423,7 +426,7 @@ const seed = async () => {
         Un seul Porte-Marque peut franchir le seuil.
         Ce que tu abandonneras ici ne pourra jamais être repris.`,
         1,
-        "NULL.",
+        null,
         "couronne_epine_choix_final.jpg",
       ],
       [
@@ -459,7 +462,7 @@ const seed = async () => {
         Quelque chose d’ancien, tapi dans l’ombre, qui attend que tu franchisses un seuil invisible.
         Pourtant, tes jambes avancent, guidées par cette lumière qui semble t’appeler par ton propre sang.`,
         1,
-        "NUll",
+        null,
         "ruines_Ashtorath.jpg",
       ],
       [
@@ -499,8 +502,129 @@ const seed = async () => {
         Le poids de ta décision pèse lourd dans la nuit silencieuse.
         Chaque option façonnera ta destinée. `,
         1,
-        "NULL",
+        null,
         "Dessous_temple_en_ruine.jpg",
+      ],
+      [
+        19,
+        `Sous la surface du Lac Noir, tout s’alourdit. L’eau, épaisse et sombre comme du verre liquide, freine chacun de tes mouvements. 
+        Chaque pas s’enfonce dans un lit de cendres détrempées, réveillant des volutes noires qui s’élèvent comme des spectres endormis.
+
+        Le silence est absolu, brisé seulement par ta propre respiration, étouffée et lointaine, comme si tu étais déjà mort.
+        Au cœur du sanctuaire englouti, tu la vois.
+
+        La Mère Cendre.
+
+        Une silhouette gigantesque, pétrifiée dans un sommeil sans âge. Son corps, formé de pierre et de racines cendrées, repose sur un trône d’ossements noués. 
+        Des veines d’obsidienne serpentent sa peau minérale, pulsant au rythme d’une lueur rougeoyante, comme un cœur encore vivant.
+
+        À mesure que tu t’approches, l’eau elle-même frémit sous son souffle. Chaque battement de sa respiration fait vibrer l’air et l’eau, 
+        distordant la lumière autour d’elle.
+        Des souvenirs diffus surgissent dans ton esprit. Des murmures d’un pacte ancien. Une soif insatiable, un pouvoir interdit.
+
+        Tu comprends que son rêve n’est pas seulement un songe : c’est une corruption qui s’étend lentement, menaçant d’engloutir tout ce qui approche. 
+        Pourtant, quelque chose en toi s’y rattache, une marque oubliée, un lien profond… comme si tu avais jadis bu à sa source, ou porté son héritage.`,
+        1,
+        null,
+        "temple mere des cendres.jpg",
+      ],
+      [
+        20,
+        `Tu fermes les yeux un instant. Le vent tourbillonne autour de la Couronne d’Épine, emportant les cendres et les fragments de mémoire arrachés au monde.
+          Face à toi, ton double te fixe. Il ne dit rien. Il sait ce que tu t’apprêtes à faire.
+
+          Sans un mot, tu t’écartes.
+
+        Tu le laisses franchir la Brèche à ta place.Il s’avance, lentement, absorbé par la lumière écarlate. Chaque pas résonne comme un glas. 
+        La Marque sur ta main s’efface, consumée par un feu froid. Ton souffle devient brume.Lorsque ton double atteint le seuil, un éclat traverse le ciel. 
+        La Brèche se referme dans un hurlement muet. Les chaînes de la Couronne d’Épine se brisent, et le monde entier semble retenir son souffle.
+
+        Tu sens ton propre être se déliter.Ton nom… ton vrai nom… s’efface, comme s’il n’avait jamais existé. 
+        Les souvenirs te glissent entre les doigts. Même ton visage devient flou dans ton esprit. Mais une chose demeure claire :
+
+        Le monde est sauvé.
+
+        Yrnwald renaîtra, libéré de la Peste Rouge et des Brèches.
+        Les flammes noires s’éteignent une à une.
+        La lumière, nouvelle et douce, caresse l’horizon.
+        Les habitants des terres oubliées réapprennent à respirer, à vivre, à espérer.
+        Et pourtant…
+
+        Personne ne se souviendra jamais de toi.
+        Ni de ton sacrifice, ni de ta lutte, ni de ton existence.
+
+        Tu deviens un souffle dans la brise, une ombre dans les contes qui ne seront jamais contés.
+
+        Mais quelque part, dans le silence du monde réparé, une rumeur persiste :
+        "Quand le néant menacera à nouveau, un Porte-Marque sans nom reviendra…"
+
+        Puis tout s’efface.`,
+        1,
+        null,
+        "the end.jpg",
+      ],
+      [
+        21,
+        `La Couronne d’Épine scintille, suspendue au-dessus de la Brèche béante. Autour de toi, le monde entier retient son souffle.
+
+        Face à toi, ton double t'observe. 
+        Il est calme, sûr de lui. Un sourire froid sur les lèvres, il lève son arme, celle que tu reconnais comme une extension de toi-même.
+
+        Le choix t’est retiré, il faut combattre.
+        La lutte est brutale, sans répit, sans pitié. Vos coups résonnent comme des tonnerres. L’acier contre l’acier, la chair contre la chair. 
+        Chaque impact déchire un peu plus le tissu du monde, et la Brèche rugit, avide de dévorer l’un de vous.
+
+        Tu sens ta Marque brûler, s'embraser comme jamais auparavant. Elle alimente ta force, t’offrant la rage d'un désespoir ancien. 
+        Ton double lutte avec la même fureur, car vous êtes faits du même sang, du même oubli.
+        Mais au terme d’un affrontement déchirant, c’est toi qui l’emportes.
+
+        Dans un dernier éclat de lumière noire, ton double s’effondre. Il te sourit, même en disparaissant.
+        Il savait que ce combat ne pouvait avoir de vainqueur. Le silence retombe.
+
+        La Brèche se referme sous ta main, obéissant à ta volonté brisée. La Couronne d’Épine s'efface, consumée dans le néant.
+
+        Yrnwald est sauvé. Le monde, lentement, reprend son souffle, mais toi…
+
+        Toi, tu sais que quelque chose s’est logé dans ton cœur. Un fragment de ton double, un éclat de noirceur, caché, tapi, affamé.
+        Tu es devenu le Héros que le monde attendait, mais au fond de toi, un murmure résonne encore.
+        Un poison lent. Une ombre qui grandira. Le monde ne le saura jamais. Mais toi.....
+        
+        Tu ne l’oublieras pas.`,
+        1,
+        null,
+        "the end.jpg",
+      ],
+      [
+        22,
+        `Le vent tourbillonne autour de la Couronne d’Épine, faisant danser les cendres dans l’air figé.
+        Devant toi, ton double t’attend, immobile, la lame baissée, son regard empreint d’une étrange compassion.
+        Mais cette fois, il n’y aura ni fuite, ni combat.
+
+        Tu tends la main vers lui. Sans un mot, il accepte. Vos doigts se rejoignent, et aussitôt, la Marque s’illumine, brûlante, dévorante.
+        Tout vacille. Tes souvenirs affluent, les tiens, mais aussi les siens. Des visions d’une vie que tu n’as jamais vécue. Des douleurs que tu n’as jamais ressenties. 
+        Des pouvoirs que tu n’avais pas encore osé effleurer. Les limites entre vous s’effacent.
+
+        Tu ne sais plus où il finit et où tu commences. Vous n’êtes plus deux. Vous êtes un.
+        Une seule conscience, plus vaste, plus ancienne. Un souffle traverse le monde.
+
+        La Brèche, face à toi, se referme lentement, comme soumise à ta volonté nouvelle. La Couronne d’Épine s'incline devant ta puissance. 
+        Le ciel se recoud, et Yrnwald renaît sous une lueur étrange. Mais rien ne sera jamais comme avant.
+
+        Car toi, désormais, tu portes tout : les souvenirs, la douleur, la Marque, le pouvoir… et le poids du monde.
+        Tu es devenu le Souverain Gris. Gardien d’un monde sauvé, mais transformé à jamais.
+
+        Roi d’un royaume où plus personne ne peut dire si la lumière triomphe encore de l’ombre.`,
+        1,
+        null,
+        "the end.jpg",
+      ],
+      [
+        23,
+        `L’histoire touche à sa fin… mais toutes les réponses n’ont peut-être pas encore été trouvées. 
+        Dans les Brumes d’Yrnwald, les souvenirs perdus attendent toujours les voyageurs assez fous pour les rechercher.`,
+        1,
+        null,
+        "end of history.jpg",
       ],
     ];
     for (const etape of etapes) {
@@ -511,7 +635,7 @@ const seed = async () => {
     }
 
     const choices = [
-      [1, "Suivre la vieille femme à travers les ruines", 1, "NULL", 2],
+      [1, "Suivre la vieille femme à travers les ruines", 1, null, 2],
 
       [2, "Choisir La Lame Noire (guerrier)", 2, 1, 3],
       [3, "Choisir L’Ombre Sifflante (rôdeur)", 2, 1, 3],
@@ -521,62 +645,91 @@ const seed = async () => {
       [6, "Prendre l’Anneau de murmures", 3, 3, 4],
       [7, "Prendre la Poche d’ombres", 3, 4, 4],
 
-      [8, "Prendre la route vers les Peste-Ruines d’Ashtorath", 4, "NULL", 15],
-      [9, "Prendre la route vers la Forêt de Gräven", 4, "NULL", 5],
-      [10, "Prendre la route vers les Temples en ruine", 4, "NULL", 17],
+      [8, "Prendre la route vers les Peste-Ruines d’Ashtorath", 4, null, 15],
+      [9, "Prendre la route vers la Forêt de Gräven", 4, null, 5],
+      [10, "Prendre la route vers les Temples en ruine", 4, null, 17],
 
       [11, "Acheter la Fiole de mémoire", 5, 5, 6],
       [12, "Acheter la Lame d’obsidienne", 5, 6, 6],
       [13, "Acheter le Crochet de Brèche", 5, 7, 6],
 
-      [14, "Suivre la route vers la Tour du Voile", 6, "NULL", 7],
+      [14, "Suivre la route vers la Tour du Voile", 6, null, 7],
 
-      [15, "Utiliser un objet défensif pour bloquer l’ombre", 8, "NULL", 9],
+      [15, "Utiliser un objet défensif pour bloquer l’ombre", 8, null, 9],
       [
         16,
         "Utiliser un artefact de voyage pour fuir instantanément",
         8,
-        "NULL",
+        null,
         9,
       ],
 
-      [17, "Invoquer une aide temporaire", 8, "NULL", 9],
+      [17, "Invoquer une aide temporaire", 8, null, 9],
 
-      [18, "Offrir ton sang à la Reine Écorchée", 9, "NULL", 10],
-      [19, "Offrir le sien", 9, "NULL", 10],
+      [18, "Offrir ton sang à la Reine Écorchée", 9, null, 10],
+      [19, "Offrir le sien", 9, null, 10],
 
       [20, "Accepter le fragment d’os et continuer vers la suite", 10, 8, 11],
 
       [21, "Poursuivre vers la Couronne d’Épine", 11, 9, 12],
 
       [22, "Suivre la femme pour récupérer le paquet", 12, 10, 13],
-      [23, "Refuser et continuer seul", 12, "NULL", 13],
+      [23, "Refuser et continuer seul", 12, null, 13],
 
+      [24, "Fuir et laisser ton autre franchir la Brèche", 13, null, 20],
+      [25, "Combattre son double et prendre sa place", 13, 11, 21],
+      [26, "Fusionner avec son double", 13, null, 22],
+
+      [27, "Accepter de donner ta mémoire au Spectre", 15, null, 16],
+      [28, "Refuser et affronter les ombres", 15, null, 16],
+
+      [29, "Suivre la lumière dans les souterrains", 16, null, 8],
+      [30, "Rebrousser chemin", 16, null, 8],
+
+      [31, "Prier auprès des fanatiques", 17, null, 18],
+      [32, "Tenter de dérober un artefact", 17, null, 18],
+
+      [33, "Purifier ta Marque à l’autel", 18, null, 8],
+      [34, "Corrompre davantage ta Marque à l’autel", 18, null, 8],
+      [35, "Reprendre la route vers la Tour du Voile", 16, null, 7],
+      [36, "Quitter les Temples et rejoindre la Tour du Voile", 18, null, 7],
       [
-        24,
-        "Se sacrifier et laisser l’autre franchir la Brèche",
-        13,
-        "NULL",
-        14,
+        37,
+        "Se rendre aux Ruines d’Ashtorath pour réveiller la Reine Écorchée",
+        7,
+        null,
+        15,
       ],
-      [25, "Combattre son double et prendre sa place", 13, 11, 14],
-      [26, "Fusionner avec son double", 13, "NULL", 14],
-
-      [27, "Accepter de donner ta mémoire au Spectre", 15, "NULL", 16],
-      [28, "Refuser et affronter les ombres", 15, "NULL", 16],
-
-      [29, "Suivre la lumière dans les souterrains", 16, "NULL", 8],
-      [30, "Rebrousser chemin", 16, "NULL", 8],
-
-      [31, "Prier auprès des fanatiques", 17, "NULL", 18],
-      [32, "Tenter de dérober un artefact", 17, "NULL", 18],
-
-      [33, "Purifier ta Marque à l’autel", 18, "NULL", 8],
-      [34, "Corrompre davantage ta Marque à l’autel", 18, "NULL", 8],
+      [
+        38,
+        "Se rendre aux Temples pour éveiller le Veilleur Aveugle",
+        7,
+        null,
+        17,
+      ],
+      [
+        39,
+        "Se rendre sous le Lac Noir pour éveiller la Mère Cendre",
+        7,
+        null,
+        19,
+      ],
+      [
+        40,
+        "Éveiller la Mère Cendre en offrant un fragment de toi-même",
+        19,
+        null,
+        8,
+      ],
+      [41, "Refuser de troubler son sommeil et fuir discrètement", 19, null, 8],
+      [42, "Fin : Le Héros Oublié", 20, null, 23],
+      [43, "Fin : Le Brisé", 21, null, 23],
+      [44, "Fin : Le Souverain Gris", 22, null, 23],
+      [45, "revenir à l'accueil.", 23, null, 0],
     ];
     for (const choice of choices) {
       await connection.execute(
-        `INSERT INTO choice (id, texte, etape_id, object_id, link_to_steps_id) VALUES (?, ?, ?, ?, ?)`,
+        `INSERT INTO choice (id, texte, step_id, object_id, link_to_step_id) VALUES (?, ?, ?, ?, ?)`,
         choice
       );
     }
@@ -592,29 +745,6 @@ const seed = async () => {
       await connection.execute(
         `INSERT INTO users (id, pseudo, avatar, email) VALUES (?, ?, ?, ?)`,
         user
-      );
-    }
-
-    const etapeObjects = [
-      [1, 12],
-      [2, 1],
-      [3, 2],
-      [3, 3],
-      [3, 4],
-      [5, 5],
-      [5, 6],
-      [5, 7],
-      [7, 8],
-      [8, 10],
-      [11, 9],
-      [12, 10],
-      [13, 11],
-      [14, 11],
-    ];
-    for (const eo of etapeObjects) {
-      await connection.execute(
-        `INSERT INTO etape_object (etape_id, object_id) VALUES (?, ?)`,
-        eo
       );
     }
 
@@ -640,7 +770,7 @@ const seed = async () => {
     ];
     for (const prog of progressions) {
       await connection.execute(
-        `INSERT INTO progress (history_id, etape_id, object_id, user_id) VALUES (?, ?, ?, ?)`,
+        `INSERT INTO progress (history_id, step_id, object_id, user_id) VALUES (?, ?, ?, ?)`,
         prog
       );
     }
