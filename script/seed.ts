@@ -629,7 +629,7 @@ const seed = async () => {
     ];
     for (const etape of etapes) {
       await connection.execute(
-        `INSERT INTO steps (id, text, history_id, pnj, background) VALUES (?, ?, ?, ?, ?)`,
+        `INSERT INTO steps (id, text, historyId, pnj, background) VALUES (?, ?, ?, ?, ?)`,
         etape
       );
     }
@@ -729,7 +729,7 @@ const seed = async () => {
     ];
     for (const choice of choices) {
       await connection.execute(
-        `INSERT INTO choice (id, text, step_id, object_id, link_to_step_id) VALUES (?, ?, ?, ?, ?)`,
+        `INSERT INTO choice (id, text, stepId, objectId, linkToStepId) VALUES (?, ?, ?, ?, ?)`,
         choice
       );
     }
@@ -757,7 +757,7 @@ const seed = async () => {
     ];
     for (const inv of inventories) {
       await connection.execute(
-        `INSERT INTO inventory (is_used, user_id, object_id, history_id) VALUES (?, ?, ?, ?)`,
+        `INSERT INTO inventory (isUsed, userId, objectId, historyId) VALUES (?, ?, ?, ?)`,
         inv
       );
     }
@@ -770,7 +770,7 @@ const seed = async () => {
     ];
     for (const prog of progressions) {
       await connection.execute(
-        `INSERT INTO progress (history_id, step_id, object_id, user_id) VALUES (?, ?, ?, ?)`,
+        `INSERT INTO progress (historyId, stepId, objectId, userId) VALUES (?, ?, ?, ?)`,
         prog
       );
     }

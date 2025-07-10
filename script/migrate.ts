@@ -31,44 +31,44 @@ const schema = `
     
   CREATE TABLE IF NOT EXISTS inventory (
       id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
-      is_used BOOLEAN NOT NULL,
-      user_id INT NOT NULL,
-      object_id INT,
-      history_id INT NOT NULL,
-      FOREIGN KEY (object_id) REFERENCES object(id),
-      FOREIGN KEY (user_id) REFERENCES users(id),
-      FOREIGN KEY (history_id) REFERENCES history(id)
+      isUsed BOOLEAN NOT NULL,
+      userId INT NOT NULL,
+      objectId INT,
+      historyId INT NOT NULL,
+      FOREIGN KEY (objectId) REFERENCES object(id),
+      FOREIGN KEY (userId) REFERENCES users(id),
+      FOREIGN KEY (historyId) REFERENCES history(id)
   );
 
   CREATE TABLE IF NOT EXISTS steps (
     id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
     text TEXT NOT NULL,
-    history_id INT NOT NULL,
+    historyId INT NOT NULL,
     pnj VARCHAR(255),
     background TEXT NOT NULL,
-    FOREIGN KEY (history_id) REFERENCES history(id)
+    FOREIGN KEY (historyId) REFERENCES history(id)
   );
 
   CREATE TABLE IF NOT EXISTS choice (
     id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
     text TEXT NOT NULL,
-    step_id INT NOT NULL,
-    object_id INT,
-    link_to_step_id INT NOT NULL,
-    FOREIGN KEY (object_id) REFERENCES object(id),
-    FOREIGN KEY (step_id) REFERENCES steps(id)
+    stepId INT NOT NULL,
+    objectId INT,
+    linkToStepId INT NOT NULL,
+    FOREIGN KEY (objectId) REFERENCES object(id),
+    FOREIGN KEY (stepId) REFERENCES steps(id)
     );
 
   CREATE TABLE IF NOT EXISTS progress (
     id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
-    history_id INT NOT NULL,
-    step_id INT NOT NULL,
-    object_id INT,
-    user_id INT NOT NULL,
-    FOREIGN KEY (history_id) REFERENCES history(id),
-    FOREIGN KEY (step_id) REFERENCES steps(id),
-    FOREIGN KEY (object_id) REFERENCES object(id),
-    FOREIGN KEY (user_id) REFERENCES users(id)
+    historyId INT NOT NULL,
+    stepId INT NOT NULL,
+    objectId INT,
+    userId INT NOT NULL,
+    FOREIGN KEY (historyId) REFERENCES history(id),
+    FOREIGN KEY (stepId) REFERENCES steps(id),
+    FOREIGN KEY (objectId) REFERENCES object(id),
+    FOREIGN KEY (userId) REFERENCES users(id)
   );
 
 

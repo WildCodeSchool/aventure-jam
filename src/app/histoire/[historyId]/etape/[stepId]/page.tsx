@@ -30,19 +30,19 @@ const Step = async ({ params }: Props) => {
         </Link>
       </div>
       <div className={styles.mainEtapeTitle}>
-        <p>{step.texte}</p>
+        <p>{step.text}</p>
         <div className={styles.ChoiceList}>
           <ul className={styles.ChoiceCase}>
             {choices.map((choice) => (
               <li key={choice.id} className={styles.choiceStyle}>
                 <Link
                   href={
-                    choice.link_to_step_id === 0
+                    choice.linkToStepId === 0
                       ? "/"
-                      : `/histoire/${historyId}/etape/${choice.link_to_step_id}`
+                      : `/histoire/${historyId}/etape/${choice.linkToStepId}`
                   }
                 >
-                  {choice.texte}
+                  {choice.text}
                 </Link>
               </li>
             ))}

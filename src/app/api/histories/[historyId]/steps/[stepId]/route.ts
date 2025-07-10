@@ -10,7 +10,7 @@ export async function GET(_req: Request, { params }: Params) {
   const { stepId, historyId } = await params;
   try {
     const result = await db.query(
-      "SELECT id, texte, history_id, pnj, background FROM steps WHERE id = ? AND history_id = ? ",
+      "SELECT id, text, historyId, pnj, background FROM steps WHERE id = ? AND historyId = ? ",
 
       [stepId, historyId]
     );
