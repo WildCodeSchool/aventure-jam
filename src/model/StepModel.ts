@@ -1,7 +1,7 @@
 export interface StepModel {
   id: number;
   text: string;
-  historyId: number;
+  history_id: number;
   pnj: string;
   background: string;
 }

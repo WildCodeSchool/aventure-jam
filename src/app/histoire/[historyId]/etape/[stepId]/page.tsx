@@ -37,9 +37,9 @@ const Step = async ({ params }: Props) => {
               <li key={choice.id} className={styles.choiceStyle}>
                 <Link
                   href={
-                    choice.linkToStepId === 0
+                    choice.link_to_step_id === 0
                       ? "/"
-                      : `/histoire/${historyId}/etape/${choice.linkToStepId}`
+                      : `/histoire/${historyId}/etape/${choice.link_to_step_id}`
                   }
                 >
                   {choice.text}
