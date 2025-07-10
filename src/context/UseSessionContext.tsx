@@ -11,6 +11,7 @@ type UserContextType = {
 };
 
 const emptyUser: User = {
+    id: 0,
     email: "",
     pseudo: "",
     avatar: "https://img.freepik.com/premium-vector/dark-fantasy-portrait-witch-illustration_961307-7342.jpg",
@@ -19,10 +20,16 @@ const emptyUser: User = {
         etapeId: 0,
         inventaireid: 0
     },
-    inventaire: {
+    inventaire: [
+        {
         isUsed: false,
         objectId: 0,
-    }
+        },
+        {
+            isUsed: false,
+            objectId: 0,
+        }
+    ]
 }
 
 const UserContext = createContext<UserContextType>({

@@ -3,27 +3,35 @@ import styles from "./Login.module.css";
 import { signIn, signOut, useSession } from "next-auth/react";
 import { useUser } from "@/context/UseSessionContext";
 import { useEffect } from "react";
+import { getOneUser } from "@/lib/getUser";
 
 export default function SignInPage() {
   const { data: session } = useSession()
-  const { setUser, user } = useUser();
+  const { setUser } = useUser();
 
 
   async function handleConnection() {
-    const googleSignIn = await signIn("google");
+    await signIn("google");
+    
   }
 
   useEffect(() => {
-    if (session?.user) {
-      setUser((prevUser) => ({
-        ...prevUser,
-        email: session.user?.email ?? "",
-        pseudo: session.user?.name ?? "Guerrier",
-        avatar:
-          session.user?.image ??
-          "https://img.freepik.com/premium-vector/dark-fantasy-portrait-witch-illustration_961307-7342.jpg",
-      }));
+    async function fetchUser() {
+      if (session?.user) {
+        const resUser = await getOneUser(session.user.email as string);
+        const resId = await resUser.id;
+        await setUser((prevUser) => ({
+          ...prevUser,
+          id: resId,
+          email: session.user?.email ?? "",
+          pseudo: session.user?.name ?? "Guerrier",
+          avatar:
+            session.user?.image ??
+            "https://img.freepik.com/premium-vector/dark-fantasy-portrait-witch-illustration_961307-7342.jpg",
+        }));
+      }
     }
+    fetchUser();
   }, [session]);
 
   if (session) {

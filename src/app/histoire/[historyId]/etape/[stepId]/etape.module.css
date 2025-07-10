@@ -37,3 +37,13 @@
   top: 20px;
   left: 20px;
 }
+  @media screen and (max-width: 800px){
+    .mainEtapeTitle p{
+      font-size: 15px;
+    }
+
+    .mainEtapeTitle{
+      padding: .7rem;
+      width: 95%;
+    }
+  }

@@ -1,6 +1,7 @@
 import { apiRoutes } from "@/data/ROUTES";
 import styles from "./etape.module.css";
 import Link from "next/link";
+import Inventory from "@/ui/Inventory";
 
 type Props = {
   params: {
@@ -26,6 +27,9 @@ const Step = async ({ params }: Props) => {
             alt=" aller vers accueil"
           />
         </Link>
+        <Inventory
+          historyId={historyId}
+        />
       </div>
       <div className={styles.mainEtapeTitle}>
         <p>{step.texte}</p>
