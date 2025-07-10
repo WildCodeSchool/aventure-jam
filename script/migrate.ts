@@ -42,7 +42,7 @@ const schema = `
 
   CREATE TABLE IF NOT EXISTS steps (
     id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
-    texte TEXT NOT NULL,
+    text TEXT NOT NULL,
     history_id INT NOT NULL,
     pnj VARCHAR(255),
     background TEXT NOT NULL,
@@ -51,7 +51,7 @@ const schema = `
 
   CREATE TABLE IF NOT EXISTS choice (
     id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
-    texte TEXT NOT NULL,
+    text TEXT NOT NULL,
     step_id INT NOT NULL,
     object_id INT,
     link_to_step_id INT NOT NULL,

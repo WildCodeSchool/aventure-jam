@@ -629,7 +629,7 @@ const seed = async () => {
     ];
     for (const etape of etapes) {
       await connection.execute(
-        `INSERT INTO steps (id, texte, history_id, pnj, background) VALUES (?, ?, ?, ?, ?)`,
+        `INSERT INTO steps (id, text, history_id, pnj, background) VALUES (?, ?, ?, ?, ?)`,
         etape
       );
     }
@@ -729,7 +729,7 @@ const seed = async () => {
     ];
     for (const choice of choices) {
       await connection.execute(
-        `INSERT INTO choice (id, texte, step_id, object_id, link_to_step_id) VALUES (?, ?, ?, ?, ?)`,
+        `INSERT INTO choice (id, text, step_id, object_id, link_to_step_id) VALUES (?, ?, ?, ?, ?)`,
         choice
       );
     }
