@@ -18,6 +18,8 @@ const Step = async ({ params }: Props) => {
   const apiChoicesResult = await fetch(apiRoutes.CHOICES(historyId, stepId));
   const choices: ChoiceModel[] = await apiChoicesResult.json();
 
+  console.log(choices);
+
   return (
     <section className={styles.etapeBody}>
       <div className={styles.accueilSection}>
@@ -37,9 +39,9 @@ const Step = async ({ params }: Props) => {
               <li key={choice.id} className={styles.choiceStyle}>
                 <Link
                   href={
-                    choice.link_to_step_id === 0
+                    choice.linkToStepId === 0
                       ? "/"
-                      : `/histoire/${historyId}/etape/${choice.link_to_step_id}`
+                      : `/histoire/${historyId}/etape/${choice.linkToStepId}`
                   }
                 >
                   {choice.text}

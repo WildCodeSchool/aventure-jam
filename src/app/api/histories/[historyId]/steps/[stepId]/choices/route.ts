@@ -1,23 +1,20 @@
 import { db } from "@/lib/db";
-import { StepModel } from "@/model/StepModel";
+import { ChoiceModel } from "@/model/ChoiceModel";
 import { NextResponse } from "next/server";
 
 type Params = {
-  params: { stepId: string; choiceId: string };
+  params: { stepId: string; historyId: string };
 };
 
 export async function GET(_req: Request, { params }: Params) {
-  const { stepId } = await params;
+  const { historyId, stepId } = await params;
   try {
     const result = await db.query(
-      "SELECT id, text, step_id, link_to_step_id FROM choice WHERE step_id = ?",
-      [stepId]
+      "SELECT id, text, step_id AS stepId, object_id AS objectId, link_to_step_id AS linkToStepId FROM choice WHERE step_id = ?",
+      [stepId, historyId]
     );
-    const rows = result[0] as StepModel[];
-    if (rows.length === 0) {
-      return NextResponse.json({ error: "Etape non trouvée" }, { status: 404 });
-    }
-    return NextResponse.json(rows);
+    const choices = result[0] as ChoiceModel[];
+    return NextResponse.json(choices);
   } catch (error) {
     console.error("erreur MySql : ", error);
     return NextResponse.json(
