@@ -141,7 +141,7 @@ const seed = async () => {
         <p>« Suis-moi, Porte-Marque. Il te reste peu de temps avant que le Néant ne te réclame de nouveau. »</p>`,
         1,
         "Morgha la Céciteuse.",
-        "ruines_brume_cramoisie.jpg",
+        "/background/imageRuineBrumeCramoisie.png",
       ],
       [
         2,
@@ -157,7 +157,7 @@ const seed = async () => {
         « Mais tu n’as pas d’arme… ni de souvenir. Commence par choisir ce que tu es. Ce que tu veux devenir. »</p>`,
         1,
         "Morgha la Céciteuse.",
-        "temple_veilleurs_feu_noir.jpg",
+        "/background/feuNoirTemple.png",
       ],
       [
         3,
@@ -177,7 +177,7 @@ const seed = async () => {
         <p>Tu ne survivras pas si tu t’y rends aujourd’hui. Il te faudra des réponses. De la puissance. Des choix. »</p>`,
         1,
         "Morgha la Céciteuse.",
-        "sanctuaire_choix_relique.jpg",
+        "/background/feuNoirTemple.png",
       ],
       [
         4,

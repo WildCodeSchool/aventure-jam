@@ -18,37 +18,40 @@ const Step = async ({ params }: Props) => {
   const choices: ChoiceModel[] = await apiChoicesResult.json();
 
   return (
-    <section className={styles.etapeBody}>
-      <div className={styles.accueilSection}>
-        <Link href="/">
-          <img
-            className={styles.linkAccueil}
-            src="/Logo/9713317.png"
-            alt=" aller vers accueil"
+    <section>
+      <img className={styles.etapeBody} src={step.background} alt={step.id} />
+      <div>
+        <div className={styles.accueilSection}>
+          <Link href="/">
+            <img
+              className={styles.linkAccueil}
+              src="/Logo/9713317.png"
+              alt=" aller vers accueil"
+            />
+          </Link>
+        </div>
+        <div className={styles.mainEtapeTitle}>
+          <div
+            className={styles.stepTextContainer}
+            dangerouslySetInnerHTML={{ __html: step.text }}
           />
-        </Link>
-      </div>
-      <div className={styles.mainEtapeTitle}>
-        <div
-          className={styles.stepTextContainer}
-          dangerouslySetInnerHTML={{ __html: step.text }}
-        />
-        <div className={styles.ChoiceList}>
-          <ul className={styles.ChoiceCase}>
-            {choices.map((choice) => (
-              <li key={choice.id} className={styles.choiceStyle}>
-                <Link
-                  href={
-                    choice.linkToStepId === 0
-                      ? "/"
-                      : `/histoire/${historyId}/etape/${choice.linkToStepId}`
-                  }
-                >
-                  {choice.text}
-                </Link>
-              </li>
-            ))}
-          </ul>
+          <div className={styles.ChoiceList}>
+            <ul className={styles.ChoiceCase}>
+              {choices.map((choice) => (
+                <li key={choice.id} className={styles.choiceStyle}>
+                  <Link
+                    href={
+                      choice.linkToStepId === 0
+                        ? "/"
+                        : `/histoire/${historyId}/etape/${choice.linkToStepId}`
+                    }
+                  >
+                    {choice.text}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </section>

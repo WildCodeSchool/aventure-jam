@@ -1,5 +1,5 @@
 .etapeBody {
-  background-image: url(/background/imageRuineBrumeCramoisie.png);
+  position: absolute;
   background-size: cover;
   background-position: center;
   height: 100vh;
