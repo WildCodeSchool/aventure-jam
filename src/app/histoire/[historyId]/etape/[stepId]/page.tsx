@@ -19,7 +19,12 @@ const Step = async ({ params }: Props) => {
   const choices: ChoiceModel[] = await apiChoicesResult.json();
 
   return (
-    <section className={styles.etapeBody}>
+    <section className={styles.globalBody}>
+      <img
+        className={styles.dinamicBackground}
+        src={step.background}
+        alt={step.id}
+      />
       <div className={styles.accueilSection}>
         <Link href="/">
           <img
@@ -30,7 +35,10 @@ const Step = async ({ params }: Props) => {
         </Link>
       </div>
       <div className={styles.mainEtapeTitle}>
-        <p>{step.text}</p>
+        <div
+          className={styles.stepTextContainer}
+          dangerouslySetInnerHTML={{ __html: step.text }}
+        />
         <div className={styles.ChoiceList}>
           <ul className={styles.ChoiceCase}>
             {choices.map((choice) => (
