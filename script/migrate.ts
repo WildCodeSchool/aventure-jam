@@ -20,6 +20,7 @@ const schema = `
     name VARCHAR(100) NOT NULL,
     description TEXT NOT NULL,
     image VARCHAR(100) NOT NULL
+   
   );
 
    CREATE TABLE IF NOT EXISTS history (
@@ -32,50 +33,45 @@ const schema = `
       id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
       is_used BOOLEAN NOT NULL,
       user_id INT NOT NULL,
-      object_id INT NOT NULL,
+      object_id INT,
       history_id INT NOT NULL,
       FOREIGN KEY (object_id) REFERENCES object(id),
       FOREIGN KEY (user_id) REFERENCES users(id),
       FOREIGN KEY (history_id) REFERENCES history(id)
   );
 
-  CREATE TABLE IF NOT EXISTS etape (
+  CREATE TABLE IF NOT EXISTS step (
     id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
-    texte TEXT NOT NULL,
+    text TEXT NOT NULL,
     history_id INT NOT NULL,
-    pnj TEXT NOT NULL,
+    pnj VARCHAR(255),
     background TEXT NOT NULL,
     FOREIGN KEY (history_id) REFERENCES history(id)
   );
 
   CREATE TABLE IF NOT EXISTS choice (
     id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
-    texte TEXT NOT NULL,
-    etape_id INT NOT NULL,
-    object_id INT NOT NULL,
+    text TEXT NOT NULL,
+    step_id INT NOT NULL,
+    object_id INT,
+    link_to_step_id INT NOT NULL,
     FOREIGN KEY (object_id) REFERENCES object(id),
-    FOREIGN KEY (etape_id) REFERENCES etape(id)
-  );
+    FOREIGN KEY (step_id) REFERENCES step(id)
+    );
 
   CREATE TABLE IF NOT EXISTS progress (
     id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
     history_id INT NOT NULL,
-    etape_id INT NOT NULL,
-    object_id INT NOT NULL,
+    step_id INT NOT NULL,
+    object_id INT,
     user_id INT NOT NULL,
     FOREIGN KEY (history_id) REFERENCES history(id),
-    FOREIGN KEY (etape_id) REFERENCES etape(id),
+    FOREIGN KEY (step_id) REFERENCES step(id),
     FOREIGN KEY (object_id) REFERENCES object(id),
     FOREIGN KEY (user_id) REFERENCES users(id)
   );
 
-  CREATE TABLE IF NOT EXISTS etape_object (
-    id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
-    etape_id INT NOT NULL,
-    object_id INT NOT NULL,
-    FOREIGN KEY (object_id) REFERENCES object(id),
-    FOREIGN KEY (etape_id) REFERENCES etape(id)
-  );
+
 `;
 
 const migrate = async () => {

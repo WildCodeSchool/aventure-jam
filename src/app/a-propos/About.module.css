@@ -1,5 +1,5 @@
 .aboutBody {
-  background-image: url(../../../public/images/illustrationAboutTemporaire.jpg);
+  background-image: url(/background/illustrationAboutTemporaire.jpg);
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -10,7 +10,7 @@
   height: auto;
   max-width: 80%;
   padding: 50px;
-  font-family: var(--font-piedra), sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -47,28 +47,18 @@
   list-style: none;
   display: flex;
 }
-.linkAdrien {
-  height: 40px;
-  width: 40px;
-  border-radius: 50%;
-}
 .linkJerome {
-  height: 40px;
-  width: 40px;
+  height: 60px;
+  width: 60px;
   border-radius: 50%;
 }
 .linkMaxence {
-  height: 40px;
-  width: 40px;
+  height: 60px;
+  width: 60px;
   border-radius: 50%;
 }
 
 @media screen and (max-width: 800px) {
-  .linkAdrien {
-    height: 30px;
-    width: 30px;
-    border-radius: 50%;
-  }
   .linkJerome {
     height: 30px;
     width: 30px;
@@ -101,9 +91,4 @@
     font-size: 1rem;
   }
 
-  .linkendINButton {
-    display: flex;
-    flex-direction: column;
-    right: 20px;
-  }
 }

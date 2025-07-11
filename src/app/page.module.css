@@ -1,6 +1,7 @@
 .homeBody {
-  background-image: url(../../public/images/bgHome.png);
+  background-image: url(/background/bgHome.png);
   background-size: cover;
+  background-repeat: no-repeat;
   background-position: center;
 }
 
@@ -40,12 +41,12 @@
   }
 
   .mainTitle {
-    font-size: 10px;
+    font-size: 15px;
   }
 
   .linkAbout {
-    height: 20px;
-    width: 20px;
+    height: 30px;
+    width: 30px;
   }
 
   .linkHistory {

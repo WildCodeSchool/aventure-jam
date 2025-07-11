@@ -1,4 +1,4 @@
-export type Inventaire = {
+export type Inventory = {
     isUsed: boolean;
     objectId: number;
-}
+}[];
