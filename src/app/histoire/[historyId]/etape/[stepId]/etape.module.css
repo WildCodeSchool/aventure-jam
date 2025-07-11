@@ -40,6 +40,7 @@
   border: solid white;
   padding: 15px;
 }
+
 .choiceStyle:active {
   animation: gradient 600ms;
 }
@@ -108,5 +109,16 @@
       #fff 100%,
       #fff 100%
     );
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .mainEtapeTitle p {
+    font-size: 15px;
+  }
+
+  .mainEtapeTitle {
+    padding: 0.7rem;
+    width: 95%;
   }
 }

@@ -56,7 +56,7 @@ const schema = `
     object_id INT,
     link_to_step_id INT NOT NULL,
     FOREIGN KEY (object_id) REFERENCES object(id),
-    FOREIGN KEY (step_id) REFERENCES steps(id)
+    FOREIGN KEY (step_id) REFERENCES step(id)
     );
 
   CREATE TABLE IF NOT EXISTS progress (
@@ -66,7 +66,7 @@ const schema = `
     object_id INT,
     user_id INT NOT NULL,
     FOREIGN KEY (history_id) REFERENCES history(id),
-    FOREIGN KEY (step_id) REFERENCES steps(id),
+    FOREIGN KEY (step_id) REFERENCES step(id),
     FOREIGN KEY (object_id) REFERENCES object(id),
     FOREIGN KEY (user_id) REFERENCES users(id)
   );
