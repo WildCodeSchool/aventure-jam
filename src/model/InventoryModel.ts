@@ -1,4 +1,4 @@
 export type Inventaire = {
-    isUsed: boolean;
-    objectId: number;
-}
+  isUsed: boolean;
+  object_id: number;
+};
