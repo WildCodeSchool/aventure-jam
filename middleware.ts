@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 
-const PAGE_PROTECTED_PATHS = [/^\/histoire\/[1-9]$/, /^\/histoire\/[1-9]\/etape\/\d+$/];
+const PAGE_PROTECTED_PATHS = [/^\/histoire\/\d+\/etape\/\d+$/];
 
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;

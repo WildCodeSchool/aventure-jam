@@ -6,9 +6,8 @@ import { useEffect } from "react";
 import { getOneUser } from "@/lib/getUser";
 
 export default function SignInPage() {
-  const { data: session } = useSession()
+  const { data: session } = useSession();
   const { setUser } = useUser();
-
 
   async function handleConnection() {
     await signIn("google");
