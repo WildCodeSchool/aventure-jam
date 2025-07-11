@@ -1,9 +1,9 @@
 import { infoMessages } from "@/data/responseMessages";
 import { apiRoutes } from "@/data/ROUTES";
-import { Inventaire } from "@/model/InventoryModel";
+import { Inventory } from "@/model/InventoryModel";
 
 
-export async function getInventoryByHistory(email: string, historyId: number): Promise<Inventaire[]> {
+export async function getInventoryByHistory(email: string, historyId: number): Promise<Inventory[]> {
     const res = await fetch(`${apiRoutes.INVENTORY(email, historyId)}`, {
         method: "GET",
         headers: {

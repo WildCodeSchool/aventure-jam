@@ -8,7 +8,6 @@ export async function GET(request: NextRequest) {
     const url = await request.nextUrl.pathname
     const email = url.split("/").pop()
 
-    console.log(email)
     try {
         const [rows] = await db.query(
             `SELECT * FROM users WHERE email = ?`,

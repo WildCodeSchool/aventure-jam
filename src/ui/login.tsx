@@ -18,8 +18,8 @@ export default function SignInPage() {
     async function fetchUser() {
       if (session?.user) {
         const resUser = await getOneUser(session.user.email as string);
-        const resId = await resUser.id;
-        await setUser((prevUser) => ({
+        const resId = resUser.id;
+        setUser((prevUser) => ({
           ...prevUser,
           id: resId,
           email: session.user?.email ?? "",

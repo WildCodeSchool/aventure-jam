@@ -1,8 +1,9 @@
 import { apiRoutes } from "@/data/ROUTES";
 import styles from "./etape.module.css";
 import Link from "next/link";
-import Inventory from "@/ui/Inventory";
 import { ChoiceModel } from "@/model/ChoiceModel";
+import dynamic from "next/dynamic";
+const Inventory = dynamic(() => import("@/ui/Inventory"));
 
 type Props = {
   params: {

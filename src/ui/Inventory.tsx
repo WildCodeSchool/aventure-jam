@@ -33,7 +33,7 @@ export default function Inventory({historyId} : {historyId: number} ) {
         };
 
         fetchUser();
-    }, []);
+    }, [session, historyId]);
 
     return (
         <>
@@ -42,7 +42,7 @@ export default function Inventory({historyId} : {historyId: number} ) {
                 <ul className={isVisible ? styles.inventoryContent : styles.disabled}>
                     {user.inventaire.map((item, id) => (
                         <li key={id}>
-                            
+                            {item.name}
                         </li>
                     ))}
                 </ul>
