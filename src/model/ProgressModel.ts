@@ -1,5 +1,5 @@
 export type Progress = {
-    historyId: number;
-    etapeId: number;
-    inventaireid: number;
-}
+  history_id: number;
+  etape_id: number;
+  inventaire_id: number;
+};

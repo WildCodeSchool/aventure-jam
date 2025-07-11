@@ -1,5 +1,5 @@
 .etapeBody {
-  background-image: url(/images/Gemini_Generated_Image_sba3uisba3uisba3.jpg);
+  background-image: url(/background/imageRuineBrumeCramoisie.png);
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -24,18 +24,21 @@
 .mainEtapeTitle p {
   font-size: 18px;
 }
-.nextPage {
-  margin-top: 50px;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row-reverse;
-}
 .linkAccueil {
   height: 40px;
   width: 40px;
   position: fixed;
   top: 20px;
   left: 20px;
+}
+.ChoiceCase {
+  margin: 25px;
+}
+.choiceStyle {
+  background-color: rgb(16, 29, 91);
+  border-radius: 10px;
+  border: solid white;
+  padding: 15px;
 }
   @media screen and (max-width: 800px){
     .mainEtapeTitle p{

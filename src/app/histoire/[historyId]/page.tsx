@@ -19,7 +19,7 @@ const History = async ({ params }: Props) => {
         <Link href="/">
           <img
             className={styles.linkAccueil}
-            src="/images/9713317.png"
+            src="/Logo/9713317.png"
             alt=" aller vers accueil"
           />
         </Link>

@@ -4,9 +4,11 @@ import { useEffect, useState } from "react";
 import styles from "./Inventory.module.css";
 import { useUser } from "@/context/UseSessionContext";
 import { getInventoryByHistory } from "@/lib/getInventory";
+import { useSession } from "next-auth/react";
 
 export default function Inventory({historyId} : {historyId: number} ) {
-
+    const { data: session } = useSession()
+    
     const [isVisible, setIsVisible] = useState(false)
     const { setUser, user } = useUser();
 
@@ -17,11 +19,10 @@ export default function Inventory({historyId} : {historyId: number} ) {
     }
 
     useEffect(() => {
-        const email = user.email
+        const email = session?.user?.email
         const fetchUser = async () => {
             try {
-                const data = await getInventoryByHistory(email, historyId);
-                console.log(data)
+                const data = await getInventoryByHistory(email as string, historyId);
                 setUser(prevUser => ({
                     ...prevUser,
                     ...data,

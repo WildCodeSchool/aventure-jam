@@ -1,5 +1,5 @@
 .aboutBody {
-  background-image: url(../../../public/images/illustrationAboutTemporaire.jpg);
+  background-image: url(/background/illustrationAboutTemporaire.jpg);
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -48,13 +48,13 @@
   display: flex;
 }
 .linkJerome {
-  height: 40px;
-  width: 40px;
+  height: 60px;
+  width: 60px;
   border-radius: 50%;
 }
 .linkMaxence {
-  height: 40px;
-  width: 40px;
+  height: 60px;
+  width: 60px;
   border-radius: 50%;
 }
 

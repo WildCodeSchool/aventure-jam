@@ -9,7 +9,7 @@ const About = () => {
           <Link href="/">
             <img
               className={styles.linkAccueil}
-              src="images/9713317.png"
+              src="/Logo/9713317.png"
               alt="Aller vers accueil"
             />
           </Link>
@@ -61,7 +61,7 @@ const About = () => {
             >
               <img
                 className={styles.linkMaxence}
-                src="/images/9131529.png"
+                src="/Logo/9131529.png"
                 alt="lien vers linkendin Maxence"
               />
             </a>
