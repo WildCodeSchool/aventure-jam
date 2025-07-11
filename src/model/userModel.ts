@@ -3,6 +3,7 @@ import { Progress } from "./ProgressModel";
 
 
 export type User = {
+    id: number;
     pseudo: string;
     avatar: string;
     email: string;

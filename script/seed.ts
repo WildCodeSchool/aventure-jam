@@ -20,7 +20,7 @@ const seed = async () => {
       TRUNCATE TABLE progress;
       TRUNCATE TABLE inventory;
       TRUNCATE TABLE choice;
-      TRUNCATE TABLE steps;
+      TRUNCATE TABLE step;
       TRUNCATE TABLE history;
       TRUNCATE TABLE object;
       TRUNCATE TABLE users;
@@ -629,7 +629,7 @@ const seed = async () => {
     ];
     for (const etape of etapes) {
       await connection.execute(
-        `INSERT INTO steps (id, text, history_id, pnj, background) VALUES (?, ?, ?, ?, ?)`,
+        `INSERT INTO step (id, text, history_id, pnj, background) VALUES (?, ?, ?, ?, ?)`,
         etape
       );
     }
