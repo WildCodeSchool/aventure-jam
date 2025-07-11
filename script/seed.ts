@@ -120,32 +120,35 @@ const seed = async () => {
     const etapes = [
       [
         1,
-        `Tu ouvres les yeux, étendu sur un sol froid et dur. Autour de toi, des ruines noyées dans une brume cramoisie. L’air sent la chair calcinée et la cendre mouillée. 
-        Le ciel est figé, crevé d’un œil rouge qui ne cligne jamais. Tu n’as ni souvenir, ni nom. Juste la sensation aiguë que tu n’es pas censé être là… pas en vie.
-        
-        Tu te redresses lentement. Tes membres sont engourdis, ta gorge sèche comme si tu avais crié des siècles dans le vide. 
-        
-        Tu baisses les yeux sur ta main droite : une marque noire, brûlée dans ta chair. Un œil fermé, entouré de crocs. Tu n’en connais pas le sens, mais il pulse, chaud, comme un cœur battant. 
-        
-        Quelque chose en toi sait : cette marque est une clef. Ou une malédiction.
-        
-        Derrière toi, un craquement.
-        
-        Tu te retournes d’instinct. Une silhouette approche entre les pierres effondrées : une vieille femme drapée d’un manteau de suie. Son visage est masqué par un bandeau de cuir clouté.
-        « Tu n’as pas de nom… » dit-elle d’une voix rauque. « Alors tu peux en forger un. Mais la Marque… elle, t’a choisi. »
-        
-        Elle tend la main. Tu hésites… puis la prends.
-        « Suis-moi, Porte-Marque. Il te reste peu de temps avant que le Néant ne te réclame de nouveau. »`,
+        `<p>Tu ouvres les yeux, étendu sur un sol froid et dur.<br />
+        Autour de toi, des ruines noyées dans une brume cramoisie. L’air sent la chair calcinée et la cendre mouillée.<br />
+        Le ciel est figé, crevé d’un œil rouge qui ne cligne jamais. <br />
+        Tu n’as ni souvenir, ni nom. Juste la sensation aiguë que tu n’es pas censé être là… pas en vie.</p>
+        <br />
+        <p>Tu te redresses lentement. Tes membres sont engourdis, ta gorge sèche comme si tu avais crié des siècles dans le vide.</p>
+        <br />
+        <p>Tu baisses les yeux sur ta main droite : une marque noire, brûlée dans ta chair. Un œil fermé, entouré de crocs.<br />
+        Tu n’en connais pas le sens, mais il pulse, chaud, comme un cœur battant.</p>
+        <br />
+        <p>Quelque chose en toi sait : cette marque est une clef. Ou une malédiction.</p>
+        <br />
+        <p>Derrière toi, un craquement.</p>
+        <br />
+        <p>Tu te retournes d’instinct. Une silhouette approche entre les pierres effondrées : une vieille femme drapée d’un manteau de suie. Son visage est masqué par un bandeau de cuir clouté.<br />
+        « Tu n’as pas de nom… » dit-elle d’une voix rauque. « Alors tu peux en forger un. Mais la Marque… elle, t’a choisi. »</p>
+        <br />
+        <p>Elle tend la main. Tu hésites… puis la prends.<br />
+        <p>« Suis-moi, Porte-Marque. Il te reste peu de temps avant que le Néant ne te réclame de nouveau. »</p>`,
         1,
         "Morgha la Céciteuse.",
         "ruines_brume_cramoisie.jpg",
       ],
       [
         2,
-        `Elle te conduit dans les profondeurs d’un sanctuaire à moitié effondré, un ancien Temple des Veilleurs. 
+        `Elle te conduit dans les profondeurs d’un sanctuaire à moitié effondré, un ancien Temple des Veilleurs.
         Là, dans l’obscurité fumeuse, brûle un feu noir, silencieux. 
         
-        La femme – elle se nomme Morgha la Céciteuse, elle te donne de quoi boire. 
+        La femme – elle se nomme Morgha la Céciteuse, elle te donne de quoi boire.
         L’eau est cendreuse, mais elle te rend un peu de vigueur.
         « Le monde s’éteint. Les Brèches, ouvertes par la Couronne d’Épine, laissent entrer la Peste Rouge et ses Enfants. »
         « Toi, tu viens d’un monde d’avant. Ou peut-être d’un futur qui n’existe plus. Qu’importe. Tu portes la Marque. Tu peux refermer la Brèche originelle. »
@@ -158,14 +161,16 @@ const seed = async () => {
       ],
       [
         3,
-        `Tu sers la dague contre ta paume. Son contact est froid, presque douloureux. Mais dans ton esprit, un écho s’éveille. Des souvenirs… ou des fragments de ce que tu pourrais être. 
+        `Tu sers la dague contre ta paume. Son contact est froid, presque douloureux. Mais dans ton esprit, un écho s’éveille. 
+        Des souvenirs… ou des fragments de ce que tu pourrais être.
         
         Tu ne les comprends pas tous. Tu ne sais pas encore ce que tu étais. Mais quelque chose, là-dessous, se tend vers la surface.
         
         Morgha te regarde longuement.
-        « Il est encore temps. Certains fils du destin sont brisés, d’autres simplement noués. Ta marque n’est pas qu’un fardeau, Porte-Marque. Elle est aussi une clef. »
+        « Il est encore temps. 
+        Certains fils du destin sont brisés, d’autres simplement noués. Ta marque n’est pas qu’un fardeau, Porte-Marque. Elle est aussi une clef. »
         
-        Elle glisse quelque chose dans ta main libre. Un petit objet, que tu glisses sans réfléchir à ta ceinture, autour de ton cou ou à ton doigt. 
+        Elle glisse quelque chose dans ta main libre. Un petit objet, que tu glisses sans réfléchir à ta ceinture, autour de ton cou ou à ton doigt.
         Tu ne sais pas encore ce qu’il est, ni à quoi il servira, mais il pulse doucement contre toi. Un talisman, peut-être… ou un dernier mensonge.
         « Yrnwald ne peut plus être sauvé, mais ce qui se trouve au nord… la Brèche originelle, elle, peut être scellée. 
         
@@ -176,10 +181,34 @@ const seed = async () => {
       ],
       [
         4,
-        `Dehors, le vent a tourné. L’aube ne vient pas. Yrnwald ne connaît plus le jour. 
-        La lumière ne vient désormais que des Brèches, et de ceux qu’elles consument.
-        Sur la carte gravée dans ta mémoire — ou transmise par la Marque — trois routes apparaissent clairement. 
-        Aucune n’est sûre. Toutes mènent à un fragment de vérité.`,
+        `Dehors, le vent a tourné.
+        L’aube ne vient pas.
+        Yrnwald a oublié la lumière du jour, depuis longtemps.
+        Dans l’air, une odeur de fer et de cendre. Des bourrasques froides transportent des cendres rouges, tourbillonnant comme des lucioles mourantes.
+
+        La lumière, ici, ne provient plus du ciel, mais des Brèches — ces plaies ouvertes dans le tissu du monde.
+        Elles pulsent, chaque battement arrachant un peu plus de réalité à ce qui reste du royaume.
+        Et ceux qui s’en approchent trop deviennent… autre chose.
+
+        Tu ressens soudain un tiraillement dans ta main marquée.
+        Une vision surgit dans ton esprit — ou peut-être une réminiscence imposée par la Marque.
+
+        Dans ton esprit, une carte se déploie, brûlée dans ta mémoire.
+        Trois routes apparaissent, claires et nettes, comme si tu avais toujours su qu’elles existaient.
+        Chacune irradie une énergie différente, attirante et mortelle à la fois.
+
+        - À l’ouest, les Peste-Ruines d’Ashtorath : un champ de bataille figé dans le temps, hanté par les échos d’une guerre oubliée. On raconte qu’une reine déchue y veille encore, prisonnière de ses propres malédictions.
+
+        - Au sud-est, la Forêt de Gräven : un bois tortueux où même les arbres semblent doués de conscience. Des murmures y flottent en permanence, certains offrant du savoir… d’autres un piège certain.
+
+        - Au nord-est, les Temples en ruine, vestiges d’une foi dévorée par la folie. Des Veilleurs fanatiques y rôdent encore, plus dangereux que les bêtes, prêts à défendre ce qu’ils appellent « la pureté du Néant ».
+
+        Tu sais que tu devras en choisir une.
+        Aucune de ces routes n’est sûre.
+        Mais toutes mènent à un fragment de la vérité… et peut-être à un bout de toi-même que tu as perdu.
+
+        La Marque palpite, impatiente.
+        Le destin t’attend.`,
         1,
         null,
         "yrnwald_trois_routes.jpg",

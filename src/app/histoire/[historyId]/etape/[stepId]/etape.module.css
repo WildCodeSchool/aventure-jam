@@ -40,3 +40,73 @@
   border: solid white;
   padding: 15px;
 }
+.choiceStyle:active {
+  animation: gradient 600ms;
+}
+@keyframes gradient {
+  0% {
+    background: radial-gradient(
+      circle at center,
+      rgba(255, 125, 125, 0) 0%,
+      #fff 0%,
+      #fff 100%
+    );
+  }
+  15% {
+    background: radial-gradient(
+      circle at center,
+      rgba(170, 9, 9, 0.3) 24%,
+      #fff 15%,
+      #fff 100%
+    );
+  }
+  30% {
+    background: radial-gradient(
+      circle at center,
+      rgba(170, 9, 9, 0.3) 24%,
+      #fff 30%,
+      #fff 100%
+    );
+  }
+  45% {
+    background: radial-gradient(
+      circle at center,
+      rgba(170, 9, 9, 0.3) 24%,
+      #fff 45%,
+      #fff 100%
+    );
+  }
+  60% {
+    background: radial-gradient(
+      circle at center,
+      rgba(170, 9, 9, 0.3) 24%,
+      #fff 60%,
+      #fff 100%
+    );
+  }
+  75% {
+    background: radial-gradient(
+      circle at center,
+      rgba(170, 9, 9, 0.3) 24%,
+      #fff 75%,
+      #fff 100%
+    );
+  }
+  90% {
+    background: radial-gradient(
+      circle at center,
+      rgba(170, 9, 9, 0.3) 24%,
+      #fff 90%,
+      #fff 100%
+    );
+  }
+  100% {
+    color: #fff;
+    background: radial-gradient(
+      circle at center,
+      #f88 99%,
+      #fff 100%,
+      #fff 100%
+    );
+  }
+}

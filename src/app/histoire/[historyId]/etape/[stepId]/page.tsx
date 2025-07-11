@@ -7,7 +7,6 @@ type Props = {
   params: {
     historyId: number;
     stepId: number;
-    choicesId: number;
   };
 };
 
@@ -30,7 +29,10 @@ const Step = async ({ params }: Props) => {
         </Link>
       </div>
       <div className={styles.mainEtapeTitle}>
-        <p>{step.text}</p>
+        <div
+          className={styles.stepTextContainer}
+          dangerouslySetInnerHTML={{ __html: step.text }}
+        />
         <div className={styles.ChoiceList}>
           <ul className={styles.ChoiceCase}>
             {choices.map((choice) => (
