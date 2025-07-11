@@ -40,7 +40,7 @@ const schema = `
       FOREIGN KEY (history_id) REFERENCES history(id)
   );
 
-  CREATE TABLE IF NOT EXISTS steps (
+  CREATE TABLE IF NOT EXISTS step (
     id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
     text TEXT NOT NULL,
     history_id INT NOT NULL,

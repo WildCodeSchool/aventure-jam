@@ -18,8 +18,6 @@ const Step = async ({ params }: Props) => {
   const apiChoicesResult = await fetch(apiRoutes.CHOICES(historyId, stepId));
   const choices: ChoiceModel[] = await apiChoicesResult.json();
 
-  console.log(choices);
-
   return (
     <section className={styles.etapeBody}>
       <div className={styles.accueilSection}>

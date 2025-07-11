@@ -7,11 +7,11 @@ type Params = {
 };
 
 export async function GET(_req: Request, { params }: Params) {
-  const { historyId, stepId } = await params;
+  const { stepId } = await params;
   try {
     const result = await db.query(
       "SELECT id, text, step_id AS stepId, object_id AS objectId, link_to_step_id AS linkToStepId FROM choice WHERE step_id = ?",
-      [stepId, historyId]
+      [stepId]
     );
     const choices = result[0] as ChoiceModel[];
     return NextResponse.json(choices);
