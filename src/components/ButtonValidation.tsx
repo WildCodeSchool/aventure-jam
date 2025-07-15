@@ -19,7 +19,7 @@ const ButtonToValidate = ({ to, label, duration = 1000, className }: Props) => {
 
   const clearTimers = () => {
     if (intervalRef.current) clearInterval(intervalRef.current);
-    if (timeoutRef.current) clearInterval(timeoutRef.current);
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
     setProgress(0);
   };
 
