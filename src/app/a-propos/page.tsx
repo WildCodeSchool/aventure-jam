@@ -22,9 +22,6 @@ const About = () => {
               une invitation à vivre une aventure interactive, en solo, où
               chaque choix a son importance.
               <br />
-              Pas besoin de héros prédéfini : tu es le personnage principal,
-              maître de ton destin.
-              <br />
               Ici, on parle de récits captivants, de décisions cruciales, de
               chemins qui se dessinent au fil de tes actions.
               <br />
@@ -38,10 +35,6 @@ const About = () => {
               C’est un projet né d’une passion pour le storytelling et le
               développement, imaginé et réalisé par un trio de développeurs en
               formation à la Wild Code School.
-              <br />
-              On a voulu créer un espace où l’imagination et la technologie se
-              rencontrent, pour offrir aux joueurs une expérience fun, immersive
-              et non intrusive.
               <br />
               Prends une grande inspiration. Le monde que tu t’apprêtes à
               découvrir n’attend que toi.
