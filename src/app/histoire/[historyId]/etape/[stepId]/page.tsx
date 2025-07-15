@@ -2,8 +2,11 @@ import { apiRoutes } from "@/data/ROUTES";
 import styles from "./etape.module.css";
 import Link from "next/link";
 import { ChoiceModel } from "@/model/ChoiceModel";
+import ButtonToValidate from "@/components/ButtonValidation";
 import dynamic from "next/dynamic";
+
 const Inventory = dynamic(() => import("@/ui/Inventory"));
+
 
 type Props = {
   params: {
@@ -21,12 +24,17 @@ const Step = async ({ params }: Props) => {
   const choices: ChoiceModel[] = await apiChoicesResult.json();
 
   return (
-    <section className={styles.etapeBody}>
+    <section className={styles.globalBody}>
+      <img
+        className={styles.dinamicBackground}
+        src={step.background}
+        alt={step.id}
+      />
       <div className={styles.accueilSection}>
         <Link href="/">
           <img
             className={styles.linkAccueil}
-            src="/Logo/9713317.png"
+            src="/Logo/tourAccueil.png"
             alt=" aller vers accueil"
           />
         </Link>
@@ -35,20 +43,23 @@ const Step = async ({ params }: Props) => {
         />
       </div>
       <div className={styles.mainEtapeTitle}>
-        <p>{step.text}</p>
+        <div
+          className={styles.stepTextContainer}
+          dangerouslySetInnerHTML={{ __html: step.text }}
+        />
         <div className={styles.ChoiceList}>
           <ul className={styles.ChoiceCase}>
             {choices.map((choice) => (
               <li key={choice.id} className={styles.choiceStyle}>
-                <Link
-                  href={
+                <ButtonToValidate
+                  to={
                     choice.linkToStepId === 0
                       ? "/"
                       : `/histoire/${historyId}/etape/${choice.linkToStepId}`
                   }
-                >
-                  {choice.text}
-                </Link>
+                  label={choice.text}
+                  className={styles.choiceButton}
+                />
               </li>
             ))}
           </ul>
