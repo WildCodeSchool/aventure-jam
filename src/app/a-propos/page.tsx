@@ -9,7 +9,7 @@ const About = () => {
           <Link href="/">
             <img
               className={styles.linkAccueil}
-              src="/Logo/tourAccueil.png"
+              src="/Logo/9713317.png"
               alt="Aller vers accueil"
             />
           </Link>
