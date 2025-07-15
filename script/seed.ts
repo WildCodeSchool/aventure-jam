@@ -214,7 +214,7 @@ const seed = async () => {
         Le destin t’attend.</p>`,
         1,
         null,
-        "yrnwald_trois_routes.jpg",
+        "/background/troisRoutes.png",
       ],
       [
         5,
@@ -247,7 +247,7 @@ const seed = async () => {
         Tu ne sais pas encore ce qu’il t’a coûté.</p>`,
         1,
         "Marchand masqué.",
-        "foret_graven_marchand.jpg",
+        "/background/troisRoutes.png",
       ],
       [
         6,
@@ -269,7 +269,7 @@ const seed = async () => {
         <p>Tu entres.</p>`,
         1,
         null,
-        "tour_voile_plaine.jpg",
+        "/background/pillierNoir.png",
       ],
       [
         7,
@@ -305,7 +305,7 @@ const seed = async () => {
         <p>Tu repars.</p>`,
         1,
         "Vieillard aveugle.",
-        "tour_vieillard_cartes.jpg",
+        "/background/vieillardAveugle.png",
       ],
       [
         8,
@@ -322,7 +322,7 @@ const seed = async () => {
         <p>Derrière toi, la Brèche te traque encore.</p>`,
         1,
         null,
-        "plaine_breche.jpg",
+        "/background/brecheFuite.png",
       ],
       [
         9,
@@ -346,7 +346,7 @@ const seed = async () => {
         <p>Le Pacte de Sang d’Ashtorath te guette.</p>`,
         1,
         "La Reine Écorchée",
-        "ashtorath_reine_ecorchee.jpg",
+        "/background/avenueMorte.png",
       ],
       [
         10,
@@ -367,7 +367,7 @@ const seed = async () => {
         <p>Désormais, plus rien ne sera jamais comme avant.</p>`,
         1,
         null,
-        "pilier_noir_eveil.jpg",
+        "/background/cheminTour.png",
       ],
       [
         11,
@@ -391,7 +391,7 @@ const seed = async () => {
         Seul reste ce poids dans ta main : le parchemin scellé, brûlant d’un secret que tu redoutes de connaître.</p> `,
         1,
         "Pèlerin du Vide",
-        "pelerin_parchemin.jpg",
+        "/background/pelerinMasqué.png",
       ],
       [
         12,
@@ -413,7 +413,7 @@ const seed = async () => {
         Il ne reste que toi, ton fardeau retrouvé… et ce qui s’approche lentement, prêt à te confronter.</p> `,
         1,
         "Femme mystérieuse.",
-        "bois_puits_nom_vole.jpg",
+        "/background/profondeureBoisPuit.png",
       ],
       [
         13,
@@ -444,7 +444,7 @@ const seed = async () => {
         mais aussi de ce que deviendra le monde.</p>`,
         1,
         "Ton double.",
-        "miroir_fendu_double.jpg",
+        "/background/boisPuitsVide.png",
       ],
       [
         14,
@@ -462,7 +462,7 @@ const seed = async () => {
         Ce que tu abandonneras ici ne pourra jamais être repris.</p>`,
         1,
         null,
-        "couronne_epine_choix_final.jpg",
+        "/background/finalPicture.png",
       ],
       [
         15,
@@ -482,7 +482,7 @@ const seed = async () => {
         <p>Un frisson parcourt ton dos. Ici, il te faudra sacrifier quelque chose : ta mémoire… ou ta chair.</p>`,
         1,
         "Spectres des ruines",
-        "Spectres_des_ruines.jpg",
+        "/background/ruineSpectre.png",
       ],
       [
         16,
@@ -498,7 +498,7 @@ const seed = async () => {
         Pourtant, tes jambes avancent, guidées par cette lumière qui semble t’appeler par ton propre sang.</p>`,
         1,
         null,
-        "ruines_Ashtorath.jpg",
+        "/background/ruineSpectre.png",
       ],
       [
         17,
@@ -519,7 +519,7 @@ const seed = async () => {
         Une opportunité… ou un piège.</p>`,
         1,
         "Fanatique",
-        "Temple_en_ruine.jpg",
+        "/background/autelMassif.png",
       ],
       [
         18,
@@ -538,7 +538,7 @@ const seed = async () => {
         Chaque option façonnera ta destinée.</p> `,
         1,
         null,
-        "Dessous_temple_en_ruine.jpg",
+        "/background/autelMassif.png",
       ],
       [
         19,
@@ -562,7 +562,7 @@ const seed = async () => {
         comme si tu avais jadis bu à sa source, ou porté son héritage.</p>`,
         1,
         null,
-        "temple mere des cendres.jpg",
+        "/background/mereCendre.png",
       ],
       [
         20,
@@ -597,7 +597,7 @@ const seed = async () => {
         <p>Puis tout s’efface.</p>`,
         1,
         null,
-        "the end.jpg",
+        "/background/finalPicture.png",
       ],
       [
         21,
@@ -628,7 +628,7 @@ const seed = async () => {
         <p>Tu ne l’oublieras pas.</p>`,
         1,
         null,
-        "the end.jpg",
+        "/background/finalPicture.png",
       ],
       [
         22,
@@ -652,7 +652,7 @@ const seed = async () => {
         <p>Roi d’un royaume où plus personne ne peut dire si la lumière triomphe encore de l’ombre.</p>`,
         1,
         null,
-        "the end.jpg",
+        "/background/finalPicture.png",
       ],
       [
         23,
@@ -660,7 +660,7 @@ const seed = async () => {
         Dans les Brumes d’Yrnwald, les souvenirs perdus attendent toujours les voyageurs assez fous pour les rechercher.</p>`,
         1,
         null,
-        "end of history.jpg",
+        "/background/voieFinal.png",
       ],
     ];
     for (const etape of etapes) {

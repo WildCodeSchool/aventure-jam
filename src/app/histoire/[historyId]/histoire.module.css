@@ -28,8 +28,9 @@
   font-size: 20px;
 }
 .linkAccueil {
-  height: 40px;
-  width: 40px;
+  background-color: transparent;
+  height: 60px;
+  width: 60px;
   position: fixed;
   top: 20px;
   left: 20px;

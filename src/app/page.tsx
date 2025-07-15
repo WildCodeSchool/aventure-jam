@@ -21,7 +21,7 @@ const Home = () => {
           <Link href="/a-propos">
             <img
               className={styles.linkAbout}
-              src="/Logo/9195785.png"
+              src="/Logo/aboutLogo.png"
               alt="aller vers about"
             />
           </Link>

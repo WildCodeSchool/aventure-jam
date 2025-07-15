@@ -30,7 +30,7 @@ const Step = async ({ params }: Props) => {
         <Link href="/">
           <img
             className={styles.linkAccueil}
-            src="/Logo/9713317.png"
+            src="/Logo/tourAccueil.png"
             alt=" aller vers accueil"
           />
         </Link>
