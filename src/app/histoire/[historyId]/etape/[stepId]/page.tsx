@@ -2,6 +2,7 @@ import { apiRoutes } from "@/data/ROUTES";
 import styles from "./etape.module.css";
 import Link from "next/link";
 import { ChoiceModel } from "@/model/ChoiceModel";
+import ButtonToValidate from "@/components/ButtonValidation";
 
 type Props = {
   params: {
@@ -43,15 +44,15 @@ const Step = async ({ params }: Props) => {
           <ul className={styles.ChoiceCase}>
             {choices.map((choice) => (
               <li key={choice.id} className={styles.choiceStyle}>
-                <Link
-                  href={
+                <ButtonToValidate
+                  to={
                     choice.linkToStepId === 0
                       ? "/"
                       : `/histoire/${historyId}/etape/${choice.linkToStepId}`
                   }
-                >
-                  {choice.text}
-                </Link>
+                  label={choice.text}
+                  className={styles.choiceButton}
+                />
               </li>
             ))}
           </ul>
