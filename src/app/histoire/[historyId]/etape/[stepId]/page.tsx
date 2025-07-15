@@ -3,6 +3,10 @@ import styles from "./etape.module.css";
 import Link from "next/link";
 import { ChoiceModel } from "@/model/ChoiceModel";
 import ButtonToValidate from "@/components/ButtonValidation";
+import dynamic from "next/dynamic";
+
+const Inventory = dynamic(() => import("@/ui/Inventory"));
+
 
 type Props = {
   params: {
@@ -34,6 +38,9 @@ const Step = async ({ params }: Props) => {
             alt=" aller vers accueil"
           />
         </Link>
+        <Inventory
+          historyId={historyId}
+        />
       </div>
       <div className={styles.mainEtapeTitle}>
         <div

@@ -36,10 +36,19 @@
   left: 20px;
 }
 
+.nextStepLink img{
+  height: 2rem;
+  width: 4rem;
+}
+
+.nextStepLink{
+  justify-self: flex-end;
+}
+
 @media screen and (max-width: 800px) {
   .linkAccueil {
-    height: 20px;
-    width: 20px;
+    height: 30px;
+    width: 30px;
   }
 
   .keepCalm h2 {
@@ -52,5 +61,10 @@
 
   .keepCalm {
     padding: 0.7rem;
+  }
+
+  .mainTitle{
+    padding: 1.5rem;
+    width: 95%;
   }
 }
