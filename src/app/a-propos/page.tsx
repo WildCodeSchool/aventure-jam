@@ -1,9 +1,10 @@
+import Header from "@/components/Header";
 import styles from "./About.module.css";
-import Link from "next/link";
 
 const About = () => {
   return (
     <>
+      <Header />
       <section className={styles.aboutBody}>
         <section className={styles.aboutSection}>
           <h2 className={styles.aboutTitle}>A Propos</h2>

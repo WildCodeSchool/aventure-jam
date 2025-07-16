@@ -25,11 +25,13 @@ const ButtonToValidate = ({ link, label }: Props) => {
     if (timeoutRef.current) {
       clearTimeout(timeoutRef.current);
     }
+
     setProgress(0);
   };
 
   const handleStart = () => {
     startTimeRef.current = Date.now();
+
     intervalRef.current = window.setInterval(() => {
       const elapsed = Date.now() - (startTimeRef.current || 0);
       setProgress(Math.min(elapsed / duration, 1));
@@ -44,6 +46,7 @@ const ButtonToValidate = ({ link, label }: Props) => {
   const handleEnd = () => {
     clearTimers();
   };
+
   useEffect(() => {
     return () => {
       clearTimers();
