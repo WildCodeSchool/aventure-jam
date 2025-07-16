@@ -4,9 +4,9 @@ import Link from "next/link";
 import { ChoiceModel } from "@/model/ChoiceModel";
 import ButtonToValidate from "@/components/ButtonValidation";
 import dynamic from "next/dynamic";
+import NoBackNavigation from "@/components/NoBackNavigation";
 
 const Inventory = dynamic(() => import("@/ui/Inventory"));
-
 
 type Props = {
   params: {
@@ -24,48 +24,49 @@ const Step = async ({ params }: Props) => {
   const choices: ChoiceModel[] = await apiChoicesResult.json();
 
   return (
-    <section className={styles.globalBody}>
-      <img
-        className={styles.dinamicBackground}
-        src={step.background}
-        alt={step.id}
-      />
-      <div className={styles.accueilSection}>
-        <Link href="/">
-          <img
-            className={styles.linkAccueil}
-            src="/Logo/tourAccueil.png"
-            alt=" aller vers accueil"
-          />
-        </Link>
-        <Inventory
-          historyId={historyId}
+    <>
+      <NoBackNavigation />
+      <section className={styles.globalBody}>
+        <img
+          className={styles.dinamicBackground}
+          src={step.background}
+          alt={step.id}
         />
-      </div>
-      <div className={styles.mainEtapeTitle}>
-        <div
-          className={styles.stepTextContainer}
-          dangerouslySetInnerHTML={{ __html: step.text }}
-        />
-        <div className={styles.ChoiceList}>
-          <ul className={styles.ChoiceCase}>
-            {choices.map((choice) => (
-              <li key={choice.id} className={styles.choiceStyle}>
-                <ButtonToValidate
-                  to={
-                    choice.linkToStepId === 0
-                      ? "/"
-                      : `/histoire/${historyId}/etape/${choice.linkToStepId}`
-                  }
-                  label={choice.text}
-                  className={styles.choiceButton}
-                />
-              </li>
-            ))}
-          </ul>
+        <div className={styles.accueilSection}>
+          <Link href="/">
+            <img
+              className={styles.linkAccueil}
+              src="/Logo/tourAccueil.png"
+              alt=" aller vers accueil"
+            />
+          </Link>
+          <Inventory historyId={historyId} />
         </div>
-      </div>
-    </section>
+        <div className={styles.mainEtapeTitle}>
+          <div
+            className={styles.stepTextContainer}
+            dangerouslySetInnerHTML={{ __html: step.text }}
+          />
+          <div className={styles.ChoiceList}>
+            <ul className={styles.ChoiceCase}>
+              {choices.map((choice) => (
+                <li key={choice.id} className={styles.choiceStyle}>
+                  <ButtonToValidate
+                    to={
+                      choice.linkToStepId === 0
+                        ? "/"
+                        : `/histoire/${historyId}/etape/${choice.linkToStepId}`
+                    }
+                    label={choice.text}
+                    className={styles.choiceButton}
+                  />
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+    </>
   );
 };
 
