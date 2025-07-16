@@ -33,17 +33,22 @@
 }
 .ChoiceCase {
   margin: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 .choiceStyle {
   background-color: rgb(16, 29, 91);
   border-radius: 10px;
   border: solid white;
-  padding: 15px;
+  padding: 10px;
 }
 
   @media screen and (max-width: 800px){
     .mainEtapeTitle p{
       font-size: 15px;
+      max-height: 70%;
+      overflow-y: scroll;
     }
 
     .mainEtapeTitle{
