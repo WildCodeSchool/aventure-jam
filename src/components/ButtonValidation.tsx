@@ -1,54 +1,63 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
+import styles from "./ButtonValidation.module.css";
 
 type Props = {
-  to: string;
+  link: string;
   label: string;
-  duration?: number;
-  className: string;
 };
 
-const ButtonToValidate = ({ to, label, duration = 1000, className }: Props) => {
+const ButtonToValidate = ({ link, label }: Props) => {
   const [progress, setProgress] = useState(0);
   const router = useRouter();
-  const intervalRef = useRef<NodeJS.Timeout | null>(null);
-  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const intervalRef = useRef<number | null>(null);
+  const timeoutRef = useRef<number | null>(null);
   const startTimeRef = useRef<number | null>(null);
+  const duration = 1000;
 
   const clearTimers = () => {
-    if (intervalRef.current) clearInterval(intervalRef.current);
-    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+      intervalRef.current = null;
+    }
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
     setProgress(0);
   };
 
   const handleStart = () => {
     startTimeRef.current = Date.now();
-
-    intervalRef.current = setInterval(() => {
-      const toFlowOut = Date.now() - (startTimeRef.current || 0);
-      setProgress(Math.min(toFlowOut / duration, 1));
+    intervalRef.current = window.setInterval(() => {
+      const elapsed = Date.now() - (startTimeRef.current || 0);
+      setProgress(Math.min(elapsed / duration, 1));
     }, 16);
 
-    timeoutRef.current = setTimeout(() => {
+    timeoutRef.current = window.setTimeout(() => {
       clearTimers();
-      router.push(to);
+      router.push(link);
     }, duration);
   };
 
   const handleEnd = () => {
     clearTimers();
   };
+  useEffect(() => {
+    return () => {
+      clearTimers();
+    };
+  }, []);
 
   return (
     <button
+      className={styles.choiceButton}
       onMouseDown={handleStart}
       onMouseUp={handleEnd}
       onMouseLeave={handleEnd}
       onTouchStart={handleStart}
       onTouchEnd={handleEnd}
-      className={className}
       data-progress={progress}
     >
       {label}

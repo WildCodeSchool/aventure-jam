@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Piedra } from "next/font/google";
 import "./globals.css";
-import SessionWrapper from '@/ui/provider';
+import SessionWrapper from "@/ui/provider";
 import { UserProvider } from "@/context/UseSessionContext";
-
+import Header from "@/components/Header";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,8 +33,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} ${piedra.variable}`}>
-        <UserProvider><SessionWrapper>{children}</SessionWrapper></UserProvider>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} ${piedra.variable}`}
+      >
+        <UserProvider>
+          <SessionWrapper>
+            <Header />
+            {children}
+          </SessionWrapper>
+        </UserProvider>
       </body>
     </html>
   );

@@ -30,13 +30,6 @@ const Step = async ({ params }: Props) => {
         alt={step.id}
       />
       <div className={styles.accueilSection}>
-        <Link href="/">
-          <img
-            className={styles.linkAccueil}
-            src="/Logo/tourAccueil.png"
-            alt=" aller vers accueil"
-          />
-        </Link>
         <Inventory historyId={historyId} />
       </div>
       <div className={styles.mainEtapeTitle}>
@@ -49,13 +42,12 @@ const Step = async ({ params }: Props) => {
             {choices.map((choice) => (
               <li key={choice.id} className={styles.choiceStyle}>
                 <ButtonToValidate
-                  to={
+                  link={
                     choice.linkToStepId === 0
                       ? "/"
                       : `/histoire/${historyId}/etape/${choice.linkToStepId}`
                   }
                   label={choice.text}
-                  className={styles.choiceButton}
                 />
               </li>
             ))}

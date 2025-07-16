@@ -5,15 +5,6 @@ const About = () => {
   return (
     <>
       <section className={styles.aboutBody}>
-        <div className={styles.accueilSection}>
-          <Link href="/">
-            <img
-              className={styles.linkAccueil}
-              src="/Logo/tourAccueil.png"
-              alt="Aller vers accueil"
-            />
-          </Link>
-        </div>
         <section className={styles.aboutSection}>
           <h2 className={styles.aboutTitle}>A Propos</h2>
           <div>

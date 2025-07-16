@@ -30,13 +30,7 @@
 .mainEtapeTitle p {
   font-size: 18px;
 }
-.linkAccueil {
-  height: 60px;
-  width: 60px;
-  position: fixed;
-  top: 20px;
-  left: 20px;
-}
+
 .ChoiceCase {
   display: flex;
   flex-direction: column;
