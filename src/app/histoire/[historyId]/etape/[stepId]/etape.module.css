@@ -1,9 +1,15 @@
-.etapeBody {
-  background-image: url(/background/imageRuineBrumeCramoisie.png);
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
-  margin: 0;
+.dinamicBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+.globalBody {
+  position: relative;
+  min-height: 100vh;
 }
 .mainEtapeTitle {
   height: auto;
@@ -24,30 +30,115 @@
 .mainEtapeTitle p {
   font-size: 18px;
 }
-.linkAccueil {
-  height: 40px;
-  width: 40px;
-  position: fixed;
-  top: 20px;
-  left: 20px;
-}
+
 .ChoiceCase {
-  margin: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 10px;
 }
-.choiceStyle {
-  background-color: rgb(16, 29, 91);
+
+.ChoiceCase li {
+  margin: 15px;
+}
+.choiceButton {
+  backdrop-filter: blur(2px) saturate(140%);
+  background-color: rgba(17, 25, 40, 0.75);
   border-radius: 10px;
   border: solid white;
   padding: 15px;
+  width: 100%;
 }
 
-  @media screen and (max-width: 800px){
-    .mainEtapeTitle p{
-      font-size: 15px;
-    }
-
-    .mainEtapeTitle{
-      padding: .7rem;
-      width: 95%;
-    }
+.choiceButton:active {
+  animation: gradient 1000ms;
+}
+@keyframes gradient {
+  0% {
+    background: radial-gradient(
+      circle at center,
+      rgba(28, 138, 0, 0.3) 24%,
+      #fff 0%,
+      #fff 100%
+    );
   }
+  15% {
+    background: radial-gradient(
+      circle at center,
+      rgba(28, 138, 0, 0.3) 24%,
+      #fff 15%,
+      #fff 100%
+    );
+  }
+  30% {
+    background: radial-gradient(
+      circle at center,
+      rgba(28, 138, 0, 0.3) 24%,
+      #fff 30%,
+      #fff 100%
+    );
+  }
+  45% {
+    background: radial-gradient(
+      circle at center,
+      rgba(28, 138, 0, 0.3) 24%,
+      #fff 45%,
+      #fff 100%
+    );
+  }
+  60% {
+    background: radial-gradient(
+      circle at center,
+      rgba(28, 138, 0, 0.3) 24%,
+      #fff 60%,
+      #fff 100%
+    );
+  }
+  75% {
+    background: radial-gradient(
+      circle at center,
+      rgba(28, 138, 0, 0.3) 24%,
+      #fff 75%,
+      #fff 100%
+    );
+  }
+  85% {
+    background: radial-gradient(
+      circle at center,
+      rgba(28, 138, 0, 0.3) 24%,
+      #fff 90%,
+      #fff 100%
+    );
+  }
+  100% {
+    color: #fff;
+    background: radial-gradient(
+      circle at center,
+      rgb(5, 80, 2) 99%,
+      #fff 100%,
+      #fff 100%
+    );
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .mainEtapeTitle p {
+    font-size: 15px;
+  }
+}
+
+.mainEtapeTitle {
+  padding: 0.7rem;
+  width: 95%;
+}
+
+@media screen and (max-width: 800px) {
+  .mainEtapeTitle p {
+    font-size: 15px;
+  }
+
+  .mainEtapeTitle {
+    padding: 0.7rem;
+    width: 95%;
+  }
+}

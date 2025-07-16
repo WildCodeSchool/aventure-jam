@@ -15,23 +15,14 @@ const History = async ({ params }: Props) => {
 
   return (
     <section className={styles.historyBody}>
-      <div className={styles.accueilSection}>
-        <Link href="/">
-          <img
-            className={styles.linkAccueil}
-            src="/Logo/9713317.png"
-            alt=" aller vers accueil"
-          />
-        </Link>
-      </div>
       <div className={styles.mainTitle}>
         <h2>{history.title}</h2>
         <p>{history.description}</p>
-          <Link href={appRoutes.STEP(historyId, 1)}>
-        <div className={styles.nextStepLink}>
+        <Link href={appRoutes.STEP(historyId, 1)}>
+          <div className={styles.nextStepLink}>
             <img src="/images/RightArrow.svg" />
-        </div>
-          </Link>
+          </div>
+        </Link>
       </div>
     </section>
   );
