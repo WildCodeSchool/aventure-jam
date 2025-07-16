@@ -27,21 +27,12 @@
 .keepCalm p {
   font-size: 20px;
 }
-.linkAccueil {
-  background-color: transparent;
-  height: 60px;
-  width: 60px;
-  position: fixed;
-  top: 20px;
-  left: 20px;
-}
-
-.nextStepLink img{
+.nextStepLink img {
   height: 2rem;
   width: 4rem;
 }
 
-.nextStepLink{
+.nextStepLink {
   justify-self: flex-end;
 }
 
@@ -63,7 +54,7 @@
     padding: 0.7rem;
   }
 
-  .mainTitle{
+  .mainTitle {
     padding: 1.5rem;
     width: 95%;
   }

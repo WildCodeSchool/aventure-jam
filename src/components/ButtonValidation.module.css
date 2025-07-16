@@ -1,0 +1,79 @@
+.choiceButton {
+  backdrop-filter: blur(2px) saturate(140%);
+  background-color: rgba(17, 25, 40, 0.75);
+  border-radius: 10px;
+  border: solid white;
+  padding: 15px;
+  width: 100%;
+}
+
+.choiceButton:active {
+  animation: gradient 1000ms;
+}
+@keyframes gradient {
+  0% {
+    background: radial-gradient(
+      circle at center,
+      rgba(13, 65, 0, 0.661) 24%,
+      rgba(17, 25, 40, 0.75) 0%,
+      rgba(17, 25, 40, 0.75) 100%
+    );
+  }
+  15% {
+    background: radial-gradient(
+      circle at center,
+      rgba(24, 114, 1, 0.702) 24%,
+      rgba(17, 25, 40, 0.75) 15%,
+      rgba(17, 25, 40, 0.75) 100%
+    );
+  }
+  30% {
+    background: radial-gradient(
+      circle at center,
+      rgba(30, 143, 2, 0.756) 24%,
+      rgba(17, 25, 40, 0.75) 30%,
+      rgba(17, 25, 40, 0.75) 100%
+    );
+  }
+  45% {
+    background: radial-gradient(
+      circle at center,
+      rgba(40, 194, 2, 0.759) 24%,
+      rgba(17, 25, 40, 0.75) 45%,
+      rgba(17, 25, 40, 0.75) 100%
+    );
+  }
+  60% {
+    background: radial-gradient(
+      circle at center,
+      rgba(56, 220, 15, 0.831) 24%,
+      rgba(17, 25, 40, 0.75) 60%,
+      rgba(17, 25, 40, 0.75) 100%
+    );
+  }
+  75% {
+    background: radial-gradient(
+      circle at center,
+      rgba(58, 232, 14, 0.907) 24%,
+      rgba(17, 25, 40, 0.75) 75%,
+      rgba(17, 25, 40, 0.75) 100%
+    );
+  }
+  85% {
+    background: radial-gradient(
+      circle at center,
+      rgba(58, 232, 14, 0.907) 24%,
+      rgba(17, 25, 40, 0.75) 90%,
+      rgba(17, 25, 40, 0.75) 100%
+    );
+  }
+  100% {
+    color: #fff;
+    background: radial-gradient(
+      circle at center,
+      rgba(58, 232, 14, 0.907) 99%,
+      rgba(17, 25, 40, 0.75) 100%,
+      rgba(17, 25, 40, 0.75) 100%
+    );
+  }
+}

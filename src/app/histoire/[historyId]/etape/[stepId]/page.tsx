@@ -1,6 +1,8 @@
 import { apiRoutes } from "@/data/ROUTES";
 import styles from "./etape.module.css";
 import { ChoiceModel } from "@/model/ChoiceModel";
+import Link from "next/link";
+import ButtonToValidate from "@/components/ButtonValidation";
 import dynamic from "next/dynamic";
 import NoBackNavigation from "@/components/NoBackNavigation";
 
@@ -30,22 +32,31 @@ const Step = async ({ params }: Props) => {
           src={step.background}
           alt={step.id}
         />
-        <Inventory historyId={historyId} />
-        <section className={styles.etapeBody}>
-          <div className={styles.mainEtapeTitle}>
-            <div
-              className={styles.stepTextContainer}
-              dangerouslySetInnerHTML={{ __html: step.text }}
-            />
-            <div className={styles.ChoiceList}>
-              <ul className={styles.ChoiceCase}>
-                {choices.map((choice) => (
-                  <li key={choice.id} className={styles.choiceStyle}></li>
-                ))}
-              </ul>
-            </div>
+        <div className={styles.accueilSection}>
+          <Inventory historyId={historyId} />
+        </div>
+        <div className={styles.mainEtapeTitle}>
+          <div
+            className={styles.stepTextContainer}
+            dangerouslySetInnerHTML={{ __html: step.text }}
+          />
+          <div className={styles.ChoiceList}>
+            <ul className={styles.ChoiceCase}>
+              {choices.map((choice) => (
+                <li key={choice.id} className={styles.choiceStyle}>
+                  <ButtonToValidate
+                    link={
+                      choice.linkToStepId === 0
+                        ? "/"
+                        : `/histoire/${historyId}/etape/${choice.linkToStepId}`
+                    }
+                    label={choice.text}
+                  />
+                </li>
+              ))}
+            </ul>
           </div>
-        </section>
+        </div>
       </section>
     </>
   );
