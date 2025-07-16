@@ -37,10 +37,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} ${piedra.variable}`}
       >
         <UserProvider>
-          <SessionWrapper>
-            <Header />
-            {children}
-          </SessionWrapper>
+          <SessionWrapper>{children}</SessionWrapper>
         </UserProvider>
       </body>
     </html>
