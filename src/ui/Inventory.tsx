@@ -44,7 +44,7 @@ export default function Inventory({historyId} : {historyId: number} ) {
                 <ul className={isVisible ? styles.inventoryContent : styles.disabled}>
                     {user.inventaire.map(
                         ({ id, name, image }: { id: number; name: string; image: string }) => (
-                            <li key={id}>
+                            <li key={`item-${id}`}>
                                 {name}
                                 <img src={`/images/${image}`} alt={name} />
                             </li>
