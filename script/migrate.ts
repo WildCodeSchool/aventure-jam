@@ -55,6 +55,7 @@ const schema = `
     step_id INT NOT NULL,
     object_id INT,
     link_to_step_id INT NOT NULL,
+    take_or_give BOOLEAN,
     FOREIGN KEY (object_id) REFERENCES object(id),
     FOREIGN KEY (step_id) REFERENCES step(id)
     );
