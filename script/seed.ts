@@ -671,7 +671,7 @@ const seed = async () => {
     }
 
     const choices = [
-      [1, "Suivre la vieille femme à travers les ruines", 1, null, 2, null],
+      [1, "Suivre la vieille femme à travers les ruines", 1, null, 2, 0],
 
       [2, "Choisir La Lame Noire (guerrier)", 2, 1, 3, 0],
       [3, "Choisir L’Ombre Sifflante (rôdeur)", 2, 1, 3, 0],
@@ -681,91 +681,91 @@ const seed = async () => {
       [6, "Prendre l’Anneau de murmures", 3, 3, 4, 0],
       [7, "Prendre la Poche d’ombres", 3, 4, 4, 0],
 
-      [8, "Prendre la route vers les Peste-Ruines d’Ashtorath", 4, null, 15, null],
-      [9, "Prendre la route vers la Forêt de Gräven", 4, null, 5, null],
-      [10, "Prendre la route vers les Temples en ruine", 4, null, 17, null],
+      [8, "Prendre la route vers les Peste-Ruines d’Ashtorath", 4, null, 15, 0],
+      [9, "Prendre la route vers la Forêt de Gräven", 4, null, 5, 0],
+      [10, "Prendre la route vers les Temples en ruine", 4, null, 17, 0],
 
       [11, "Acheter la Fiole de mémoire", 5, 5, 6, 0],
       [12, "Acheter la Lame d’obsidienne", 5, 6, 6, 0],
       [13, "Acheter le Crochet de Brèche", 5, 7, 6, 0],
 
-      [14, "Suivre la route vers la Tour du Voile", 6, null, 7, null],
+      [14, "Suivre la route vers la Tour du Voile", 6, null, 7, 0],
 
-      [15, "Utiliser un objet défensif pour bloquer l’ombre", 8, null, 9, null],
+      [15, "Utiliser un objet défensif pour bloquer l’ombre", 8, null, 9, 0],
       [
         16,
         "Utiliser un artefact de voyage pour fuir instantanément",
         8,
         null,
-        9, , null
+        9, 0
       ],
 
-      [17, "Invoquer une aide temporaire", 8, null, 9, null],
+      [17, "Invoquer une aide temporaire", 8, null, 9, 0],
 
-      [18, "Offrir ton sang à la Reine Écorchée", 9, null, 10, null],
-      [19, "Offrir le sien", 9, null, 10, null],
+      [18, "Offrir ton sang à la Reine Écorchée", 9, null, 10, 0],
+      [19, "Offrir le sien", 9, null, 10, 0],
 
       [20, "Accepter le fragment d’os et continuer vers la suite", 10, 8, 11, 0],
 
       [21, "Poursuivre vers la Couronne d’Épine", 11, 9, 12, 0],
 
       [22, "Suivre la femme pour récupérer le paquet", 12, 10, 13, 0],
-      [23, "Refuser et continuer seul", 12, null, 13, null],
+      [23, "Refuser et continuer seul", 12, null, 13, 0],
 
-      [24, "Fuir et laisser ton autre franchir la Brèche", 13, null, 20, null],
+      [24, "Fuir et laisser ton autre franchir la Brèche", 13, null, 20, 0],
       [25, "Combattre son double et prendre sa place", 13, 11, 21, 0],
       [26, "Fusionner avec son double", 13, null, 22, 0],
 
-      [27, "Accepter de donner ta mémoire au Spectre", 15, null, 16, null],
-      [28, "Refuser et affronter les ombres", 15, null, 16, null],
+      [27, "Accepter de donner ta mémoire au Spectre", 15, null, 16, 0],
+      [28, "Refuser et affronter les ombres", 15, null, 16, 0],
 
-      [29, "Suivre la lumière dans les souterrains", 16, null, 8, null],
-      [30, "Rebrousser chemin", 16, null, 8, null],
+      [29, "Suivre la lumière dans les souterrains", 16, null, 8, 0],
+      [30, "Rebrousser chemin", 16, null, 8, 0],
 
-      [31, "Prier auprès des fanatiques", 17, null, 18, null],
-      [32, "Tenter de dérober un artefact", 17, null, 18, null],
+      [31, "Prier auprès des fanatiques", 17, null, 18, 0],
+      [32, "Tenter de dérober un artefact", 17, null, 18, 0],
 
-      [33, "Purifier ta Marque à l’autel", 18, null, 8, null],
-      [34, "Corrompre davantage ta Marque à l’autel", 18, null, 8, null],
-      [35, "Reprendre la route vers la Tour du Voile", 16, null, 7, null],
-      [36, "Quitter les Temples et rejoindre la Tour du Voile", 18, null, 7, null],
+      [33, "Purifier ta Marque à l’autel", 18, null, 8, 0],
+      [34, "Corrompre davantage ta Marque à l’autel", 18, null, 8, 0],
+      [35, "Reprendre la route vers la Tour du Voile", 16, null, 7, 0],
+      [36, "Quitter les Temples et rejoindre la Tour du Voile", 18, null, 7, 0],
       [
         37,
         "Se rendre aux Ruines d’Ashtorath pour réveiller la Reine Écorchée",
         7,
         null,
-        15,  null
+        15,  0
       ],
       [
         38,
         "Se rendre aux Temples pour éveiller le Veilleur Aveugle",
         7,
         null,
-        17, null
+        17, 0
       ],
       [
         39,
         "Se rendre sous le Lac Noir pour éveiller la Mère Cendre",
         7,
         null,
-        19, null
+        19, 0
       ],
       [
         40,
         "Éveiller la Mère Cendre en offrant un fragment de toi-même",
         19,
         null,
-        8, null
+        8, 0
       ],
-      [41, "Refuser de troubler son sommeil et fuir discrètement", 19, null, 8, null],
-      [42, "Fin : Le Héros Oublié", 20, null, 23, null],
-      [43, "Fin : Le Brisé", 21, null, 23, null],
-      [44, "Fin : Le Souverain Gris", 22, null, 23, null],
-      [45, "revenir à l'accueil.", 23, null, 0, null],
+      [41, "Refuser de troubler son sommeil et fuir discrètement", 19, null, 8, 0],
+      [42, "Fin : Le Héros Oublié", 20, null, 23, 0],
+      [43, "Fin : Le Brisé", 21, null, 23, 0],
+      [44, "Fin : Le Souverain Gris", 22, null, 23, 0],
+      [45, "revenir à l'accueil.", 23, null, 0, 0],
     ];
     for (const choice of choices) {
       await connection.execute(
-        `INSERT INTO choice (id, text, step_id, object_id, link_to_step_id) VALUES (?, ?, ?, ?, ?)`,
+        `INSERT INTO choice (id, text, step_id, object_id, link_to_step_id) VALUES (?, ?, ?, ?, ?, ?)`,
         choice
       );
     }
