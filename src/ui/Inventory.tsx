@@ -23,7 +23,6 @@ export default function Inventory({historyId} : {historyId: number} ) {
         const fetchUser = async () => {
             try {
                 const data = await fetchInventoryForHistory(email as string, historyId);
-                console.log(data)
                 setUser(prevUser => ({
                     ...prevUser,
                     ...data,

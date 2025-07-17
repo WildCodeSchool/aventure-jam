@@ -1,6 +1,5 @@
+import { ObjectModel } from "./objectModel";
+
 export type Inventory = {
-    isUsed: boolean;
-    objectId: number;
-    image: string;
-    name: string;
+    objects: ObjectModel[];
 }[];
