@@ -11,7 +11,7 @@ export async function GET(request: NextRequest) {
 
     try {
         const [rows] = await db.query(
-            `SELECT inventory.*, object.image FROM inventory JOIN object ON inventory.object_Id = object.id JOIN users ON users.id = inventory.user_id WHERE users.email = ? AND inventory.history_Id = ?`,
+            `SELECT inventory.*, object.image, object.name FROM inventory JOIN object ON inventory.object_Id = object.id JOIN users ON users.id = inventory.user_id WHERE users.email = ? AND inventory.history_Id = ?`,
             [email, historyId]
         );
         return NextResponse.json(rows);

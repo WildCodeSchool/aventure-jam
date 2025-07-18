@@ -16,18 +16,16 @@ const emptyUser: User = {
     pseudo: "",
     avatar: "https://img.freepik.com/premium-vector/dark-fantasy-portrait-witch-illustration_961307-7342.jpg",
     progress: {
-        historyId: 0,
-        etapeId: 0,
-        inventaireid: 0
+        history_id: 0,
+        etape_id: 0,
+        inventaire_id: [0]
     },
     inventaire: [
         {
         isUsed: false,
         objectId: 0,
-        },
-        {
-            isUsed: false,
-            objectId: 0,
+        image: "",
+        name: "",
         }
     ]
 }

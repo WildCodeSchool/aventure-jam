@@ -41,73 +41,73 @@ const seed = async () => {
         1,
         "Dague cérémonielle",
         "Une lame d'acier sombre striée de runes éteintes, froide au toucher. Elle semble résonner avec la Marque sur ta main.",
-        "dague_ceremonielle.jpg",
+        "dague_ceremonielle.png",
       ],
       [
         2,
         "Pierre de veillée",
         "Une pierre runique qui pulse d'une lumière bleutée. Elle permet de ressusciter une fois en cas de mort.",
-        "pierre_veillee.jpg",
+        "pierre_veillee.png",
       ],
       [
         3,
         "Anneau de murmures",
         "Un anneau d'argent terni qui permet d'entendre les secrets cachés et les conversations lointaines.",
-        "anneau_murmures.jpg",
+        "anneau_murmures.png",
       ],
       [
         4,
         "Poche d'ombres",
         "Un petit sac de cuir noir qui semble absorber la lumière. Il peut dissimuler un objet ou toi-même.",
-        "poche_ombres.jpg",
+        "poche_ombres.png",
       ],
       [
         5,
         "Fiole de mémoire",
         "Une fiole de verre contenant un liquide opalescent. Elle renferme un souvenir vivant du passé.",
-        "fiole_memoire.jpg",
+        "fiole_memoire.png",
       ],
       [
         6,
         "Lame d'obsidienne",
         "Une lame de verre volcanique, fragile mais capable de trancher les esprits et les illusions.",
-        "lame_obsidienne.jpg",
+        "lame_obsidienne.png",
       ],
       [
         7,
         "Crochet de Brèche",
         "Un artefact métallique qui pulse au rythme de ton cœur. Il est directement lié aux énergies des Brèches.",
-        "crochet_breche.jpg",
+        "crochet_breche.png",
       ],
       [
         8,
         "Fragment d'os poli",
         "Une clef d'os blanc, lisse comme de l'ivoire. Ce n'est pas une clef pour une porte, mais pour un souvenir enfoui.",
-        "fragment_os.jpg",
+        "fragment_os.png",
       ],
       [
         9,
         "Parchemin scellé",
         "Un parchemin ancien scellé par une mèche de tes propres cheveux. À n'ouvrir qu'en dernier recours.",
-        "parchemin_scelle.jpg",
+        "parchemin_scelle.png",
       ],
       [
         10,
         "Paquet ensanglanté",
         "Un mystérieux paquet taché de sang séché. Il contenait ton vrai nom, désormais volé.",
-        "paquet_sanglant.jpg",
+        "paquet_sanglant.png",
       ],
       [
         11,
         "Lame noire sans reflet",
         "L'arme de ton double, une épée qui n'a aucun reflet. Elle symbolise le choix entre qui tu es et qui tu aurais pu être.",
-        "lame_noire.jpg",
+        "lame_noire.png",
       ],
       [
         12,
         "Marque du Porte-Marque",
         "La marque noire brûlée dans ta chair. Un œil fermé entouré de crocs qui pulse comme un cœur battant.",
-        "marque_portemarque.jpg",
+        "marque_portemarque.png",
       ],
     ];
     for (const obj of objects) {
@@ -671,111 +671,111 @@ const seed = async () => {
     }
 
     const choices = [
-      [1, "Suivre la vieille femme à travers les ruines", 1, null, 2],
+      [1, "Suivre la vieille femme à travers les ruines", 1, null, 2, 0],
 
-      [2, "Choisir La Lame Noire (guerrier)", 2, 1, 3],
-      [3, "Choisir L’Ombre Sifflante (rôdeur)", 2, 1, 3],
-      [4, "Choisir L’Appel du Sang (sorcier)", 2, 1, 3],
+      [2, "Choisir La Lame Noire (guerrier)", 2, 1, 3, 0],
+      [3, "Choisir L’Ombre Sifflante (rôdeur)", 2, 1, 3, 0],
+      [4, "Choisir L’Appel du Sang (sorcier)", 2, 1, 3, 0],
 
-      [5, "Prendre la Pierre de veillée", 3, 2, 4],
-      [6, "Prendre l’Anneau de murmures", 3, 3, 4],
-      [7, "Prendre la Poche d’ombres", 3, 4, 4],
+      [5, "Prendre la Pierre de veillée", 3, 2, 4, 0],
+      [6, "Prendre l’Anneau de murmures", 3, 3, 4, 0],
+      [7, "Prendre la Poche d’ombres", 3, 4, 4, 0],
 
-      [8, "Prendre la route vers les Peste-Ruines d’Ashtorath", 4, null, 15],
-      [9, "Prendre la route vers la Forêt de Gräven", 4, null, 5],
-      [10, "Prendre la route vers les Temples en ruine", 4, null, 17],
+      [8, "Prendre la route vers les Peste-Ruines d’Ashtorath", 4, null, 15, 0],
+      [9, "Prendre la route vers la Forêt de Gräven", 4, null, 5, 0],
+      [10, "Prendre la route vers les Temples en ruine", 4, null, 17, 0],
 
-      [11, "Acheter la Fiole de mémoire", 5, 5, 6],
-      [12, "Acheter la Lame d’obsidienne", 5, 6, 6],
-      [13, "Acheter le Crochet de Brèche", 5, 7, 6],
+      [11, "Acheter la Fiole de mémoire", 5, 5, 6, 0],
+      [12, "Acheter la Lame d’obsidienne", 5, 6, 6, 0],
+      [13, "Acheter le Crochet de Brèche", 5, 7, 6, 0],
 
-      [14, "Suivre la route vers la Tour du Voile", 6, null, 7],
+      [14, "Suivre la route vers la Tour du Voile", 6, null, 7, 0],
 
-      [15, "Utiliser un objet défensif pour bloquer l’ombre", 8, null, 9],
+      [15, "Utiliser un objet défensif pour bloquer l’ombre", 8, null, 9, 0],
       [
         16,
         "Utiliser un artefact de voyage pour fuir instantanément",
         8,
         null,
-        9,
+        9, 0
       ],
 
-      [17, "Invoquer une aide temporaire", 8, null, 9],
+      [17, "Invoquer une aide temporaire", 8, null, 9, 0],
 
-      [18, "Offrir ton sang à la Reine Écorchée", 9, null, 10],
-      [19, "Offrir le sien", 9, null, 10],
+      [18, "Offrir ton sang à la Reine Écorchée", 9, null, 10, 0],
+      [19, "Offrir le sien", 9, null, 10, 0],
 
-      [20, "Accepter le fragment d’os et continuer vers la suite", 10, 8, 11],
+      [20, "Accepter le fragment d’os et continuer vers la suite", 10, 8, 11, 0],
 
-      [21, "Poursuivre vers la Couronne d’Épine", 11, 9, 12],
+      [21, "Poursuivre vers la Couronne d’Épine", 11, 9, 12, 0],
 
-      [22, "Suivre la femme pour récupérer le paquet", 12, 10, 13],
-      [23, "Refuser et continuer seul", 12, null, 13],
+      [22, "Suivre la femme pour récupérer le paquet", 12, 10, 13, 0],
+      [23, "Refuser et continuer seul", 12, null, 13, 0],
 
-      [24, "Fuir et laisser ton autre franchir la Brèche", 13, null, 20],
-      [25, "Combattre son double et prendre sa place", 13, 11, 21],
-      [26, "Fusionner avec son double", 13, null, 22],
+      [24, "Fuir et laisser ton autre franchir la Brèche", 13, null, 20, 0],
+      [25, "Combattre son double et prendre sa place", 13, 11, 21, 0],
+      [26, "Fusionner avec son double", 13, null, 22, 0],
 
-      [27, "Accepter de donner ta mémoire au Spectre", 15, null, 16],
-      [28, "Refuser et affronter les ombres", 15, null, 16],
+      [27, "Accepter de donner ta mémoire au Spectre", 15, null, 16, 0],
+      [28, "Refuser et affronter les ombres", 15, null, 16, 0],
 
-      [29, "Suivre la lumière dans les souterrains", 16, null, 8],
-      [30, "Rebrousser chemin", 16, null, 8],
+      [29, "Suivre la lumière dans les souterrains", 16, null, 8, 0],
+      [30, "Rebrousser chemin", 16, null, 8, 0],
 
-      [31, "Prier auprès des fanatiques", 17, null, 18],
-      [32, "Tenter de dérober un artefact", 17, null, 18],
+      [31, "Prier auprès des fanatiques", 17, null, 18, 0],
+      [32, "Tenter de dérober un artefact", 17, null, 18, 0],
 
-      [33, "Purifier ta Marque à l’autel", 18, null, 8],
-      [34, "Corrompre davantage ta Marque à l’autel", 18, null, 8],
-      [35, "Reprendre la route vers la Tour du Voile", 16, null, 7],
-      [36, "Quitter les Temples et rejoindre la Tour du Voile", 18, null, 7],
+      [33, "Purifier ta Marque à l’autel", 18, null, 8, 0],
+      [34, "Corrompre davantage ta Marque à l’autel", 18, null, 8, 0],
+      [35, "Reprendre la route vers la Tour du Voile", 16, null, 7, 0],
+      [36, "Quitter les Temples et rejoindre la Tour du Voile", 18, null, 7, 0],
       [
         37,
         "Se rendre aux Ruines d’Ashtorath pour réveiller la Reine Écorchée",
         7,
         null,
-        15,
+        15,  0
       ],
       [
         38,
         "Se rendre aux Temples pour éveiller le Veilleur Aveugle",
         7,
         null,
-        17,
+        17, 0
       ],
       [
         39,
         "Se rendre sous le Lac Noir pour éveiller la Mère Cendre",
         7,
         null,
-        19,
+        19, 0
       ],
       [
         40,
         "Éveiller la Mère Cendre en offrant un fragment de toi-même",
         19,
         null,
-        8,
+        8, 0
       ],
-      [41, "Refuser de troubler son sommeil et fuir discrètement", 19, null, 8],
-      [42, "Fin : Le Héros Oublié", 20, null, 23],
-      [43, "Fin : Le Brisé", 21, null, 23],
-      [44, "Fin : Le Souverain Gris", 22, null, 23],
-      [45, "revenir à l'accueil.", 23, null, 0],
+      [41, "Refuser de troubler son sommeil et fuir discrètement", 19, null, 8, 0],
+      [42, "Fin : Le Héros Oublié", 20, null, 23, 0],
+      [43, "Fin : Le Brisé", 21, null, 23, 0],
+      [44, "Fin : Le Souverain Gris", 22, null, 23, 0],
+      [45, "revenir à l'accueil.", 23, null, 0, 0],
     ];
     for (const choice of choices) {
       await connection.execute(
-        `INSERT INTO choice (id, text, step_id, object_id, link_to_step_id) VALUES (?, ?, ?, ?, ?)`,
+        `INSERT INTO choice (id, text, step_id, object_id, link_to_step_id) VALUES (?, ?, ?, ?, ?, ?)`,
         choice
       );
     }
 
     const users = [
-      [1, "Porte-Marque", "avatar_portemarque.jpg", "portemarque@yrnwald.com"],
-      [2, "Morgha", "avatar_morgha.jpg", "morgha@veilleurs.com"],
-      [3, "Voyageur", "avatar_voyageur.jpg", "voyageur@cendres.com"],
-      [4, "Reine-Écorchée", "avatar_reine.jpg", "reine@ashtorath.com"],
-      [5, "Marchand-Masqué", "avatar_marchand.jpg", "marchand@graven.com"],
+      [1, "Porte-Marque", "avatar_portemarque.png", "portemarque@yrnwald.com"],
+      [2, "Morgha", "avatar_morgha.png", "morgha@veilleurs.com"],
+      [3, "Voyageur", "avatar_voyageur.png", "voyageur@cendres.com"],
+      [4, "Reine-Écorchée", "avatar_reine.png", "reine@ashtorath.com"],
+      [5, "Marchand-Masqué", "avatar_marchand.png", "marchand@graven.com"],
     ];
     for (const user of users) {
       await connection.execute(
