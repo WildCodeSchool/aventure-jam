@@ -1,12 +1,12 @@
 import Link from "next/link";
 import styles from "./page.module.css";
-import Homeconnexion from "@/components/HomeConnexion";
+import HomeConnexion from "@/components/HomeConnexion";
 
 const Home = () => {
   return (
     <>
       <section className={styles.homeBody}>
-        <Homeconnexion />
+        <HomeConnexion />
         <div className={styles.aboutSection}>
           <Link href="/a-propos">
             <img

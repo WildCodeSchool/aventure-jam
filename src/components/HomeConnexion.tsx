@@ -7,7 +7,7 @@ import Login from "@/ui/login";
 import { appRoutes } from "@/data/ROUTES";
 import styles from "@/app/page.module.css";
 
-const Homeconnexion = () => {
+const HomeConnexion = () => {
   const { data: session } = useSession();
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -48,4 +48,4 @@ const Homeconnexion = () => {
   );
 };
 
-export default Homeconnexion;
+export default HomeConnexion;
