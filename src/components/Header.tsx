@@ -1,10 +1,20 @@
+"use client";
+
+import Link from "next/link";
 import styles from "./Header.module.css";
 
-export default function Header(){
+const Header = () => {
   return (
-        <header className={styles.header}>
-            <img src = "/Items/Gemini_Generated_Image_26kqiz26kqiz26kq.png" alt = "Icone iventaire" ></img>
-            <img src = "/Avatar/Gemini_Generated_Image_4des844des844des.png" alt = "avatar" ></img>
-        </header>
+    <header className={styles.headerHome}>
+      <Link href="/">
+        <img
+          src="/Logo/tourAccueil.png"
+          alt="Aller vers accueil"
+          className={styles.logo}
+        />
+      </Link>
+    </header>
   );
-}
+};
+
+export default Header;

@@ -1,19 +1,11 @@
+import Header from "@/components/Header";
 import styles from "./About.module.css";
-import Link from "next/link";
 
 const About = () => {
   return (
     <>
+      <Header />
       <section className={styles.aboutBody}>
-        <div className={styles.accueilSection}>
-          <Link href="/">
-            <img
-              className={styles.linkAccueil}
-              src="/Logo/9713317.png"
-              alt="Aller vers accueil"
-            />
-          </Link>
-        </div>
         <section className={styles.aboutSection}>
           <h2 className={styles.aboutTitle}>A Propos</h2>
           <div>
