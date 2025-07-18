@@ -1,7 +1,6 @@
 import { apiRoutes } from "@/data/ROUTES";
 import styles from "./etape.module.css";
 import { ChoiceModel } from "@/model/ChoiceModel";
-import Link from "next/link";
 import ButtonToValidate from "@/components/ButtonValidation";
 import dynamic from "next/dynamic";
 import NoBackNavigation from "@/components/NoBackNavigation";
