@@ -45,3 +45,46 @@ export async function Get(req: Request, { params }: Params) {
     return NextResponse.json({ error: "Erreur serveur" }, { status: 500 });
   }
 }
+
+export async function POST(req: Request, { params }: Params) {
+  const { email } = params;
+  const { step_id, history_id, object_id } = await req.json();
+
+  try {
+    const [rows] = await db.query("SELECT id FROM users WHERE email = ?", [
+      email,
+    ]);
+    const userRows = rows as { id: number }[];
+
+    if (!Array.isArray(userRows) || userRows.length === 0)
+      return NextResponse.json(
+        { error: "Utilisateur non trouvé" },
+        { status: 404 }
+      );
+
+    const userId = userRows[0].id;
+
+    const [otherRows] = await db.query(
+      "SELECT * FROM progress WHERE user_id = ? AND history_id = ?",
+      [userId, history_id]
+    );
+
+    const existingRows = otherRows as { id: number; step_id: number }[];
+
+    if (existingRows.length > 0) {
+      return NextResponse.json(
+        { error: "Progression déjà existante" },
+        { status: 400 }
+      );
+    }
+    await db.query(
+      "INSERT INTO progress (user_id, history_id, step_id, object_id) VALUES (?, ?, ?, ?)",
+      [userId, history_id, step_id, object_id]
+    );
+
+    return NextResponse.json({ message: "Progression créée" });
+  } catch (error) {
+    console.error("Erreur POST progression:", error);
+    return NextResponse.json({ error: "Erreur serveur" }, { status: 500 });
+  }
+}
