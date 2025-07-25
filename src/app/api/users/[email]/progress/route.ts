@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { db } from "@/lib/db";
+import { ProgressModel } from "@/model/ProgressModel";
 
 type Params = {
   params: { email: string };
@@ -69,7 +70,7 @@ export async function POST(req: Request, { params }: Params) {
       [userId, history_id]
     );
 
-    const existingRows = otherRows as { id: number; step_id: number }[];
+    const existingRows = otherRows as ProgressModel[];
 
     if (existingRows.length > 0) {
       return NextResponse.json(
@@ -85,6 +86,48 @@ export async function POST(req: Request, { params }: Params) {
     return NextResponse.json({ message: "Progression créée" });
   } catch (error) {
     console.error("Erreur POST progression:", error);
+    return NextResponse.json({ error: "Erreur serveur" }, { status: 500 });
+  }
+}
+export async function PATCH(req: Request, { params }: Params) {
+  const { email } = params;
+  const { step_id, object_id, history_id } = await req.json();
+
+  try {
+    const [addedRows] = await db.query("SELECT id FROM users WHERE email = ?", [
+      email,
+    ]);
+    const userRows = addedRows as { id: number }[];
+
+    if (!Array.isArray(userRows) || userRows.length === 0)
+      return NextResponse.json(
+        { error: "Utilisateur non trouvé" },
+        { status: 404 }
+      );
+
+    const userId = userRows[0].id;
+
+    const [progressRows] = await db.query(
+      "SELECT id FROM progress WHERE user_id = ? AND history_id = ?",
+      [userId, history_id]
+    );
+
+    const inProgressRows = progressRows as ProgressModel[];
+
+    if (inProgressRows.length === 0) {
+      return NextResponse.json(
+        { error: "Progression inexistante" },
+        { status: 404 }
+      );
+    }
+    await db.query(
+      "UPDATE progress SET step_id = ?, object_id = ? WHERE user_id = ? AND history_id = ?",
+      [step_id, object_id, userId, history_id]
+    );
+
+    return NextResponse.json({ message: "Progression mise à jour" });
+  } catch (error) {
+    console.error("Erreur PATCH progression:", error);
     return NextResponse.json({ error: "Erreur serveur" }, { status: 500 });
   }
 }
