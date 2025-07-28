@@ -111,25 +111,24 @@
 }
 
 .deconnectionButton {
-    color: #e3e3e3;
-    min-width: min-content;
-    padding: .3rem;
-    border-radius: .5rem;
-    background-color: #131314;
-    font-family: "Roboto", arial, sans-serif;
-    position: fixed;
-    bottom: 91%;
-    left: 95%;
-    cursor: pointer;
+  color: #e3e3e3;
+  min-width: min-content;
+  padding: 0.3rem;
+  border-radius: 0.5rem;
+  background-color: #131314;
+  font-family: "Roboto", arial, sans-serif;
+  position: fixed;
+  bottom: 91%;
+  left: 95%;
+  cursor: pointer;
 }
 
-.deconnectionButton img{
+.deconnectionButton img {
   height: 2rem;
   width: 1.5rem;
 }
 
-
-.profilePicture{
+.profilePicture {
   position: fixed;
   bottom: 90%;
   left: 90%;
@@ -139,20 +138,20 @@
   cursor: pointer;
 }
 
-@media screen and (max-width: 800px){
-  .profilePicture{
+@media screen and (max-width: 800px) {
+  .profilePicture {
     bottom: 90%;
     left: 77%;
     height: 3rem;
     width: 3rem;
   }
 
-  .deconnectionButton{
+  .deconnectionButton {
     bottom: 90.5%;
     left: 91%;
   }
 
-  .deconnectionButton img{
+  .deconnectionButton img {
     height: 1.5rem;
     width: 1rem;
   }

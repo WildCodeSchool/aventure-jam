@@ -21,6 +21,9 @@
   border-radius: 12px;
   box-sizing: border-box;
 }
+.linkAccueil {
+  display: flex;
+}
 .keepCalm h2 {
   font-size: 50px;
 }
