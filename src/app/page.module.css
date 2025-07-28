@@ -22,6 +22,10 @@
   padding: 7px;
   border-radius: 15px;
 }
+a:hover {
+  color: rgb(223, 217, 217);
+  backdrop-filter: blur(90px);
+}
 
 .linkAbout {
   height: 50px;
