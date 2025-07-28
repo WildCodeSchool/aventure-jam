@@ -130,10 +130,10 @@
 
 .profilePicture {
   position: fixed;
-  bottom: 90%;
-  left: 90%;
-  height: 4rem;
-  width: 4rem;
+  bottom: 91%;
+  left: 88%;
+  height: 3rem;
+  width: 3rem;
   border-radius: 2rem;
   cursor: pointer;
 }

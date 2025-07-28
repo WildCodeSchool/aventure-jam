@@ -18,7 +18,9 @@
   margin: 25px;
   background-color: transparent;
   font-size: 20px;
-  border: none;
+  border: solid white 2px;
+  padding: 7px;
+  border-radius: 15px;
 }
 
 .linkAbout {
