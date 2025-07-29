@@ -8,10 +8,11 @@ const Header = () => {
     <header className={styles.headerHome}>
       <Link href="/">
         <img
-          src="/Logo/tourAccueil.png"
+          src="/Logo/HomeLogo.PNG"
           alt="Aller vers accueil"
           className={styles.logo}
         />
+        <p>Accueil</p>
       </Link>
     </header>
   );

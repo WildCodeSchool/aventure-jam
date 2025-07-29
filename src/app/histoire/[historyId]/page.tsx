@@ -20,7 +20,7 @@ const History = async ({ params }: Props) => {
         <p>{history.description}</p>
         <Link href={appRoutes.STEP(historyId, 1)}>
           <div className={styles.nextStepLink}>
-            <img src="/images/RightArrow.svg" />
+            <img src="/Logo/pressPlay.PNG" />
           </div>
         </Link>
       </div>
