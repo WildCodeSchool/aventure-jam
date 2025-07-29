@@ -1,17 +1,23 @@
 "use client";
 
-import { useRouter } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
 import { useState, useRef, useEffect } from "react";
+import { useSession } from "next-auth/react";
 import styles from "./ButtonValidation.module.css";
+import { addInventory } from "@/service/AventureService";
 
 type Props = {
   link: string;
   label: string;
+  objectId: number;
 };
 
-const ButtonToValidate = ({ link, label }: Props) => {
+const ButtonToValidate = ({ link, label, objectId }: Props) => {
   const [progress, setProgress] = useState(0);
   const router = useRouter();
+  const params = useParams();
+  const { data: session } = useSession();
+
   const intervalRef = useRef<number | null>(null);
   const timeoutRef = useRef<number | null>(null);
   const startTimeRef = useRef<number | null>(null);
@@ -39,6 +45,16 @@ const ButtonToValidate = ({ link, label }: Props) => {
 
     timeoutRef.current = window.setTimeout(() => {
       clearTimers();
+      try {
+        const email = session?.user?.email;
+        const historyId = Number(params.historyId);
+
+        if (email && historyId && objectId !== null) {
+          addInventory(email, historyId, objectId);
+        }
+      } catch (error) {
+        console.error("Erreur lors de l'ajout à l'inventaire :", error);
+      }
       router.push(link);
     }, duration);
   };

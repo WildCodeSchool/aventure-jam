@@ -3,14 +3,19 @@ import { apiRoutes } from "@/data/ROUTES";
 import { Inventory } from "@/model/InventoryModel";
 
 
-export async function getInventoryByHistory(email: string, historyId: number, objectId: number): Promise<Inventory[]> { 
-    const res = await fetch(`${apiRoutes.INVENTORY(email, historyId, objectId)}`, {
+export async function postInventoryByHistory(
+    email: string,
+    historyId: number,
+    objectId: number
+): Promise<Inventory> {
+    const res = await fetch(apiRoutes.INVENTORY(email, historyId), {
         method: "POST",
         headers: {
             Accept: "application/json",
             "Content-Type": "application/json",
         },
         credentials: "include",
+        body: JSON.stringify({ objectId }),
     });
 
     if (res.status === 404) {
@@ -22,5 +27,4 @@ export async function getInventoryByHistory(email: string, historyId: number, ob
     }
 
     return res.json();
-
 }
