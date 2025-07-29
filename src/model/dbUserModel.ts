@@ -1,6 +1,8 @@
 export type dbUser = {
-    id: number,
-    pseudo: string,
-    avatar: string,
-    email: string,
-}
+  id: number;
+  pseudo: string;
+  avatar: string;
+  email: string;
+};
+
+export default dbUser;
