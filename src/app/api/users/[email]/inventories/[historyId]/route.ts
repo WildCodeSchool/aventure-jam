@@ -1,11 +1,7 @@
 import { infoMessages } from "@/data/responseMessages";
 import { db } from "@/lib/db";
 import { NextRequest, NextResponse } from "next/server";
-import { RowDataPacket } from "mysql2/promise";
 
-interface UserRow extends RowDataPacket {
-    userId: number;
-}
 
 export async function GET(request: NextRequest) {
 
@@ -66,21 +62,10 @@ export async function DELETE(request: NextRequest) {
             return NextResponse.json({ error: "Liste d'objets vide ou invalide." }, { status: 400 });
         }
 
-        const [rows] = await db.query<UserRow[]>(
-            "SELECT id as userId FROM users WHERE email = ?",
-            [email]
-        );
-
-        const userId = rows[0]?.userId;
-
-        if (!userId) {
-            return NextResponse.json({ error: "Utilisateur non trouvé." }, { status: 404 });
-        }
-
         for (const objectId of objectIds) {
             await db.query(
-                "DELETE FROM inventory WHERE user_id = ? AND object_id = ? AND history_id = ? LIMIT 1",
-                [userId, objectId, historyId]
+                "DELETE FROM inventory WHERE (SELECT id FROM users WHERE email = ?) = ? AND object_id = ? AND history_id = ? LIMIT 1",
+                [email, objectId, historyId]
             );
         }
 
