@@ -29,7 +29,7 @@ const HomeConnexion = () => {
             onClick={handleProtectedClick}
             className={styles.linkHistory}
           >
-            LANCER HISTOIRE
+            Entre dans l'Histoire
           </button>
         )}
         <div className={styles.googleButton}>
