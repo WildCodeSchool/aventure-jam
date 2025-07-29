@@ -50,6 +50,18 @@
 .choiceButton:active {
   animation: gradient 1000ms;
 }
+
+.choiceButtonDesactivated {
+  backdrop-filter: blur(2px) saturate(140%);
+  background-color: rgba(17, 25, 40, 0.75);
+  border-radius: 10px;
+  border: solid white;
+  padding: 15px;
+  width: 100%;
+  cursor: not-allowed;
+}
+
+
 @keyframes gradient {
   0% {
     background: radial-gradient(
