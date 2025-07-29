@@ -21,7 +21,7 @@ const HomeConnexion = () => {
         <h1>HISTOIRE INTERACTIVE</h1>
         {session ? (
           <Link className={styles.linkHistory} href={appRoutes.HISTORY(1)}>
-            Entre dans l'histoire
+            Entre dans l'Histoire
           </Link>
         ) : (
           <button
