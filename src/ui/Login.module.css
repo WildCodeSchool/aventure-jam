@@ -141,14 +141,14 @@
 @media screen and (max-width: 800px) {
   .profilePicture {
     bottom: 90%;
-    left: 77%;
+    left: 65%;
     height: 3rem;
     width: 3rem;
   }
 
   .deconnectionButton {
     bottom: 90.5%;
-    left: 91%;
+    left: 87%;
   }
 
   .deconnectionButton img {

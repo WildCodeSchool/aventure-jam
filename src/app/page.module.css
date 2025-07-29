@@ -47,7 +47,8 @@ a:hover {
   }
 
   .mainTitle {
-    font-size: 15px;
+    font-size: 24px;
+    justify-content: space-evenly;
   }
 
   .linkAbout {
@@ -56,6 +57,6 @@ a:hover {
   }
 
   .linkHistory {
-    font-size: 10px;
+    font-size: 12px;
   }
 }
