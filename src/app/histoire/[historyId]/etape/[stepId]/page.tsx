@@ -48,8 +48,10 @@ const Step = async ({ params }: Props) => {
                       choice.linkToStepId === 0
                         ? "/"
                         : `/histoire/${historyId}/etape/${choice.linkToStepId}`
-                    }
-                    label={choice.text}
+                      }
+                      label={choice.text}
+                    objectId={choice.objectId}
+                    takeOrGive={choice.takeOrGive}
                   />
                 </li>
               ))}
