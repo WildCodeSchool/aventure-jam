@@ -1,17 +1,24 @@
 "use client";
 
-import { useRouter } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
 import { useState, useRef, useEffect } from "react";
+import { useSession } from "next-auth/react";
 import styles from "./ButtonValidation.module.css";
+import { addInventory, deleteInventories } from "@/service/AventureService";
 
 type Props = {
   link: string;
   label: string;
+  objectId: number;
+  takeOrGive: number | null;
 };
 
-const ButtonToValidate = ({ link, label }: Props) => {
+const ButtonToValidate = ({ link, label, objectId, takeOrGive }: Props) => {
   const [progress, setProgress] = useState(0);
   const router = useRouter();
+  const params = useParams();
+  const { data: session } = useSession();
+
   const intervalRef = useRef<number | null>(null);
   const timeoutRef = useRef<number | null>(null);
   const startTimeRef = useRef<number | null>(null);
@@ -39,6 +46,22 @@ const ButtonToValidate = ({ link, label }: Props) => {
 
     timeoutRef.current = window.setTimeout(() => {
       clearTimers();
+      try {
+        const email = session?.user?.email;
+        const historyId = Number(params.historyId);
+
+        if (email && historyId && objectId !== null) {
+          if (takeOrGive && takeOrGive === 0) {
+            addInventory(email, historyId, objectId);
+          } else if (takeOrGive && takeOrGive === 1) {
+            deleteInventories(email, historyId, [objectId])
+          } else {
+            return
+          }
+        }
+      } catch (error) {
+        console.error("Erreur lors de l'ajout à l'inventaire :", error);
+      }
       router.push(link);
     }, duration);
   };

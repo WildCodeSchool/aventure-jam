@@ -4,4 +4,5 @@ export interface ChoiceModel {
   stepId: number;
   objectId: number;
   linkToStepId: number;
+  takeOrGive: number;
 }
