@@ -51,11 +51,11 @@ const ButtonToValidate = ({ link, label, objectId, takeOrGive }: Props) => {
         const historyId = Number(params.historyId);
 
         if (email && historyId && objectId !== null) {
-          if (takeOrGive && takeOrGive === 0) {
+          if (takeOrGive === 0) {
             addInventory(email, historyId, objectId);
           }
           if (takeOrGive && takeOrGive === 1) {
-            deleteInventories(email, historyId, [objectId]);
+            deleteInventories(email, historyId, [objectId])
           }
         }
       } catch (error) {
