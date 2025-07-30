@@ -1,0 +1,10 @@
+.historiesContainer {
+  display: flex;
+  padding: 15rem;
+  justify-content: center;
+  align-items: center;
+  background-image: url(/background/pageMenuHistoire.png);
+  background-size: cover;
+  margin: 0;
+  height: 100vh;
+}

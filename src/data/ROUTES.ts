@@ -2,6 +2,7 @@ const apiUrl = process.env.NEXT_PUBLIC_API_URL;
 const appUrl = process.env.NEXT_PUBLIC_APP_URL;
 const apiRoutes = {
   INFOS: `${apiUrl}/api/infos`,
+  HISTORIES: `${apiUrl}/api/histories`,
   HISTORY: (id: number) => `${apiUrl}/api/histories/${id}`,
   STEP: (historyId: number, stepId: number) =>
     `${apiUrl}/api/histories/${historyId}/steps/${stepId}`,
