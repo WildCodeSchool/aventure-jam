@@ -4,7 +4,7 @@ import { useParams, useRouter } from "next/navigation";
 import { useState, useRef, useEffect } from "react";
 import { useSession } from "next-auth/react";
 import styles from "./ButtonValidation.module.css";
-import { addInventory, deleteInventories } from "@/service/AventureService";
+import { addInventory, deleteInventories, fetchInventoryForHistory } from "@/service/AventureService";
 
 type Props = {
   link: string;
@@ -60,6 +60,14 @@ const ButtonToValidate = ({ link, label, objectId, takeOrGive }: Props) => {
         }
       } catch (error) {
         console.error("Erreur lors de l'ajout à l'inventaire :", error);
+      }
+      if (link === "/") {
+        const email = session?.user?.email
+        const historyId = Number(params.historyId);
+        fetchInventoryForHistory(email as string, historyId).then((data: any[]) => {
+          const objectIds = data.map((item) => item.object_id);
+          deleteInventories(email as string, historyId, objectIds);
+        });
       }
       router.push(link);
     }, duration);

@@ -14,9 +14,9 @@ export async function deleteInventory(
         },
         credentials: "include",
         body: JSON.stringify({ objectIds }),
+        
     });
-
-    if (res.status === 404) {
+        if (res.status === 404) {
         throw new Error(infoMessages.notFound || "Ressource non trouvée.");
     }
 

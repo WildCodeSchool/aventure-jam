@@ -1,5 +1,9 @@
-import { ObjectModel } from "./objectModel";
-
 export type Inventory = {
-    objects: ObjectModel[];
+    history_id: number;
+    id: number;
+    image: string;
+    is_used: number;
+    name: string;
+    object_id: number;
+    user_id: number;
 }[];
