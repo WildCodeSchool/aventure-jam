@@ -85,7 +85,7 @@ const ButtonToValidate = ({ link, label, objectId, takeOrGive }: Props) => {
       onTouchEnd={handleEnd}
       data-progress={progress}
     >
-      {label}
+      <span className={styles.buttonLabel}>{label}</span>
     </button>
   );
 };

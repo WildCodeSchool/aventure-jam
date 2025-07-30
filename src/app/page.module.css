@@ -19,8 +19,9 @@
   background-color: transparent;
   font-size: 20px;
   border: solid white 2px;
-  padding: 7px;
+  padding: 10px;
   border-radius: 15px;
+  cursor: pointer;
 }
 a:hover {
   color: rgb(223, 217, 217);

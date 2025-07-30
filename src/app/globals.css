@@ -17,7 +17,6 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
-  color: white;
 }
 
 body {
@@ -47,6 +46,5 @@ ul {
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: white;
-    color: white;
   }
 }
