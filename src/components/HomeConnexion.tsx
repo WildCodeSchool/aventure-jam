@@ -21,7 +21,7 @@ const HomeConnexion = () => {
         <h1>HISTOIRE INTERACTIVE</h1>
         {session ? (
           <Link className={styles.linkHistory} href={appRoutes.HISTORY(1)}>
-            Entre dans l'histoire
+            Entre dans l'Histoire
           </Link>
         ) : (
           <button
@@ -29,7 +29,7 @@ const HomeConnexion = () => {
             onClick={handleProtectedClick}
             className={styles.linkHistory}
           >
-            LANCER HISTOIRE
+            Entre dans l'Histoire
           </button>
         )}
         <div className={styles.googleButton}>

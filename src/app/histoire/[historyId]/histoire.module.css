@@ -8,7 +8,7 @@
 .mainTitle {
   height: auto;
   max-width: 80%;
-  padding: 60px;
+  padding: 10px;
   font-family: var(--font-geist-sans);
   position: absolute;
   top: 50%;
@@ -22,7 +22,7 @@
 
   h2,
   p {
-    margin: 20px;
+    margin: 40px;
   }
 }
 

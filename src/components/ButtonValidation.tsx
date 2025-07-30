@@ -53,10 +53,9 @@ const ButtonToValidate = ({ link, label, objectId, takeOrGive }: Props) => {
         if (email && historyId && objectId !== null) {
           if (takeOrGive && takeOrGive === 0) {
             addInventory(email, historyId, objectId);
-          } else if (takeOrGive && takeOrGive === 1) {
-            deleteInventories(email, historyId, [objectId])
-          } else {
-            return
+          }
+          if (takeOrGive && takeOrGive === 1) {
+            deleteInventories(email, historyId, [objectId]);
           }
         }
       } catch (error) {
@@ -86,7 +85,7 @@ const ButtonToValidate = ({ link, label, objectId, takeOrGive }: Props) => {
       onTouchEnd={handleEnd}
       data-progress={progress}
     >
-      {label}
+      <span className={styles.buttonLabel}>{label}</span>
     </button>
   );
 };
