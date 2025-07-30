@@ -13,7 +13,9 @@
   justify-content: center;
   text-align: center;
   font-size: 40px;
+  font-family: "roboto", sans-serif;
 }
+
 .linkHistory {
   margin: 25px;
   background-color: transparent;
