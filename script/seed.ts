@@ -697,7 +697,8 @@ const seed = async () => {
         "Utiliser un artefact de voyage pour fuir instantanément",
         8,
         null,
-        9, 0
+        9,
+        0,
       ],
 
       [17, "Invoquer une aide temporaire", 8, null, 9, 0],
@@ -705,7 +706,14 @@ const seed = async () => {
       [18, "Offrir ton sang à la Reine Écorchée", 9, null, 10, 0],
       [19, "Offrir le sien", 9, null, 10, 0],
 
-      [20, "Accepter le fragment d’os et continuer vers la suite", 10, 8, 11, 0],
+      [
+        20,
+        "Accepter le fragment d’os et continuer vers la suite",
+        10,
+        8,
+        11,
+        0,
+      ],
 
       [21, "Poursuivre vers la Couronne d’Épine", 11, 9, 12, 0],
 
@@ -734,30 +742,41 @@ const seed = async () => {
         "Se rendre aux Ruines d’Ashtorath pour réveiller la Reine Écorchée",
         7,
         null,
-        15,  0
+        15,
+        0,
       ],
       [
         38,
         "Se rendre aux Temples pour éveiller le Veilleur Aveugle",
         7,
         null,
-        17, 0
+        17,
+        0,
       ],
       [
         39,
         "Se rendre sous le Lac Noir pour éveiller la Mère Cendre",
         7,
         null,
-        19, 0
+        19,
+        0,
       ],
       [
         40,
         "Éveiller la Mère Cendre en offrant un fragment de toi-même",
         19,
         null,
-        8, 0
+        8,
+        0,
       ],
-      [41, "Refuser de troubler son sommeil et fuir discrètement", 19, null, 8, 0],
+      [
+        41,
+        "Refuser de troubler son sommeil et fuir discrètement",
+        19,
+        null,
+        8,
+        0,
+      ],
       [42, "Fin : Le Héros Oublié", 20, null, 23, 0],
       [43, "Fin : Le Brisé", 21, null, 23, 0],
       [44, "Fin : Le Souverain Gris", 22, null, 23, 0],
@@ -765,7 +784,7 @@ const seed = async () => {
     ];
     for (const choice of choices) {
       await connection.execute(
-        `INSERT INTO choice (id, text, step_id, object_id, link_to_step_id) VALUES (?, ?, ?, ?, ?, ?)`,
+        `INSERT INTO choice (id, text, step_id, object_id, link_to_step_id, take_or_give) VALUES (?, ?, ?, ?, ?, ?)`,
         choice
       );
     }
