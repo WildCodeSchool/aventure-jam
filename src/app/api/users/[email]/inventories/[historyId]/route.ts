@@ -40,7 +40,6 @@ export async function POST(request: NextRequest) {
             'INSERT INTO inventory (is_used, user_id, object_id, history_id) VALUES (0, (SELECT id FROM users WHERE email = ?), ?, ?)',
             [email, objectId, historyId]
         );
-
         return NextResponse.json({ message: "Objet ajouté à l'inventaire." });
     } catch (error) {
         console.error("Erreur MySQL :", error);
