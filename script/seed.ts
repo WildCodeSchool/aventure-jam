@@ -681,7 +681,7 @@ const seed = async () => {
         <p>- Appeler un ancien camarade de promo qui bosse dans le secteur tech.</p>`,
         2,
         null,
-        "background.png",
+        "/background/Lueurs1.png",
       ],
       [
         25,
@@ -709,7 +709,7 @@ const seed = async () => {
         <p>Mais cela suffira-t-il à te sauver ?</p>`,
         2,
         null,
-        "background.png",
+        "/background/Lueurs2.png",
       ],
       [
         26,
@@ -739,7 +739,7 @@ const seed = async () => {
       <p>…si tu vis assez longtemps.</p>`,
         2,
         null,
-        "background.png",
+        "/background/Lueurs3.png",
       ],
       [
         27,
@@ -761,7 +761,7 @@ const seed = async () => {
       Vas-tu risquer plus que ton badge pour la vérité ?</p>`,
         2,
         null,
-        "background.png",
+        "/background/lueurs4.png",
       ],
       [
         28,
@@ -792,7 +792,7 @@ const seed = async () => {
       <p>…mais elle ne sera jamais gratuite.</p>`,
         2,
         null,
-        "backround.png",
+        "/background/lueurs5.png",
       ],
       [
         29,
@@ -832,7 +832,7 @@ const seed = async () => {
       <p>C’est une guerre.</p>`,
         2,
         null,
-        "backround.png",
+        "/background/lueurs6.png",
       ],
       [
         30,
@@ -864,7 +864,7 @@ const seed = async () => {
       Et c’est maintenant ta croix à porter.</p>`,
         2,
         null,
-        "backround.png",
+        "/background/lueurs7.png",
       ],
       [
         31,
@@ -902,7 +902,34 @@ const seed = async () => {
       <p>Dans une ruelle, dans l’ombre, un corps sans nom t’a transmis un fragment d’histoire.</p>`,
         2,
         null,
-        "background.png",
+        "/background/lueurs8.png",
+      ],
+      [
+        32,
+        `<p>En brisant le protocole, tu as découvert un implant interdit, vestige d’un pouvoir que la Ville refuse de nommer.<br />
+        Mais à Virek, la vérité ne se montre pas impunément.<br />
+        Tu sais. Et maintenant, ils viennent.</p>`,
+        2,
+        null,
+        "/background/lueurs9.png",
+      ],
+      [
+        33,
+        `<p>Une femme t’a confié un bloc mémoire que d’autres ont préféré mourir pour cacher.<br />
+        Tu as vu les premiers fragments d’un mensonge trop vaste pour un seul homme.<br />
+        Tu l’as transmis. Et tout peut commencer.</p>`,
+        2,
+        null,
+        "/background/lueurs9.png",
+      ],
+      [
+        34,
+        `<p>Grâce à un contact, tu as intercepté l’image qu’on ne devait jamais revoir : un badge gouvernemental sur un assassin fantôme.<br />
+      Une seule capture. Mais suffisante pour qu’ils te traquent.<br />
+      Tu détiens la preuve. Et ils le savent.</p>`,
+        2,
+        null,
+        "/background/lueurs9.png",
       ],
     ];
     for (const etape of etapes) {
@@ -1037,6 +1064,9 @@ const seed = async () => {
       [50, "FIN #2 — La vérité brûle les poches", 28, null, 29, 0],
       [51, " Appelles ton ancienne camarade tech", 24, null, 30, 0],
       [52, "Fin #3 : La capture interdite", 31, null, 31, 0],
+      [53, "Fin #1 – Ce que l’on ne doit pas voir", 0, null, 0],
+      [54, "Fin #2 – Le témoin silencieux", 0, null, 0],
+      [55, "Fin #3 – La capture interdite", 0, null, 0],
     ];
     for (const choice of choices) {
       await connection.execute(
