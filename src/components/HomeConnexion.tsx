@@ -17,7 +17,7 @@ const HomeConnexion = () => {
   return (
     <>
       <div className={styles.mainTitle}>
-        <h1>HISTOIRE INTERACTIVE</h1>
+        <h1>INKVERSE</h1>
         {session ? (
           <Link className={styles.linkHistory} href="/histoire">
             Entre dans l&apos;Histoire

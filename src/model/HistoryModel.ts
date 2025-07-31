@@ -3,3 +3,4 @@ export interface HistoryModel {
   title: string;
   description: string;
 }
+[];

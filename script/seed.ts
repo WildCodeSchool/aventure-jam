@@ -28,11 +28,21 @@ const seed = async () => {
     `);
 
     await connection.execute(
-      `INSERT INTO history (id, title, description) VALUES (?, ?, ?)`,
+      `
+      INSERT INTO history (id, title, description) VALUES (?, ?, ?)`,
       [
         1,
         "Les Cendres d'Yrnwald",
         "Une aventure sombre dans un monde dévasté par la Peste Rouge, où tu incarnes un Porte-Marque sans mémoire qui doit refermer la Brèche originelle pour sauver ce qui reste du monde.",
+      ]
+    );
+    await connection.execute(
+      `
+      INSERT INTO history (id, title, description) VALUES (?, ?, ?)`,
+      [
+        2,
+        " Les Lueurs du Froid",
+        "Virek, mégalopole verticale, rongée par les pluies acides et les néons publicitaires.Toi, Elian, 23 ans, tout juste diplômé de l’Académie Fédérale d’Enquête. Première affectation. Tu n’as même pas eu le temps de poser ton sac qu’un appel d’urgence te propulse dans une ruelle du secteur Delta-9.",
       ]
     );
 
@@ -662,13 +672,284 @@ const seed = async () => {
         null,
         "/background/voieFinal.png",
       ],
+      [
+        24,
+        `<p>Tu es seul dans la ruelle. La pluie ruisselle sur ton manteau réglementaire, trempe tes bottes, brouille ta visière augmentée.<br />
+        L’homme à tes pieds gît là, immobile. Aucune arme, aucun sang, aucun cri signalé. Juste une odeur d’ozone et cette marque circulaire, nette, brûlée à la tempe.</p>
+        <br />
+        <p>Ce n’est pas un tir. Ce n’est pas une lame.<br />
+        Il y a du monde tout autour, derrière les murs : des fenêtres s’ouvrent, se referment. Des drones passent, ignorent.<br />
+        Tu n’as encore rien dit à ton superviseur. Techniquement, tu devrais attendre l’équipe médico-légale.<br />
+        Mais t’attendre à quoi, exactement ? Qu’on classe l’affaire ? Qu’on t’écarte ?</p>
+        <br />
+        <p>Tu as trois choix — et pas encore de carrière à ruiner.</p>
+        <br />
+        <p>- Examiner le corps en détail, malgré le protocole</p>
+        <br />
+        <p>- Explorer les environs à la recherche d’un témoin.</p>
+        <br />
+        <p>- Appeler un ancien camarade de promo qui bosse dans le secteur tech.</p>`,
+        2,
+        null,
+        "/background/Lueurs1.png",
+      ],
+      [
+        25,
+        `<p>Ton gant glisse sur la tempe, puis sur la nuque.<br />
+        Rien… jusqu’à ce que tu détectes une résistance sous la peau,<br /> 
+        comme un implant mal intégré.<br />
+        Tu sors ton scalpel de terrain — officiellement, il est pour les prélèvements biologiques.<br /> 
+        Officieusement, il est pour ce genre d'instant.<br />
+        En grattant doucement, tu mets à jour un micro-module cristallin,<br />
+        une technologie interdite depuis la dernière réforme énergétique.</p>
+        <br />
+        <p>Tu filmes rapidement, stockes les données dans ton canal sécurisé… <br />
+        juste avant qu’un bip sec te fige.<br />
+        Ton visuel se brouille. Ton oreille bourdonne.<br />
+        Puis une voix, glaciale, synthétique :</p>
+        <br />
+        <p>— “Agent. Vous avez accédé à un niveau restreint. Veuillez rester sur place.”</p>
+        <br />
+        <p>Le ciel se zèbre d’un flash bleu.<br />
+        Un drone noir sans marque s’immobilise au-dessus de toi.</p>
+        <br />
+        <p>Tu viens de découvrir un secret qu’on ne voulait pas que tu trouves.<br />
+        Tu as eu raison.</p>
+        <br />
+        <p>Mais cela suffira-t-il à te sauver ?</p>`,
+        2,
+        null,
+        "/background/Lueurs2.png",
+      ],
+      [
+        26,
+        `<p>Tu as désobéi.<br /> 
+        Tu as découvert la vérité. Et maintenant… tu es en danger.</p>
+      <br />
+      <p>Le drone suspendu au-dessus de toi émet un bourdonnement grave, presque organique.<br /> 
+      Son projecteur scanne ton visage, ta rétine, ton identifiant neural.<br />
+      Tu sais déjà que ton accès au réseau est en train de se faire purger, que ton canal sécurisé est compromis.</p>
+      <br />
+      <p>Une alerte rouge pulse dans ta visière :</p>
+      <br />
+      <p>PROTOCOLE DE SUSPENSION – ACTIF</p>
+      <br />
+      <p>Tu recules. L’eau glacée t’arrive presque aux genoux maintenant,<br /> 
+      mais ce n’est rien comparé à la chape de silence qui vient de tomber sur le quartier.<br />
+      Plus aucun bruit. Plus de signal. Plus d’échappatoire.</p>
+      <br />
+      <p>Tu as déterré quelque chose de trop ancien. Trop puissant.<br />
+      Ce n’était pas un meurtre de ruelle. C’était une opération d’effacement.</p>
+      <br />
+      <p>Et désormais, c’est toi qu’on va effacer.</p>
+      <br />
+      <p>Dans la lueur bleue des néons, une pensée unique t’obsède :<br />
+      "Quoi qu’il arrive, je dois faire sortir ces données de la ville."</p>
+      <br />
+      <p>…si tu vis assez longtemps.</p>`,
+        2,
+        null,
+        "/background/Lueurs3.png",
+      ],
+      [
+        27,
+        `<p>Tu relèves la tête. Malgré la pluie qui martèle ta visière, tu remarques une lumière pâle au quatrième étage d’un immeuble décrépit.<br />
+      Derrière les rideaux décolorés, une silhouette furtive s'efface, comme si elle t'observait depuis le début.</p>
+      <br />
+      <p>Tu contournes le corps, traverses la ruelle et pénètres dans le hall de l'immeuble : odeur d’humidité, murs tagués, caméras factices.<br />
+      Chaque étage craque sous tes pas. Les capteurs de proximité dans ta combinaison clignotent — tu es observé, mais pas seul.<br />
+      Arrivé devant la porte de l’appartement, tu hésites. Aucun nom. Juste un oeilleton éteint et un cadenas électronique hors service.</p>
+      <br />
+      <p>Tu frappes.<br />
+      Une voix, rauque et rapide, t’interpelle de l’autre côté :</p>
+      <br />
+      <p>— “T’es pas du coin. T’es pas censé voir ça. Dégage, petit.”</p>
+      <br />
+      <p>Tu peux insister, menacer, supplier. Mais à Virek, voir c’est trahir, et parler, c’est mourir.</p>
+      <br />
+      <p>La question est simple :<br />
+      Vas-tu risquer plus que ton badge pour la vérité ?</p>`,
+        2,
+        null,
+        "/background/lueurs4.png",
+      ],
+      [
+        28,
+        `<p>Tu insistes. Tu frappes encore, trois coups secs, puis tu poses ta main sur la serrure grillagée.<br />
+      Elle s’ouvre dans un grincement.</p>
+      <br />
+      <p>L’intérieur est sombre. Une pièce unique, saturée d’odeurs de nicotine, d’huile de machine et de peur.<br />
+      Sur un fauteuil râpé, une femme d’une cinquantaine d’années te fixe. Elle a les yeux rouges de fatigue, ou peut-être de larmes — impossible à dire.<br />
+      Son bras gauche est cybernétisé à l’ancienne, d’époque pré-ban, rafistolé avec du fil de cuivre et des morceaux de plastique alimentaire.</p>
+      <br />
+      <p>— "Il a pas crié. Il a pas couru. Juste... il s’est arrêté. Comme si quelque chose s’était coupé en lui."</p>
+      <br />
+      <p>Tu t’approches.<br />
+      Elle lève la main, tremblante, et dépose dans ta paume un minuscule cube translucide — un bloc mémoire, protégé par un cryptage illégal.</p>
+      <br />
+      <p>— "Il me l’a donné juste avant de tomber. M’a dit de le remettre à quelqu’un ‘qui comprendrait’. J’ai vu ton regard… T’es pas comme les autres."</p>
+      <br />
+      <p>Avant que tu puisses répondre, elle baisse les yeux, et murmure :<br />
+      — "Maintenant partez. Et ne revenez jamais ici. Vous êtes déjà mort."</p>
+      <br />
+      <p>Tu ressors sans bruit.<br />
+      Dehors, la pluie est encore plus dense.</p>
+      <br />
+      <p>Tu tiens la clé de quelque chose. Quelque chose de bien plus grand qu’un cadavre dans une ruelle.</p>
+      <br />
+      <p>La vérité t’attend peut-être au bout…</p>
+      <br />
+      <p>…mais elle ne sera jamais gratuite.</p>`,
+        2,
+        null,
+        "/background/lueurs5.png",
+      ],
+      [
+        29,
+        `<p>Tu avances dans la ruelle, le bloc mémoire serré dans ta paume.<br />
+      Il pulse légèrement, comme s’il vivait. Comme s’il t’écoutait.<br />
+      Tu regardes autour de toi. Personne. Pas un drone. Pas un bruit. Trop calme pour être vrai.</p>
+      <br />
+      <p>Dans ton oreillette, un craquement. Parasite.<br />
+      Puis une voix, mécanique, déshumanisée :</p>
+      <br />
+      <p>— “Transmission détectée. Anomalie comportementale. Niveau 3.”</p>
+      <br />
+      <p>Ton sang se glace. Tu coupes la liaison, mais c’est trop tard.<br />
+      La signature du cube t’a trahi. Quelqu’un — ou quelque chose — sait que tu le portes.</p>
+      <br />
+      <p>Tu changes de rue. Trois fois. Tu brouilles ton signal, grilles une puce secondaire.<br /> 
+      Tu as appris tout ça à l’Académie.<br />
+      Mais ça ne suffit pas. Pas à Virek.</p>
+      <br />
+      <p>Tu arrives devant une cabine de cryptocommunication publique, encore en service<br />. 
+      Tu t’y engouffres. L’écran s’allume.<br /> 
+      Tu hésites à insérer le cube.<br />
+      Tu te demandes si ce qu’il contient mérite qu’on meure pour lui.<br />
+      Et surtout, combien sont déjà morts pour qu’il arrive jusqu’à toi.</p>
+      <br />
+      <p>Tu inspires. Tu insères le cube.<br />
+      L’écran vibre, des symboles apparaissent, puis une voix :</p>
+      <br />
+      <p>— “Connexion établie. Nœud 114 débloqué. Transfert en cours.”</p>
+      <br />
+      <p>Tu restes là, trempé, épuisé.<br />
+      Tu ne sais pas encore qui va recevoir les données. Ni ce qu’elles révèlent.<br />
+      Tu sais juste une chose :</p>
+      <br />
+      <p>Ce n’est plus ton enquête.</p>
+      <br />
+      <p>C’est une guerre.</p>`,
+        2,
+        null,
+        "/background/lueurs6.png",
+      ],
+      [
+        30,
+        `<p>Tu recules dans l’ombre d’un porche. D’un geste rapide, tu actives ta puce comm et lances un canal crypté niveau étudiant<br /> 
+      — une vieille signature, pas assez propre pour être repérée par les scrutateurs de Virek.</p>
+      <br />
+      <p>— “Linh ? C’est Elian. J’ai un corps. Une marque bizarre. Ruelles de Delta-9. Tu bosses toujours sur les flux drones ?”</p>
+      <br />
+      <p>Silence. Puis une voix étouffée, plus fatiguée que tu ne l’aurais imaginé :</p>
+      <br />
+      <p>— “T’as pas appelé depuis deux ans, El’. J’espère que tu ne fous pas ta carrière en l’air dès la première semaine.”</p>
+      <br />
+      <p>Tu souris à peine.<br />
+      Elle soupire, puis les lignes de code défilent sur ta visière. Une injection de flux piratés commence à charger.<br />
+      Tu vois la scène en survol : le drone de maintenance qui passe deux minutes avant que tu arrives… et une silhouette encapuchonnée<br />
+      qui s’éloigne à peine après avoir laissé le corps.</p>
+      <br />
+      <p>Pause. Replay. Tu zoomes.<br />
+      Et là, entre deux blocs de pixels fondus : un insigne.</p>
+      <br />
+      <p>Pas un gang. Pas un citoyen. Un badge d’accès gouvernemental. Détail infime. Détail fatal.</p>
+      <br />
+      <p>— “C’est une exécution propre, El. Et t’étais pas censé la voir. Supprime tout, j’te jure, oublie cette ruelle.”</p>
+      <br />
+      <p>Mais tu ne peux pas.<br />
+      Tu fais une capture. Tu stockes l’image dans une partition gelée de ta mémoire neurale.<br />
+      Tu sais que ça ne suffira pas à faire tomber un système.<br />
+      Mais c’est une preuve.<br />
+      Et c’est maintenant ta croix à porter.</p>`,
+        2,
+        null,
+        "/background/lueurs7.png",
+      ],
+      [
+        31,
+        `<p>Tu as vu ce que personne ne devait voir.<br />
+      Tu as copié l’image.<br />
+      Et maintenant, chaque capteur de la ville pourrait bien te reconnaître.</p>
+      <br />
+      <p>Tu quittes la ruelle, le pas calme, le cœur en vrac.<br />
+      Dans ton réseau interne, la capture du drone tourne en boucle.<br />
+      Tu l’as gelée dans un coin de ton cerveau, à l’abri des balayages standards.<br />
+      Mais tu sais que ce n’est qu’une question de temps.</p>
+      <br />
+      <p>La ville est un organisme. Et elle a senti l’infection.</p>
+      <br />
+      <p>Chaque caméra murale, chaque panneau publicitaire intelligent, chaque drone de circulation...<br /> 
+      tous peuvent maintenant voir ton visage et le comparer à ce que tu sais.</p>
+      <br />
+      <p>Tu reçois un dernier message de Linh, codé en morse binaire :</p>
+      <br />
+      <p>« Je t’ai pas aidé. Je veux pas savoir. Supprime tout. Tu peux encore t’en sortir. »</p>
+      <br />
+      <p>Tu ne réponds pas.
+      Tu regardes le reflet de ton visage sur une vitre sale : jeune, fatigué, et déjà hors-la-loi.</p>
+      <br />
+      <p>Tu pourrais fuir.<br />
+      Changer d’identité. Effacer ton traceur neural.<br />
+      Ou tu pourrais rester, et faire ce qu’aucun autre n’a osé faire dans cette ville depuis des années :</p>
+      <br />
+      <p>Parler.</p>
+      <br />
+      <p>Pas aujourd’hui.<br />
+      Pas demain.<br />
+      Mais bientôt.</p>
+      <br />
+      <p>Dans une ruelle, dans l’ombre, un corps sans nom t’a transmis un fragment d’histoire.</p>`,
+        2,
+        null,
+        "/background/lueurs8.png",
+      ],
+      [
+        32,
+        `<p>En brisant le protocole, tu as découvert un implant interdit, vestige d’un pouvoir que la Ville refuse de nommer.<br />
+        Mais à Virek, la vérité ne se montre pas impunément.<br />
+        Tu sais. Et maintenant, ils viennent.</p>`,
+        2,
+        null,
+        "/background/lueurs9.png",
+      ],
+      [
+        33,
+        `<p>Une femme t’a confié un bloc mémoire que d’autres ont préféré mourir pour cacher.<br />
+        Tu as vu les premiers fragments d’un mensonge trop vaste pour un seul homme.<br />
+        Tu l’as transmis. Et tout peut commencer.</p>`,
+        2,
+        null,
+        "/background/lueurs9.png",
+      ],
+      [
+        34,
+        `<p>Grâce à un contact, tu as intercepté l’image qu’on ne devait jamais revoir : un badge gouvernemental sur un assassin fantôme.<br />
+      Une seule capture. Mais suffisante pour qu’ils te traquent.<br />
+      Tu détiens la preuve. Et ils le savent.</p>`,
+        2,
+        null,
+        "/background/lueurs9.png",
+      ],
     ];
+    await connection.execute(`SET FOREIGN_KEY_CHECKS = 0;`);
     for (const etape of etapes) {
       await connection.execute(
         `INSERT INTO step (id, text, history_id, pnj, background) VALUES (?, ?, ?, ?, ?)`,
         etape
       );
     }
+    await connection.execute(`SET FOREIGN_KEY_CHECKS = 1;`);
 
     const choices = [
       [1, "Suivre la vieille femme à travers les ruines", 1, null, 2, 0],
@@ -781,13 +1062,33 @@ const seed = async () => {
       [43, "Fin : Le Brisé", 21, null, 23, 0],
       [44, "Fin : Le Souverain Gris", 22, null, 23, 0],
       [45, "revenir à l'accueil.", 23, null, 0, 0],
+      [46, "Examiner le corps en détail, malgré le protocole", 24, null, 25, 0],
+      [47, " Fin #1 : Ce que l’on ne doit pas voir,", 25, null, 26, 0],
+      [
+        48,
+        "Explorer les environs à la recherche d’un témoin.",
+        24,
+        null,
+        27,
+        0,
+      ],
+      [49, "Insiste, frappe à la porte à nouveau", 27, null, 28, 0],
+      [50, "FIN #2 — La vérité brûle les poches", 28, null, 29, 0],
+      [51, " Appelles ton ancienne camarade tech", 24, null, 30, 0],
+      [52, "Fin #3 : La capture interdite", 31, null, 31, 0],
+      [53, "Fin #1 – Ce que l’on ne doit pas voir", 26, null, 0, 0],
+      [54, "Fin #2 – Le témoin silencieux", 29, null, 0, 0],
+      [55, "Fin #3 – La capture interdite", 30, null, 0, 0],
     ];
+
+    await connection.execute(`SET FOREIGN_KEY_CHECKS = 0;`);
     for (const choice of choices) {
       await connection.execute(
         `INSERT INTO choice (id, text, step_id, object_id, link_to_step_id, take_or_give) VALUES (?, ?, ?, ?, ?, ?)`,
         choice
       );
     }
+    await connection.execute(`SET FOREIGN_KEY_CHECKS = 1;`);
 
     const users = [
       [1, "Porte-Marque", "avatar_portemarque.png", "portemarque@yrnwald.com"],
