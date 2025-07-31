@@ -28,11 +28,21 @@ const seed = async () => {
     `);
 
     await connection.execute(
-      `INSERT INTO history (id, title, description) VALUES (?, ?, ?)`,
+      `
+      INSERT INTO history (id, title, description) VALUES (?, ?, ?)`,
       [
         1,
         "Les Cendres d'Yrnwald",
         "Une aventure sombre dans un monde dévasté par la Peste Rouge, où tu incarnes un Porte-Marque sans mémoire qui doit refermer la Brèche originelle pour sauver ce qui reste du monde.",
+      ]
+    );
+    await connection.execute(
+      `
+      INSERT INTO history (id, title, description) VALUES (?, ?, ?)`,
+      [
+        2,
+        " Les Lueurs du Froid",
+        "Virek, mégalopole verticale, rongée par les pluies acides et les néons publicitaires.Toi, Elian, 23 ans, tout juste diplômé de l’Académie Fédérale d’Enquête. Première affectation. Tu n’as même pas eu le temps de poser ton sac qu’un appel d’urgence te propulse dans une ruelle du secteur Delta-9.",
       ]
     );
 
@@ -932,12 +942,14 @@ const seed = async () => {
         "/background/lueurs9.png",
       ],
     ];
+    await connection.execute(`SET FOREIGN_KEY_CHECKS = 0;`);
     for (const etape of etapes) {
       await connection.execute(
         `INSERT INTO step (id, text, history_id, pnj, background) VALUES (?, ?, ?, ?, ?)`,
         etape
       );
     }
+    await connection.execute(`SET FOREIGN_KEY_CHECKS = 1;`);
 
     const choices = [
       [1, "Suivre la vieille femme à travers les ruines", 1, null, 2, 0],
@@ -1064,16 +1076,19 @@ const seed = async () => {
       [50, "FIN #2 — La vérité brûle les poches", 28, null, 29, 0],
       [51, " Appelles ton ancienne camarade tech", 24, null, 30, 0],
       [52, "Fin #3 : La capture interdite", 31, null, 31, 0],
-      [53, "Fin #1 – Ce que l’on ne doit pas voir", 0, null, 0],
-      [54, "Fin #2 – Le témoin silencieux", 0, null, 0],
-      [55, "Fin #3 – La capture interdite", 0, null, 0],
+      [53, "Fin #1 – Ce que l’on ne doit pas voir", 47, null, 0, 0],
+      [54, "Fin #2 – Le témoin silencieux", 50, null, 0, 0],
+      [55, "Fin #3 – La capture interdite", 52, null, 0, 0],
     ];
+
+    await connection.execute(`SET FOREIGN_KEY_CHECKS = 0;`);
     for (const choice of choices) {
       await connection.execute(
         `INSERT INTO choice (id, text, step_id, object_id, link_to_step_id, take_or_give) VALUES (?, ?, ?, ?, ?, ?)`,
         choice
       );
     }
+    await connection.execute(`SET FOREIGN_KEY_CHECKS = 1;`);
 
     const users = [
       [1, "Porte-Marque", "avatar_portemarque.png", "portemarque@yrnwald.com"],

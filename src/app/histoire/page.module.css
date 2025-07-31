@@ -1,5 +1,6 @@
 .historiesContainer {
   display: flex;
+  flex-direction: column;
   padding: 15rem;
   justify-content: center;
   align-items: center;
