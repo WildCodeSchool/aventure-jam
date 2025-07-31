@@ -1076,9 +1076,9 @@ const seed = async () => {
       [50, "FIN #2 — La vérité brûle les poches", 28, null, 29, 0],
       [51, " Appelles ton ancienne camarade tech", 24, null, 30, 0],
       [52, "Fin #3 : La capture interdite", 31, null, 31, 0],
-      [53, "Fin #1 – Ce que l’on ne doit pas voir", 47, null, 0, 0],
-      [54, "Fin #2 – Le témoin silencieux", 50, null, 0, 0],
-      [55, "Fin #3 – La capture interdite", 52, null, 0, 0],
+      [53, "Fin #1 – Ce que l’on ne doit pas voir", 26, null, 0, 0],
+      [54, "Fin #2 – Le témoin silencieux", 29, null, 0, 0],
+      [55, "Fin #3 – La capture interdite", 30, null, 0, 0],
     ];
 
     await connection.execute(`SET FOREIGN_KEY_CHECKS = 0;`);
