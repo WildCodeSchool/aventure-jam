@@ -4,7 +4,6 @@ import { useState } from "react";
 import { signIn, useSession } from "next-auth/react";
 import Modal from "@/ui/Modal";
 import Login from "@/ui/login";
-import { appRoutes } from "@/data/ROUTES";
 import styles from "@/app/page.module.css";
 
 const HomeConnexion = () => {
@@ -20,8 +19,8 @@ const HomeConnexion = () => {
       <div className={styles.mainTitle}>
         <h1>INKVERSE</h1>
         {session ? (
-          <Link className={styles.linkHistory} href={appRoutes.HISTORY(1)}>
-            Entre dans l'Histoire
+          <Link className={styles.linkHistory} href="/histoire">
+            Entre dans l&apos;Histoire
           </Link>
         ) : (
           <button
@@ -29,7 +28,7 @@ const HomeConnexion = () => {
             onClick={handleProtectedClick}
             className={styles.linkHistory}
           >
-            Entre dans l'Histoire
+            Entre dans l&apos;Histoire
           </button>
         )}
         <div className={styles.googleButton}>

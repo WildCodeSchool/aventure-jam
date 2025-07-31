@@ -63,8 +63,8 @@ export async function DELETE(request: NextRequest) {
 
         for (const objectId of objectIds) {
             await db.query(
-                "DELETE FROM inventory JOIN users ON users.id = inventory.user_id WHERE users.email = ? AND inventory.history_Id = ? WHERE user_id = ? AND object_id = ? AND history_id = ? LIMIT 1",
-                [email, objectId, historyId]
+                "DELETE inventory FROM inventory JOIN users ON users.id = inventory.user_id WHERE users.email = ? AND inventory.history_id = ? AND inventory.object_id = ?",
+                [email, historyId, objectId]
             );
         }
 
