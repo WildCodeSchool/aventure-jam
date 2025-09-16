@@ -40,3 +40,27 @@ export async function createProgress(
     return false;
   }
 }
+
+export async function updateProgress(
+  email: string,
+  historyId: number,
+  stepId: number,
+  objectId?: number
+): Promise<boolean> {
+  try {
+    const response = await fetch(apiRoutes.PROGRESS(email, historyId), {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        step_id: stepId,
+        object_id: objectId || null,
+      }),
+    });
+    return response.ok;
+  } catch (error) {
+    console.error("Erreur lors de la mise à jour de la progression :", error);
+    return false;
+  }
+}
