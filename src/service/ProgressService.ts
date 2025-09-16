@@ -64,3 +64,18 @@ export async function updateProgress(
     return false;
   }
 }
+
+export async function deleteProgress(
+  email: string,
+  historyId: number
+): Promise<boolean> {
+  try {
+    const response = await fetch(apiRoutes.PROGRESS(email, historyId), {
+      method: "DELETE",
+    });
+    return response.ok;
+  } catch (error) {
+    console.error("Erreur lors de la suppression de la progression :", error);
+    return false;
+  }
+}
