@@ -5,6 +5,7 @@ import { Inventory } from "@/model/InventoryModel";
 import { postInventoryByHistory } from "@/lib/postInventory";
 import { deleteInventory } from "@/lib/deleteInventory";
 import { getHistories } from "@/lib/getHistories";
+import { HistoryModel } from "@/model/HistoryModel";
 
 export async function fetchInventoryForHistory(
   email: string,
@@ -21,7 +22,7 @@ export async function addInventory(
   email: string,
   historyId: number,
   objectId: number
-) {
+): Promise<unknown> {
   return postInventoryByHistory(email, historyId, objectId);
 }
 
@@ -29,10 +30,10 @@ export async function deleteInventories(
   email: string,
   historyId: number,
   objectIds: number[]
-) {
+): Promise<unknown> {
   return deleteInventory(email, historyId, objectIds);
 }
 
-export async function getAllHistories() {
+export async function getAllHistories(): Promise<HistoryModel> {
   return getHistories();
 }

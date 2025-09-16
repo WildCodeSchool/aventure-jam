@@ -48,7 +48,7 @@ const HistoryStart = ({ historyId }: Props) => {
   if (session === undefined || isLoading) {
     return (
       <div className={styles.loading}>
-        <img src="/logo/pressPlay.PNG" alt="chargement..." />
+        <img src="/Logo/img_loading.png" alt="chargement..." />
         <p>Chargement...</p>
       </div>
     );

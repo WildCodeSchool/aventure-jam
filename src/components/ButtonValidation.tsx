@@ -19,7 +19,7 @@ import {
 interface Props {
   link: string;
   label: string;
-  objectId: number;
+  objectId: number | null;
   takeOrGive: number | null;
 }
 
@@ -56,9 +56,19 @@ const ButtonToValidate = ({ link, label, objectId, takeOrGive }: Props) => {
       const existingProgress = await getProgress(email, historyId);
 
       if (existingProgress) {
-        await updateProgress(email, historyId, nextStepId, objectId);
+        await updateProgress(
+          email,
+          historyId,
+          nextStepId,
+          objectId || undefined
+        );
       } else {
-        await createProgress(email, historyId, nextStepId, objectId);
+        await createProgress(
+          email,
+          historyId,
+          nextStepId,
+          objectId || undefined
+        );
       }
     } catch (error) {
       console.error("Erreur lors de la sauvegarde de la progression :", error);

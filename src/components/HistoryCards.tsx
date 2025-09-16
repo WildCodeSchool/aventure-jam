@@ -3,27 +3,51 @@
 import { appRoutes } from "@/data/ROUTES";
 import styles from "./HistoryCards.module.css";
 import { getAllHistories } from "@/service/AventureService";
+import { HistoryModel } from "@/model/HistoryModel";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
 export const HistoryCards = () => {
-  const [histories, setHistories] = useState([]);
+  const [histories, setHistories] = useState<HistoryModel[]>([]);
   const [error, setError] = useState<string | null>(null);
+  const [isloading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const fetchHistories = async () => {
       try {
         const data = await getAllHistories();
         const normalized = Array.isArray(data) ? data : [data];
-
         setHistories(normalized);
-      } catch (err: any) {
-        setError(err.message || "Erreur lors du chargement des histoires");
+        setError(null);
+      } catch (err) {
+        const errorMessage =
+          err instanceof Error
+            ? err.message
+            : "Erreur lors du chargement de l' histoire";
+        setError(errorMessage);
+      } finally {
+        setIsLoading(false);
       }
     };
 
     fetchHistories();
   }, []);
+
+  if (isloading) {
+    return (
+      <div className={styles.loading}>
+        <p>chargement des histoires ...</p>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className={styles.error}>
+        <p>Erreur: {error}</p>
+      </div>
+    );
+  }
 
   return (
     <>
@@ -32,11 +56,7 @@ export const HistoryCards = () => {
           <h2 className={styles.historyTitle}>{history.title}</h2>
           <p className={styles.historyDescription}>{history.description}</p>
           <Link
-            href={
-              history.id == 2
-                ? appRoutes.STEP(history.id, 24)
-                : appRoutes.STEP(history.id, 1)
-            }
+            href={appRoutes.HISTORY(history.id)}
             className={styles.historyButton}
           >
             Entrer dans l&apos;histoire
