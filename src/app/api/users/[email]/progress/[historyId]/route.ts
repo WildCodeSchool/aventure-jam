@@ -59,3 +59,23 @@ export async function POST(req: NextRequest, { params }: Params) {
     );
   }
 }
+
+export async function PATCH(req: NextRequest, { params }: Params) {
+  const { historyId, email } = await params;
+  const { step_id, object_id = null } = await req.json();
+
+  try {
+    await db.query(
+      `UPDATE progress p JOIN users u ON p.user_id = u.id SET p.step_id = ?, p.object_id = ? WHERE u.email = ? AND p.history_id = ?`,
+      [step_id, object_id, email, historyId]
+    );
+
+    return NextResponse.json({ message: "Progression mise à jour" });
+  } catch (error) {
+    console.error("Erreur MySQL : ", error);
+    return NextResponse.json(
+      { error: "Internal Servor Error" },
+      { status: 500 }
+    );
+  }
+}
