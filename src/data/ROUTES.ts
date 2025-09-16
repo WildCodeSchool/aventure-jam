@@ -1,5 +1,6 @@
 const apiUrl = process.env.NEXT_PUBLIC_API_URL;
 const appUrl = process.env.NEXT_PUBLIC_APP_URL;
+
 const apiRoutes = {
   INFOS: `${apiUrl}/api/infos`,
   HISTORIES: `${apiUrl}/api/histories`,
@@ -11,6 +12,8 @@ const apiRoutes = {
   USER_EMAIL: (email: string) => `${apiUrl}/api/users/${email}`,
   CHOICES: (historyId: number, stepId: number) =>
     `${apiUrl}/api/histories/${historyId}/steps/${stepId}/choices`,
+  PROGRESS: (email: string, historyId: number) =>
+    `${apiUrl}/api/users/${email}/progress/${historyId}`,
 };
 
 const appRoutes = {
