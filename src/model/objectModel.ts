@@ -1,6 +1,6 @@
-export type ObjectModel = {
-    objectId: number;
-    name: string;
-    image: string;
-    isUsed: boolean;
-};
+export interface ObjectModel {
+  id: number;
+  name: string;
+  description: string;
+  image: string;
+}
