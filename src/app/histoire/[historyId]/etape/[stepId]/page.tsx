@@ -3,9 +3,9 @@ import styles from "./etape.module.css";
 import { ChoiceModel } from "@/model/ChoiceModel";
 import { StepModel } from "@/model/StepModel";
 import ButtonToValidate from "@/components/ButtonValidation";
-import SaveStepProgress from "@/components/SaveStepProgress";
 import dynamic from "next/dynamic";
 import NoBackNavigation from "@/components/NoBackNavigation";
+import SaveStepProgress from "@/components/SaveStepProgress";
 
 const Inventory = dynamic(() => import("@/ui/Inventory"));
 
@@ -26,7 +26,7 @@ const Step = async ({ params }: Props) => {
     ]);
 
     if (!apiStepResult.ok || !apiChoicesResult.ok) {
-      throw new Error("Erruer lors du chargement de l'étape ou des choix");
+      throw new Error("Erreur lors du chargement de l'étape ou des choix");
     }
 
     const step: StepModel = await apiStepResult.json();

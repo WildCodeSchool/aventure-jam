@@ -56,7 +56,11 @@ export const HistoryCards = () => {
           <h2 className={styles.historyTitle}>{history.title}</h2>
           <p className={styles.historyDescription}>{history.description}</p>
           <Link
-            href={appRoutes.HISTORY(history.id)}
+            href={
+              history.id == 2
+                ? appRoutes.STEP(history.id, 24)
+                : appRoutes.STEP(history.id, 1)
+            }
             className={styles.historyButton}
           >
             Entrer dans l&apos;histoire
