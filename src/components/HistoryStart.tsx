@@ -1,0 +1,68 @@
+"use client";
+
+import { useSession } from "next-auth/react";
+import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
+import { getProgress } from "@/service/ProgressService";
+import { appRoutes } from "@/data/ROUTES";
+import styles from "./HistoryStart.module.css";
+
+interface Props {
+  historyId: number;
+}
+
+const HistoryStart = ({ historyId }: Props) => {
+  const { data: session } = useSession();
+  const router = useRouter();
+  const [isLoading, setIsloading] = useState(true);
+
+  useEffect(() => {
+    const checkProgressAndRedirect = async () => {
+      if (!session?.user?.email) {
+        setIsloading(false);
+        return;
+      }
+
+      try {
+        const progress = await getProgress(session.user.email, historyId);
+
+        if (progress && progress.step_id) {
+          router.push(appRoutes.STEP(historyId, progress.step_id));
+        } else {
+          router.push(appRoutes.STEP(historyId, 1));
+        }
+      } catch (error) {
+        console.error(
+          "Erreur lors de la verification de la progression:",
+          error
+        );
+        router.push(appRoutes.STEP(historyId, 1));
+      }
+    };
+
+    if (session !== undefined) {
+      checkProgressAndRedirect();
+    }
+  }, [session, historyId, router]);
+
+  if (session === undefined || isLoading) {
+    return (
+      <div className={styles.loading}>
+        <img src="/logo/pressPlay.PNG" alt="chargement..." />
+        <p>Chargement...</p>
+      </div>
+    );
+  }
+
+  if (!session) {
+    return (
+      <div className={styles.loginRequired}>
+        <p>Vous devez etre connecté pour jouer</p>
+      </div>
+    );
+  }
+
+  return null;
+};
+
+export default HistoryStart;
