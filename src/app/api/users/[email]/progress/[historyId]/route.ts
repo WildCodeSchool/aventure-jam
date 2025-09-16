@@ -79,3 +79,22 @@ export async function PATCH(req: NextRequest, { params }: Params) {
     );
   }
 }
+
+export async function DELETE(_req: NextRequest, { params }: Params) {
+  const { historyId, email } = await params;
+
+  try {
+    await db.query(
+      `DELETE p FROM progress p JOIN users u ON p.user_id = u.id WHERE u.email = ? AND p.history_id = ?`,
+      [email, historyId]
+    );
+
+    return NextResponse.json({ message: "Progression supprimée" });
+  } catch (error) {
+    console.error("Erreur MySQL : ", error);
+    return NextResponse.json(
+      { error: "Internal Server Error" },
+      { status: 500 }
+    );
+  }
+}
