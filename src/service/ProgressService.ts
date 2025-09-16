@@ -16,3 +16,27 @@ export async function getProgress(
     return null;
   }
 }
+
+export async function createProgress(
+  email: string,
+  historyId: number,
+  stepId: number,
+  objectId?: number
+): Promise<boolean> {
+  try {
+    const response = await fetch(apiRoutes.PROGRESS(email, historyId), {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        step_id: stepId,
+        object_id: objectId || null,
+      }),
+    });
+    return response.ok;
+  } catch (error) {
+    console.error("Erreur lors de la création de la progression :", error);
+    return false;
+  }
+}
