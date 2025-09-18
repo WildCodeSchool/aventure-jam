@@ -4,7 +4,9 @@ import { NextResponse } from "next/server";
 
 export async function GET() {
   try {
-    const [rows] = await db.query("SELECT id, title, description FROM history");
+    const [rows] = await db.query(
+      "SELECT id, title, description, first_step_id FROM history"
+    );
     return NextResponse.json(rows as HistoryModel[]);
   } catch (error) {
     console.error("erreur MySql : ", error);

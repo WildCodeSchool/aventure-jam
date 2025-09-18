@@ -4,8 +4,9 @@ import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { getProgress } from "@/service/ProgressService";
-import { appRoutes } from "@/data/ROUTES";
+import { appRoutes, apiRoutes } from "@/data/ROUTES";
 import styles from "./HistoryStart.module.css";
+import { HistoryModel } from "@/model/HistoryModel";
 
 interface Props {
   historyId: number;
@@ -24,12 +25,20 @@ const HistoryStart = ({ historyId }: Props) => {
       }
 
       try {
+        const historyResponse = await fetch(apiRoutes.HISTORY(historyId));
+        if (!historyResponse.ok) {
+          throw new Error("Histoire non trouvée");
+        }
+
+        const history: HistoryModel = await historyResponse.json();
+        const firstStepId = history.first_step_id || 1;
+
         const progress = await getProgress(session.user.email, historyId);
 
         if (progress && progress.step_id) {
           router.push(appRoutes.STEP(historyId, progress.step_id));
         } else {
-          router.push(appRoutes.STEP(historyId, 1));
+          router.push(appRoutes.STEP(historyId, firstStepId));
         }
       } catch (error) {
         console.error(

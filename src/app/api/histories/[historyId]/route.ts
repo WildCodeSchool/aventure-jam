@@ -11,7 +11,7 @@ export async function GET(_req: Request, { params }: Params) {
 
   try {
     const result = await db.query(
-      "SELECT id, title, description FROM history Where id = ? ",
+      "SELECT id, title, description, first_step_id FROM history Where id = ? ",
       [historyId]
     );
     const rows = result[0] as HistoryModel[];

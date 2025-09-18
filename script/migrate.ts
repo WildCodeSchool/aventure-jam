@@ -26,7 +26,8 @@ const schema = `
    CREATE TABLE IF NOT EXISTS history (
     id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
     title TEXT NOT NULL,
-    description TEXT NOT NULL
+    description TEXT NOT NULL,
+    first_step_id INT
   );
     
   CREATE TABLE IF NOT EXISTS inventory (
