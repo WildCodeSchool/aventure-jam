@@ -55,6 +55,7 @@ export const HistoryCards = () => {
       <div className={styles.historyContainer}>
         {histories.map((history) => (
           <Link
+            key={history.id}
             href={appRoutes.HISTORY(history.id)}
             className={styles.historyCard}
           >
