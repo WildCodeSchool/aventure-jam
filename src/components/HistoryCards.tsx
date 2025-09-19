@@ -51,18 +51,18 @@ export const HistoryCards = () => {
 
   return (
     <>
-      {histories.map((history) => (
-        <div key={history.id} className={styles.historyCard}>
-          <h2 className={styles.historyTitle}>{history.title}</h2>
-          <p className={styles.historyDescription}>{history.description}</p>
+      <h2 className={styles.histoiryMainTitle}>Choisis une Histoire</h2>
+      <div className={styles.historyContainer}>
+        {histories.map((history) => (
           <Link
             href={appRoutes.HISTORY(history.id)}
-            className={styles.historyButton}
+            className={styles.historyCard}
           >
-            Entrer dans l&apos;histoire
+            <h2 className={styles.historyTitle}>{history.title}</h2>
+            <p className={styles.historyDescription}>{history.description}</p>
           </Link>
-        </div>
-      ))}
+        ))}
+      </div>
     </>
   );
 };

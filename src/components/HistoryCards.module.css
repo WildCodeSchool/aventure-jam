@@ -1,35 +1,44 @@
 .historyCard {
   border: 1px solid #ccc;
   padding: 1rem;
-  margin-bottom: 1rem;
   border-radius: 8px;
-  max-width: 80%;
+  max-width: 90%;
+  width: 100%;
   backdrop-filter: blur(2px) saturate(140%);
   background-color: rgba(17, 25, 40, 0.75);
+  box-sizing: border-box;
+  margin-bottom: 1rem;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.historyCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  border-color: #0070f3;
+  background-color: rgba(17, 25, 40, 0.85);
+}
+.historyCard:active {
+  transform: translateY(0);
+}
+
+.histoiryMainTitle {
+  margin: 20px;
 }
 
 .historyTitle {
   font-size: 1.25rem;
   font-weight: bold;
   margin-bottom: 0.5rem;
+  overflow-wrap: break-word;
 }
 
 .historyDescription {
   margin-bottom: 0.75rem;
-}
-
-.historyButton {
-  background-color: #0070f3;
-  color: white;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  cursor: pointer;
-  text-decoration: none;
-}
-
-.historyButton:hover {
-  background-color: #005bb5;
+  overflow-wrap: break-word;
 }
 
 .loading {
@@ -46,4 +55,16 @@
   border: 1px solid #f5c6cb;
   border-radius: 8px;
   color: #721c24;
+}
+
+@media screen and (max-width: 800px) {
+  .historyCardsContainer {
+    padding: 0 1rem;
+    width: 100%;
+  }
+
+  .historyCard {
+    max-width: 100%;
+    width: 100%;
+  }
 }
