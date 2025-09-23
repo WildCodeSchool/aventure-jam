@@ -1,9 +1,10 @@
-export type Inventory = {
-    history_id: number;
-    id: number;
-    image: string;
-    is_used: number;
-    name: string;
-    object_id: number;
-    user_id: number;
-}[];
+export interface Inventory {
+  id: number;
+  is_used: number;
+  user_id: number;
+  object_id: number;
+  history_id: number;
+  name?: string;
+  description?: string;
+  image?: string;
+}

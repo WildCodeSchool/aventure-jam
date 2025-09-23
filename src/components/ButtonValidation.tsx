@@ -4,14 +4,24 @@ import { useParams, useRouter } from "next/navigation";
 import { useState, useRef, useEffect } from "react";
 import { useSession } from "next-auth/react";
 import styles from "./ButtonValidation.module.css";
-import { addInventory, deleteInventories, fetchInventoryForHistory } from "@/service/AventureService";
+import {
+  addInventory,
+  deleteInventories,
+  fetchInventoryForHistory,
+} from "@/service/AventureService";
+import {
+  getProgress,
+  createProgress,
+  updateProgress,
+  deleteProgress,
+} from "@/service/ProgressService";
 
-type Props = {
+interface Props {
   link: string;
   label: string;
-  objectId: number;
+  objectId: number | null;
   takeOrGive: number | null;
-};
+}
 
 const ButtonToValidate = ({ link, label, objectId, takeOrGive }: Props) => {
   const [progress, setProgress] = useState(0);
@@ -31,9 +41,38 @@ const ButtonToValidate = ({ link, label, objectId, takeOrGive }: Props) => {
     }
     if (timeoutRef.current) {
       clearTimeout(timeoutRef.current);
+      timeoutRef.current = null;
     }
-
     setProgress(0);
+  };
+
+  const saveProgress = async (nextStepId: number) => {
+    if (!session?.user?.email) return;
+
+    const email = session.user.email;
+    const historyId = Number(params.historyId);
+
+    try {
+      const existingProgress = await getProgress(email, historyId);
+
+      if (existingProgress) {
+        await updateProgress(
+          email,
+          historyId,
+          nextStepId,
+          objectId || undefined
+        );
+      } else {
+        await createProgress(
+          email,
+          historyId,
+          nextStepId,
+          objectId || undefined
+        );
+      }
+    } catch (error) {
+      console.error("Erreur lors de la sauvegarde de la progression :", error);
+    }
   };
 
   const handleStart = () => {
@@ -44,31 +83,42 @@ const ButtonToValidate = ({ link, label, objectId, takeOrGive }: Props) => {
       setProgress(Math.min(elapsed / duration, 1));
     }, 16);
 
-    timeoutRef.current = window.setTimeout(() => {
+    timeoutRef.current = window.setTimeout(async () => {
       clearTimers();
+
       try {
         const email = session?.user?.email;
         const historyId = Number(params.historyId);
 
-        if (email && historyId && objectId !== null) {
-          if (takeOrGive === 0) {
-            addInventory(email, historyId, objectId);
+        if (email && historyId) {
+          if (objectId !== null && takeOrGive !== null) {
+            if (takeOrGive === 0) {
+              await addInventory(email, historyId, objectId);
+            } else if (takeOrGive === 1) {
+              await deleteInventories(email, historyId, [objectId]);
+            }
           }
-          if (takeOrGive && takeOrGive === 1) {
-            deleteInventories(email, historyId, [objectId])
+
+          if (link === "/") {
+            const inventory = await fetchInventoryForHistory(email, historyId);
+            if (Array.isArray(inventory) && inventory.length > 0) {
+              const objectIds = inventory.map((item) => item.object_id);
+              await deleteInventories(email, historyId, objectIds);
+            }
+
+            await deleteProgress(email, historyId);
+          } else {
+            const nextStepMatch = link.match(/\/etape\/(\d+)/);
+            if (nextStepMatch) {
+              const nextStepId = parseInt(nextStepMatch[1]);
+              await saveProgress(nextStepId);
+            }
           }
         }
       } catch (error) {
-        console.error("Erreur lors de l'ajout à l'inventaire :", error);
+        console.error("Erreur lors du traitement du bouton :", error);
       }
-      if (link === "/") {
-        const email = session?.user?.email
-        const historyId = Number(params.historyId);
-        fetchInventoryForHistory(email as string, historyId).then((data: any[]) => {
-          const objectIds = data.map((item) => item.object_id);
-          deleteInventories(email as string, historyId, objectIds);
-        });
-      }
+
       router.push(link);
     }, duration);
   };

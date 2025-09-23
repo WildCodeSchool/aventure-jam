@@ -26,7 +26,8 @@ const schema = `
    CREATE TABLE IF NOT EXISTS history (
     id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
     title TEXT NOT NULL,
-    description TEXT NOT NULL
+    description TEXT NOT NULL,
+    first_step_id INT
   );
     
   CREATE TABLE IF NOT EXISTS inventory (
@@ -61,15 +62,16 @@ const schema = `
     );
 
   CREATE TABLE IF NOT EXISTS progress (
-    id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    id INT AUTO_INCREMENT PRIMARY KEY,
     history_id INT NOT NULL,
     step_id INT NOT NULL,
-    object_id INT,
+    object_id INT NULL,
     user_id INT NOT NULL,
     FOREIGN KEY (history_id) REFERENCES history(id),
     FOREIGN KEY (step_id) REFERENCES step(id),
     FOREIGN KEY (object_id) REFERENCES object(id),
-    FOREIGN KEY (user_id) REFERENCES users(id)
+    FOREIGN KEY (user_id) REFERENCES users(id),
+    UNIQUE KEY unique_user_history (user_id, history_id)
   );
 
 
