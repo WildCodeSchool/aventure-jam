@@ -7,5 +7,5 @@ export type User = {
   avatar: string;
   email: string;
   progress: ProgressModel;
-  inventaire: Inventory;
+  inventory: Inventory[];
 };

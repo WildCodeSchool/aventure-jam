@@ -4,4 +4,5 @@ export interface ProgressModel {
   step_id: number;
   object_id: number | null;
   user_id: number;
+  inventory_id: number[];
 }
